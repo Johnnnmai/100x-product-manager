@@ -1,5 +1,46 @@
 <a id="pmskills"></a>
-# Product Manager Skills
+# 100X Product Managers
+
+---
+## Philosophy / 核心理念
+
+### English
+
+**Our Philosophy:**
+```
+🎯 Market-Driven: Build what the market needs, not what we think
+⚡ Move Fast: Speed is a competitive advantage
+🔄 Iterate Fast: Learn fast, fail fast, pivot fast
+📈 100x Thinking: Aim for 100x, not 10%
+```
+
+We believe in:
+- **Market-Driven**: The market decides what succeeds, not internal opinions
+- **Speed as Strategy**: In fast-moving markets, speed IS the strategy
+- **Learn Fast**: Hypotheses are cheap to test, fail quickly, learn quickly
+- **Think Exponential**: 10x思维 instead of 10% improvements
+
+---
+
+### 中文
+
+**我们的理念：**
+```
+🎯 市场驱动：构建市场需要的，而非我们认为的
+⚡ 快速行动：速度是核心竞争力
+🔄 快速迭代：快速学习，快速失败，快速转向
+📈 100倍思维：瞄准100倍增长，而非10%
+```
+
+我们相信：
+- **市场驱动**：市场决定什么成功，而非内部观点
+- **速度即战略**：在快速移动的市场中，速度就是战略
+- **快速学习**：假设测试成本很低，快速失败，快速学习
+- **指数思维**：100倍思维而非10%改进
+
+---
+
+## Product Manager Skills
 
 ```text
 ╔════════════════════════════════════════════════════════════════════╗
