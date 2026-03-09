@@ -1,4 +1,4 @@
-# Contributing to Product Manager Skills
+# Contributing to 100X PM Skills
 
 Thanks for your interest in contributing! This repository helps product managers work better with AI by providing battle-tested PM frameworks in an agent-ready format.
 
@@ -386,7 +386,7 @@ Your skill should pass these checks:
 - We'll help you polish it
 
 **Want to brainstorm?**
-- Reach out to Dean on [LinkedIn](https://linkedin.com/in/deanpeters)
+- Open an issue if you want feedback on whether a framework belongs in the repo
 
 ---
 
@@ -396,6 +396,6 @@ By contributing, you agree that your contributions will be licensed under the CC
 
 ---
 
-**Thank you for making Product Manager Skills better!** 🙏
+**Thank you for making 100X PM Skills better!**
 
 Every contribution helps PMs around the world work smarter with AI.

@@ -1,10 +1,10 @@
 # PM Skills Playground — Streamlit Interface (beta)
 
-A local web app for browsing and test-driving PM skills against available LLM APIs before committing to installing them in Claude Code, Cowork, or Codex.
+A local web app for browsing and test-driving PM skills against available LLM APIs before committing to installing them in Claude Code, ChatGPT, or Codex.
 
 **Status:** Streamlit (beta). This is a new feature in flight and we are actively testing and refining it. Feedback is welcome via [GitHub Issues](https://github.com/Johnnnmai/100x-product-managers/issues).
 
-**Pedagogic goal:** Lower the barrier from "I've heard about this skill" to "I've seen it work in my context." Users pick a theme, read what they're getting into, then run the skill — with full multi-turn conversation for interactive skills, progress tracking, and an explicit bail path at every step.
+**Pedagogic goal:** Lower the barrier from "I've heard about this skill" to "I've seen it work in my context." Users can start from curated starter packs or themes, read what they're getting into, then run the skill — with full multi-turn conversation for interactive skills, progress tracking, and an explicit bail path at every step.
 
 ---
 
@@ -79,7 +79,7 @@ Parsed fields per skill:
 ### Four Screens
 
 ```
-Home (theme browser)
+Home (starter packs + theme browser)
   └─ Theme (skill cards)
        └─ Skill Detail (preview + scenario input)
             └─ Session (run the skill)
@@ -156,13 +156,13 @@ estimated_time: "10-15 min"
 
 **Validation:** Adding these fields does not break `scripts/check-skill-metadata.py` — the validator only checks required fields (`name`, `description`, `type`) and ignores unknown keys.
 
-**Currently tagged:** 16 skills across all 7 themes (2 per theme minimum, 4 in Career & Leadership). Remaining 30 skills can be tagged in follow-on passes using the same frontmatter pattern.
+**Tagging note:** The app can browse the full catalog, but only skills with a `theme` field appear in the themed browser. Untagged skills still appear under the fallback expander on Home.
 
 ---
 
 ## UX Design Decisions
 
-**Theme-first, not type-first.** Users come with a job to be done ("I'm preparing for a Director interview"), not a skill type ("I want an interactive skill"). Themes map to situations; type badges (🧱 🔄 🎭) set expectations about the interaction.
+**Starter-pack first, then theme-first.** Many users arrive with a concrete job to be done ("I need PM interview prep" or "I need pricing help"), not a skill taxonomy in mind. Starter packs provide the first jump point; themes still organize the broader catalog. Type badges (🧱 🔄 🎭) set expectations about the interaction.
 
 **Pre-flight for interactive and workflow skills.** Before starting a multi-turn session, the user sees what they're getting into: estimated time, what the conversation will produce, and where the bail controls are. Component skills go straight to the output — they're single-shot.
 
@@ -199,7 +199,7 @@ The app can be deployed, but it uses environment-variable key loading only and s
 ## Known Limitations
 
 - **Cache refresh:** Skill changes require restarting the app or clearing Streamlit's cache (`st.cache_data.clear()`). During active skill development, run with `streamlit run app/main.py --server.fileWatcherType poll` to auto-reload.
-- **30 unthemed skills:** Skills without a `theme` tag appear in an expander on Home. See [Adding Theme Metadata](#adding-theme-metadata-to-a-skill) to promote them into themed cards.
+- **Unthemed skills:** Skills without a `theme` tag appear in an expander on Home. See [Adding Theme Metadata](#adding-theme-metadata-to-a-skill) to promote them into themed cards.
 - **No streaming:** API responses render all at once after completion. Streaming would improve perceived responsiveness for long outputs — a future enhancement.
 - **Workflow phase detection:** Phases are auto-detected from `### Phase N` headings in the Application section. Workflow skills without this naming convention show as a single "Full workflow" phase.
 
@@ -211,5 +211,5 @@ The app can be deployed, but it uses environment-variable key loading only and s
 - **Shared hosted key** option with session-level rate limiting for public demos
 - **Related skills panel** — surface cross-references from the skill's References section
 - **Export conversation** — download a session as markdown
-- **Theme metadata for remaining 30 skills** — follow-on tagging pass
+- **More theme metadata coverage** — continue tagging the remaining catalog
 - **Search** — keyword search across skill names, descriptions, and best_for bullets

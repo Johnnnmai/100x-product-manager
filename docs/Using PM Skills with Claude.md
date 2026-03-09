@@ -1,4 +1,4 @@
-# Using PM Skills with Claude
+# Using 100X PM Skills with Claude
 
 This repo is a library of PM skill files designed for AI agents. Claude Code (CLI) and Claude Cowork (workspace) can both read these files and apply them as structured instructions.
 
@@ -32,6 +32,24 @@ Claude Code is Anthropic's official command-line interface for Claude. It reads 
    ```bash
    claude "Using the skill at skills/prd-development/SKILL.md, create a PRD for our mobile onboarding redesign"
    ```
+
+### Start With A Starter Pack
+
+If you want the fastest path from clone to value, start with one of these:
+
+```bash
+# PM Job Hunt
+claude "Use skills/pm-resume-teardown/SKILL.md to critique my PM resume for senior growth PM roles"
+
+# Discovery & Validation
+claude "Use skills/discovery-interview-prep/SKILL.md to prepare discovery interviews for churned enterprise customers"
+
+# Growth & Finance
+claude "Use skills/business-health-diagnostic/SKILL.md to assess our SaaS business health before the board meeting"
+
+# AI-Shaped PM
+claude "Use skills/ai-shaped-readiness-advisor/SKILL.md to assess whether our PM team is AI-first or AI-shaped"
+```
 
 ### How to Apply Skills
 
@@ -170,7 +188,7 @@ If you want deeper tool/repo integrations (instead of ZIP upload workflows), use
 ### Troubleshooting
 
 **Claude says it cannot find a file**:
-- Verify you're in the `product-manager-skills` directory
+- Verify you're in the `100x-product-managers` directory
 - Check the file path is correct (case-sensitive)
 - Use `ls skills/` to confirm skill names
 
@@ -192,7 +210,7 @@ Claude Cowork is Anthropic's workspace integration (similar to Cursor, Windsurf,
 
 1. **Open the repo in Cowork**:
    - File → Open Workspace
-   - Select `product-manager-skills` folder
+   - Select `100x-product-managers` folder
 
 2. **Reference skills naturally**:
    ```
@@ -229,7 +247,7 @@ For persistent access across sessions:
 
 1. **Add skills to Cowork's knowledge base**:
    - Settings → Knowledge Modules
-   - Add Folder: `product-manager-skills/skills`
+   - Add Folder: `100x-product-managers/skills`
 
 2. **Skills become globally available**:
    ```
@@ -262,7 +280,7 @@ Cowork will:
 ### Troubleshooting
 
 **Cowork doesn't recognize a skill**:
-- Verify the workspace includes the `product-manager-skills` folder
+- Verify the workspace includes the `100x-product-managers` folder
 - Check Settings → Knowledge Modules to confirm skills are loaded
 - Try using the full path: `skills/user-story/SKILL.md`
 

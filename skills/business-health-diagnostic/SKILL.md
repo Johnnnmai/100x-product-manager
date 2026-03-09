@@ -1,6 +1,6 @@
 ---
 name: business-health-diagnostic
-description: Diagnose SaaS business health using key metrics, identify red flags, and prioritize actions. Analyzes growth, retention, efficiency, and capital health.
+description: Use when you need a board-ready read on SaaS health across growth, retention, unit economics, and cash efficiency.
 type: interactive
 theme: finance-metrics
 best_for:
@@ -16,9 +16,9 @@ estimated_time: "20-30 min"
 
 ## Purpose
 
-Diagnose overall SaaS business health by analyzing growth, retention, unit economics, and capital efficiency metrics together. Use this to identify problems early, prioritize actions by urgency, and deliver a comprehensive health scorecard for board meetings, quarterly reviews, or fundraising preparation.
+Get a board-ready read on SaaS business health by analyzing growth, retention, unit economics, and capital efficiency together. Use this to identify the real bottleneck, separate red flags from noisy metrics, and prioritize actions before a quarterly review, fundraising process, or exec meeting.
 
-This is not a single-metric check—it's a holistic diagnostic that connects revenue, retention, economics, and efficiency to reveal systemic issues and opportunities.
+This is not a single-metric check. It is a holistic diagnostic that connects revenue, retention, economics, and efficiency to reveal systemic issues and opportunities.
 
 ## Key Concepts
 

@@ -1,6 +1,6 @@
 ---
 name: prd-development
-description: Guide product managers through structured PRD (Product Requirements Document) creation by orchestrating problem framing, user research synthesis, solution definition, and success criteria into a cohes
+description: Use when turning discovery, strategy, and stakeholder context into a clear PRD that engineering and leadership can actually use.
 type: workflow
 theme: pm-artifacts
 best_for:
@@ -15,9 +15,9 @@ estimated_time: "60-120 min"
 
 
 ## Purpose
-Guide product managers through structured PRD (Product Requirements Document) creation by orchestrating problem framing, user research synthesis, solution definition, and success criteria into a cohesive document. Use this to move from scattered notes and Slack threads to a clear, comprehensive PRD that aligns stakeholders, provides engineering context, and serves as a source of truth—avoiding ambiguity, scope creep, and the "build what's in my head" trap.
+Turn scattered discovery notes, strategy decisions, and stakeholder input into a clear PRD that engineering and leadership can actually use. This workflow helps you move from vague intent to a decision-ready document with the problem, customer context, solution shape, success metrics, scope boundaries, and open risks all in one place.
 
-This is not a waterfall spec—it's a living document that captures strategic context, customer problems, proposed solutions, and success criteria, evolving as you learn through delivery.
+This is not a waterfall spec. It is a living document that captures strategic context, customer problems, proposed solutions, and success criteria while staying usable as delivery knowledge evolves.
 
 ## Key Concepts
 

@@ -1,7 +1,7 @@
 """PM Skills Playground — Streamlit app for browsing and test-driving PM skills.
 
 Usage:
-    cd /path/to/product-manager-skills
+    cd /path/to/100x-product-managers
     pip install -r app/requirements.txt
     streamlit run app/main.py
 """
@@ -108,6 +108,45 @@ TYPE_BADGES = {
     "interactive": ("🔄", "Interactive"),
     "workflow": ("🎭", "Workflow"),
 }
+
+STARTER_PACKS = [
+    {
+        "label": "PM Job Hunt",
+        "description": "Resume signal, interview prep, and big-tech vs startup role choice.",
+        "skills": [
+            "pm-resume-teardown",
+            "pm-mock-interview-workflow",
+            "bigtech-vs-startup-decision-advisor",
+        ],
+    },
+    {
+        "label": "Discovery & Validation",
+        "description": "Customer interviews, problem framing, and opportunity mapping.",
+        "skills": [
+            "discovery-interview-prep",
+            "problem-framing-canvas",
+            "opportunity-solution-tree",
+        ],
+    },
+    {
+        "label": "Growth & Finance",
+        "description": "Business health, pricing, and acquisition-channel decisions.",
+        "skills": [
+            "business-health-diagnostic",
+            "finance-based-pricing-advisor",
+            "acquisition-channel-advisor",
+        ],
+    },
+    {
+        "label": "AI-Shaped PM",
+        "description": "AI-shaped readiness, context engineering, and probe design.",
+        "skills": [
+            "ai-shaped-readiness-advisor",
+            "context-engineering-advisor",
+            "pol-probe-advisor",
+        ],
+    },
+]
 
 # ─── Skill Loading ─────────────────────────────────────────────────────────────
 
@@ -459,11 +498,32 @@ def render_sidebar(skill: dict | None = None):
 # ─── Screen: Home ─────────────────────────────────────────────────────────────
 
 def render_home(skills: list):
-    st.title("PM Skills Playground (beta)")
+    st.title("100X PM Skills Playground (beta)")
     st.markdown(
-        f"Streamlit (beta): a new feature in flight. Browse {len(skills)} PM skills, pick a theme, and test-drive skills. "
+        f"Streamlit (beta): browse {len(skills)} PM skills, jump into starter packs, and test-drive skills before installing them in Claude Code, Codex, or ChatGPT. "
         "Feedback welcome via [GitHub issues](https://github.com/Johnnnmai/100x-product-managers/issues)."
     )
+    skills_by_name = {skill["name"]: skill for skill in skills}
+
+    st.markdown("### Start Here")
+    st.caption("Pick a starter pack based on the PM job you need done this week.")
+    pack_cols = st.columns(2)
+    for i, pack in enumerate(STARTER_PACKS):
+        with pack_cols[i % 2]:
+            with st.container(border=True):
+                st.markdown(f"#### {pack['label']}")
+                st.caption(pack["description"])
+                for skill_name in pack["skills"]:
+                    skill = skills_by_name.get(skill_name)
+                    if skill is None:
+                        st.caption(f"`{skill_name}` (not found)")
+                        continue
+                    if st.button(
+                        skill_name,
+                        key=f"starter_{pack['label']}_{skill_name}",
+                        use_container_width=True,
+                    ):
+                        nav("skill", skill=skill, theme=skill.get("theme"))
     st.divider()
 
     # Group skills by theme

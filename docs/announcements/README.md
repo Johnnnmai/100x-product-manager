@@ -4,6 +4,7 @@ Canonical location for launch posts, social copy, and release-related announceme
 
 ## Latest
 
+- **2026-03-09:** [GitHub Refresh + XHS Launch Asset Set](2026-03-09-github-refresh-xhs-launch.md)
 - **2026-02-27:** [v0.5 Streamlit (beta) Playground](2026-02-27-v0-5-streamlit-beta.md)
 - **2026-02-10:** [v0.4 Facilitation Protocol Fix](2026-02-10-v0-4-facilitation-fix.md)
 - **2026-02-08:** [LinkedIn Launch](2026-02-08-linkedin-launch.md)
@@ -11,6 +12,7 @@ Canonical location for launch posts, social copy, and release-related announceme
 
 ## Timeline
 
+- [2026-03-09-github-refresh-xhs-launch.md](2026-03-09-github-refresh-xhs-launch.md) — GitHub refresh announcement, XHS long-form note, carousel outline, hooks, and CTA block
 - [2026-02-27-v0-5-streamlit-beta.md](2026-02-27-v0-5-streamlit-beta.md) — v0.5 Streamlit (beta) release note for local playground + workflow UX improvements
 - [2026-02-10-v0-4-facilitation-fix.md](2026-02-10-v0-4-facilitation-fix.md) — v0.4 release note and root-cause/fix narrative for facilitation regression
 - [2026-02-08-linkedin-launch.md](2026-02-08-linkedin-launch.md) — Product Management Skills for Your Agents launch copy (post + article)

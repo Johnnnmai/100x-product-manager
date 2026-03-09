@@ -1,6 +1,6 @@
 ---
 name: vp-cpo-readiness-advisor
-description: "Coaches Directors and executives through the transition to VP or CPO across four situations: preparing, interviewing, newly landed, or recalibrating at executive level."
+description: "Use when preparing for, interviewing for, onboarding into, or recalibrating in a VP or CPO product leadership role."
 type: interactive
 theme: career-leadership
 best_for:
@@ -16,9 +16,9 @@ estimated_time: "15-20 min"
 
 ## Purpose
 
-Guide Directors and senior product leaders through the specific challenges of the transition to VP or CPO using adaptive questions and targeted coaching. Diagnoses where you are in the journey and delivers practical, lived-experience coaching calibrated to your situation — not generic executive advice.
+Guide Directors and senior product leaders through the specific challenges of moving into VP or CPO scope. Use this to diagnose where you are in the transition, surface the executive-level failure mode that matters most, and get practical coaching calibrated to your actual situation instead of generic leadership advice.
 
-The VP/CPO transition is not a continuation of the Director transition. The landscape changes. Strategy becomes largely unwritten. Your primary customer may shift. You stop using product language with executives. Constraints don't disappear — the Rubik's Cube just goes from 3×3 to 9×9. This advisor names what's actually hard at this level and what to do about it.
+The VP/CPO transition is not a continuation of the Director transition. Strategy becomes less written down, your primary customer may shift, and the operating system moves from product execution to organizational leverage. This advisor names what actually gets harder at that level and what to do about it.
 
 ## Key Concepts
 

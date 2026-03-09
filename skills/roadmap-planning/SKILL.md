@@ -1,6 +1,6 @@
 ---
 name: roadmap-planning
-description: Guide product managers through strategic roadmap planning by orchestrating prioritization, epic definition, stakeholder alignment, and release sequencing skills into a structured process. Use this to 
+description: Use when building a roadmap from competing requests and needing a strategic sequence that leaders, product, and engineering can align on.
 type: workflow
 theme: strategy-positioning
 best_for:
@@ -15,9 +15,9 @@ estimated_time: "45-90 min"
 
 
 ## Purpose
-Guide product managers through strategic roadmap planning by orchestrating prioritization, epic definition, stakeholder alignment, and release sequencing skills into a structured process. Use this to move from disconnected feature requests to a cohesive, outcome-driven roadmap that aligns stakeholders, sequences work logically, and communicates strategic intent—avoiding "feature factory" roadmaps that lack strategic narrative or customer-centric framing.
+Build a roadmap from competing requests, strategic bets, and delivery constraints without collapsing into a feature list. Use this workflow to turn disconnected asks into an outcome-driven sequence that leaders, product, and engineering can align on, defend, and communicate clearly.
 
-This is not a Gantt chart—it's a strategic communication tool that shows what you're building, why it matters, and how it ladders up to business outcomes.
+This is not a Gantt chart. It is a strategic communication tool that shows what you are building, why it matters now, and how each initiative ladders up to business outcomes.
 
 ## Key Concepts
 

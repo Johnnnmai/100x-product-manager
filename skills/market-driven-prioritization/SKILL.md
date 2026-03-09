@@ -1,14 +1,24 @@
 ---
 name: market-driven-prioritization
-description: Prioritize work using market evidence, not internal confidence. Validate demand before committing build capacity.
+description: Use when ranking roadmap bets and needing market evidence to separate what to build now from what to validate next.
 type: component
+theme: strategy-positioning
+best_for:
+  - "Separating validated demand from internal enthusiasm during roadmap planning"
+  - "Turning fuzzy feature requests into build, validate, or drop decisions"
+  - "Keeping strategic bets tied to real market evidence"
+scenarios:
+  - "We have 12 candidate initiatives and need to decide which ones are ready for delivery versus validation"
+  - "Leadership wants a feature because competitors launched it, but we have weak customer signal"
+  - "I need a simple framework for showing what gets built now versus what still needs proof"
+estimated_time: "10-15 min"
 ---
 
 ## Purpose
 
-Use this skill to rank features, initiatives, or bets based on **market evidence** rather than stakeholder energy, internal politics, or narrative momentum.
+Rank features, initiatives, and strategic bets using **market evidence** rather than stakeholder energy, internal politics, or narrative momentum. Use this to decide what deserves immediate build capacity, what needs fast validation, and what should be parked before it turns into roadmap debt.
 
-The core discipline is simple: ask *"Does the market need this?"* before asking *"Can we build this?"* A strong PM organization does not just prioritize by impact and effort. It also prioritizes by how real the demand signal is.
+The core discipline is simple: ask *"Does the market need this?"* before asking *"Can we build this?"* Strong product teams do not prioritize only by impact and effort. They also prioritize by how real, recent, and decision-relevant the demand signal is.
 
 ### 中文
 

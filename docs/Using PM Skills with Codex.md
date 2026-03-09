@@ -1,4 +1,4 @@
-# Using PM Skills with Codex
+# Using 100X PM Skills with Codex
 
 Codex can apply these skills directly from your repo files. There are two practical paths:
 - Local workspace (Codex in your coding environment)
@@ -24,6 +24,20 @@ Example:
 
 ```text
 Using the skill at skills/prd-development/SKILL.md, create a PRD for a mobile onboarding redesign. Ask up to 3 clarifying questions first, then proceed.
+```
+
+### Fast Starter Pack Prompts
+
+Use one of these if you want an immediate "show me the value" starting point:
+
+```text
+Use skills/pm-resume-teardown/SKILL.md to critique my PM resume for senior PM roles and prioritize the top fixes.
+
+Use skills/discovery-interview-prep/SKILL.md to prepare discovery interviews for churned enterprise customers.
+
+Use skills/business-health-diagnostic/SKILL.md to assess our SaaS business health ahead of the next board review.
+
+Use skills/ai-shaped-readiness-advisor/SKILL.md to assess whether our PM org is AI-first or AI-shaped.
 ```
 
 ### How to Apply Skill Types

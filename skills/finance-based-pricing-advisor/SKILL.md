@@ -1,15 +1,25 @@
 ---
 name: finance-based-pricing-advisor
-description: Evaluate pricing changes using financial impact analysis - ARPU/ARPA, conversion, churn risk, NRR, and payback. Recommends go/no-go on pricing decisions.
+description: Use when evaluating a specific pricing change and needing a go/no-go view on revenue lift, conversion risk, churn risk, and payback.
 type: interactive
+theme: finance-metrics
+best_for:
+  - "Pressure-testing a price increase or packaging change before rollout"
+  - "Comparing revenue lift against conversion and churn risk"
+  - "Preparing a pricing recommendation for leadership or a board meeting"
+scenarios:
+  - "Should we test a 10 percent price increase for new self-serve customers next quarter?"
+  - "We want to launch a premium tier and need to quantify upside, cannibalization risk, and payback impact"
+  - "Leadership wants discounting to win deals and I need to show the economic trade-offs clearly"
+estimated_time: "15-20 min"
 ---
 
 
 ## Purpose
 
-Evaluate the **financial impact** of pricing changes (price increases, new tiers, add-ons, discounts) using ARPU/ARPA analysis, conversion impact, churn risk, NRR effects, and CAC payback implications. Use this to make data-driven go/no-go decisions on proposed pricing changes with supporting math and risk assessment.
+Stress-test a proposed pricing move before you ship it. Use this to quantify revenue lift versus conversion risk, churn risk, expansion effects, and CAC payback so you can decide whether to test, phase, or reject the change with real financial logic behind it.
 
-**What this is:** Financial impact evaluation for pricing decisions you're already considering.
+**What this is:** Financial impact evaluation for a pricing decision you are already considering.
 
 **What this is NOT:** Comprehensive pricing strategy design, value-based pricing frameworks, willingness-to-pay research, competitive positioning, psychological pricing, packaging architecture, or monetization model selection. For those topics, see the future `pricing-strategy-suite` skills.
 

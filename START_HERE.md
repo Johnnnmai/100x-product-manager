@@ -1,98 +1,94 @@
 # Start Here
 
-Use this file if you found the repo from GitHub, social media, or a friend and want value fast without reading everything.
+Use this file if you found the repo from GitHub, XHS, LinkedIn, or a friend and want value fast without reading the whole library.
 
-## 15-Minute First Run
+## Fastest Path to Value
 
-Pick one path based on your immediate job to be done.
+Pick one starter pack based on the job you need done this week.
 
-### 1. "I need to decide what to work on next"
-
-Start with:
-1. `skills/market-driven-prioritization/SKILL.md`
-2. `skills/prioritization-advisor/SKILL.md`
-3. `skills/rapid-iteration-cycle/SKILL.md`
-
-Best for:
-- quarterly planning
-- roadmap debates
-- feature-priority resets
-
-### 2. "I need to turn messy inputs into a clean PM deliverable"
+### 1. PM Job Hunt
 
 Start with:
-1. `skills/problem-framing-canvas/SKILL.md`
-2. `skills/prd-development/SKILL.md`
-3. `skills/user-story/SKILL.md`
+1. `skills/pm-resume-teardown/SKILL.md`
+2. `skills/pm-mock-interview-workflow/SKILL.md`
+3. `skills/bigtech-vs-startup-decision-advisor/SKILL.md`
 
 Best for:
-- turning discovery into a PRD
-- preparing handoff for engineering
-- improving artifact quality
+- PM resume rewrites
+- mock interview prep
+- deciding between startup and big tech roles
 
-### 3. "I need to understand whether the business is actually healthy"
+### 2. Discovery & Validation
+
+Start with:
+1. `skills/discovery-interview-prep/SKILL.md`
+2. `skills/problem-framing-canvas/SKILL.md`
+3. `skills/opportunity-solution-tree/SKILL.md`
+
+Best for:
+- customer discovery planning
+- turning messy research into a decision
+- validating before building
+
+### 3. Growth & Finance
 
 Start with:
 1. `skills/business-health-diagnostic/SKILL.md`
-2. `skills/saas-revenue-growth-metrics/SKILL.md`
-3. `skills/finance-based-pricing-advisor/SKILL.md`
+2. `skills/finance-based-pricing-advisor/SKILL.md`
+3. `skills/acquisition-channel-advisor/SKILL.md`
 
 Best for:
-- B2B SaaS PMs
-- founders wearing the PM hat
-- pricing and growth questions
+- SaaS health reviews
+- pricing decisions
+- growth channel trade-offs
 
-### 4. "I want PM work to get better with Claude Code / agents"
+### 4. AI-Shaped PM
 
 Start with:
-1. `skills/context-engineering-advisor/SKILL.md`
-2. `skills/ai-shaped-readiness-advisor/SKILL.md`
-3. `skills/skill-authoring-workflow/SKILL.md`
+1. `skills/ai-shaped-readiness-advisor/SKILL.md`
+2. `skills/context-engineering-advisor/SKILL.md`
+3. `skills/pol-probe-advisor/SKILL.md`
 
 Best for:
-- PM leads building AI-native workflows
-- teams struggling with context stuffing
-- creating repeatable PM operating systems
+- PM teams using AI but not yet changing how work gets done
+- diagnosing context stuffing
+- compressing validation loops
 
 ## Suggested Prompt Pattern
 
-Use this shape in Claude Code or Codex:
+Use this shape in Claude Code, Codex, or ChatGPT:
 
 ```text
 Using skills/<skill-name>/SKILL.md:
-1. Ask up to 3 clarifying questions.
+1. Ask up to 3 clarifying questions first.
 2. Follow the skill structure exactly.
 3. Output markdown I can reuse in real work.
 4. End with risks, assumptions, and next steps.
 ```
 
-## If You Are Comparing Repos
+## If You Only Try One Skill
 
-Use this repo when you want:
-- faster validation loops
-- stronger market-first decision making
-- PM skills that increasingly connect to agent workflows
-
-Do not start here if you want:
-- generic project-management templates without PM judgment
-- heavyweight documentation before first value
-
-## Recommended First Skill by Persona
-
-| Persona | First skill |
+| Situation | Try this first |
 | --- | --- |
-| Startup PM | `market-driven-prioritization` |
-| Growth PM | `business-health-diagnostic` |
-| Platform PM | `rapid-iteration-cycle` |
-| PM leader | `ai-shaped-readiness-advisor` |
-| Founder | `product-strategy-session` |
+| PM resume is not converting | `pm-resume-teardown` |
+| Need sharper discovery interviews | `discovery-interview-prep` |
+| Need to know if the business is healthy | `business-health-diagnostic` |
+| Need a better PRD from messy inputs | `prd-development` |
+| Want PM work to become more AI-native | `ai-shaped-readiness-advisor` |
+
+## Chinese Quick Guide / 中文快速入口
+
+- 想先解决求职问题：从 `pm-resume-teardown` 开始
+- 想先解决访谈与 discovery：从 `discovery-interview-prep` 开始
+- 想先看懂业务增长和定价：从 `business-health-diagnostic` 开始
+- 想先把 AI 真正嵌进 PM 工作流：从 `ai-shaped-readiness-advisor` 开始
 
 ## Next
 
 After your first run:
 1. Save the output you would actually reuse.
-2. Note where the skill felt generic or weak.
-3. Open an issue or refine the skill locally.
+2. Note where the skill felt generic, weak, or too abstract.
+3. Open an issue or improve the skill locally.
 
 Repo:
 - https://github.com/Johnnnmai/100x-product-managers

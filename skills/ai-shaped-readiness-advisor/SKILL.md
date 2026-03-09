@@ -1,6 +1,6 @@
 ---
 name: ai-shaped-readiness-advisor
-description: Assess whether your product work is AI-first or AI-shaped. Score 5 competencies and recommend the next capability to build.
+description: Use when assessing whether your PM team is merely AI-assisted or truly AI-shaped, and deciding which capability to build next.
 type: interactive
 theme: ai-agents
 best_for:
@@ -15,9 +15,9 @@ estimated_time: "15-20 min"
 
 ## Purpose
 
-Assess whether your product work is **"AI-first"** (using AI to automate existing tasks faster) or **"AI-shaped"** (fundamentally redesigning how product teams operate around AI capabilities). Use this to evaluate your readiness across **5 essential PM competencies for 2026**, identify gaps, and get concrete recommendations on which capability to build first.
+Assess whether your product work is **"AI-first"** or genuinely **"AI-shaped."** Use this to evaluate how your team is redesigning context, workflows, and decision quality around AI, identify the capability gap that matters most, and choose the next investment that will actually change PM performance.
 
-**Key Distinction:** AI-first is cute (using Copilot to write PRDs faster). AI-shaped is survival (building a durable "reality layer" that both humans and AI trust, orchestrating AI workflows, compressing learning cycles).
+**Key Distinction:** AI-first speeds up familiar tasks. AI-shaped rewires how product work gets done so humans and AI can operate against the same reality layer, faster learning loops, and stronger decision systems.
 
 This is not about AI tools—it's about **organizational redesign around AI as co-intelligence**. The interactive skill guides you through a maturity assessment, then recommends your next move.
 

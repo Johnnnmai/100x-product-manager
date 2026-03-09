@@ -1,6 +1,6 @@
 ---
 name: discovery-interview-prep
-description: Guide product managers through preparing for customer discovery interviews by asking adaptive questions about research goals, customer segments, constraints, and methodologies. Use this to design effe
+description: Use when planning discovery interviews and needing the right research goal, method, and question structure for a specific customer segment.
 type: interactive
 theme: discovery-research
 best_for:
@@ -16,9 +16,9 @@ estimated_time: "15-20 min"
 
 
 ## Purpose
-Guide product managers through preparing for customer discovery interviews by asking adaptive questions about research goals, customer segments, constraints, and methodologies. Use this to design effective interview plans, craft targeted questions, avoid common biases, and maximize learning from limited customer access—ensuring discovery interviews yield actionable insights rather than confirmation bias or surface-level feedback.
+Plan higher-signal discovery interviews for a specific product question, customer segment, and constraint set. Use this to choose the right interview method, craft sharper questions, and avoid wasting scarce customer access on vague conversations or solution-first bias.
 
-This is not a script generator—it's a strategic prep process that outputs a tailored interview plan with methodology, question framework, and success criteria.
+This is not a script generator. It is a prep workflow that outputs a tailored interview plan, methodology choice, question framework, and success criteria.
 
 ## Key Concepts
 
