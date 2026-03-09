@@ -450,11 +450,10 @@ def render_sidebar(skill: dict | None = None):
         st.divider()
         st.caption("Streamlit (beta) · New feature in flight")
         st.caption(
-            "[Feedback via GitHub ↗](https://github.com/deanpeters/Product-Manager-Skills/issues) · "
-            "[Connect on LinkedIn ↗](https://linkedin.com/in/deanpeters)"
+            "[Feedback via GitHub ↗](https://github.com/Johnnnmai/100x-product-managers/issues)"
         )
-        st.caption("46 PM skills · CC BY-NC-SA 4.0")
-        st.caption("[GitHub ↗](https://github.com/deanpeters/product-manager-skills)")
+        st.caption(f"{len(load_skills())} PM skills · CC BY-NC-SA 4.0")
+        st.caption("[GitHub ↗](https://github.com/Johnnnmai/100x-product-managers)")
 
 
 # ─── Screen: Home ─────────────────────────────────────────────────────────────
@@ -462,9 +461,8 @@ def render_sidebar(skill: dict | None = None):
 def render_home(skills: list):
     st.title("PM Skills Playground (beta)")
     st.markdown(
-        "Streamlit (beta): a new feature in flight. Browse 46 battle-tested PM frameworks, pick a theme, and test-drive skills. "
-        "Feedback welcome via [GitHub issues](https://github.com/deanpeters/Product-Manager-Skills/issues) "
-        "or [LinkedIn](https://linkedin.com/in/deanpeters)."
+        f"Streamlit (beta): a new feature in flight. Browse {len(skills)} PM skills, pick a theme, and test-drive skills. "
+        "Feedback welcome via [GitHub issues](https://github.com/Johnnnmai/100x-product-managers/issues)."
     )
     st.divider()
 

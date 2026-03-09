@@ -1,263 +1,145 @@
-# 100X PM Skills / 100X 产品经理技能体系
+# 100X Product Managers
 
-[English](#english) | [中文](#中文)
+Structured PM skills for Claude Code, Codex, and agent-driven product work.
 
----
+English | 中文
 
-## English
+## Why This Repo Exists
 
-### Our Philosophy
+Most PM AI outputs fail for the same reason: the model can generate text, but it does not understand the operating system behind strong product work.
 
-```
-🎯 Market-Driven: Build what the market needs, not what we think
-⚡ Move Fast: Speed is a competitive advantage
-🔄 Iterate Fast: Learn fast, fail fast, pivot fast
-📈 100x Thinking: Aim for 100x, not 10%
-```
+This repository packages PM frameworks into reusable skills so the agent can:
+- ask better questions before generating artifacts
+- move from vague ideas to decision-ready outputs
+- keep speed, evidence, and leverage at the center of product work
 
-We believe in:
-- **Market-Driven**: The market decides what succeeds, not internal opinions
-- **Speed as Strategy**: In fast-moving markets, speed IS the strategy
-- **Learn Fast**: Hypotheses are cheap to test, fail quickly, learn quickly
-- **Think Exponential**: 100x thinking instead of 10% improvements
+This repo is especially opinionated about four things:
+- Market-driven decisions over internal opinion
+- Speed as strategy
+- Rapid validation before heavy investment
+- AI-shaped PM work, not prompt theater
 
----
+中文说明：
+- 这不是一个“提示词大礼包”，而是一套可复用的 PM 工作技能库。
+- 重点不是让 AI 写得更像，而是让 AI 更懂 PM 的判断逻辑、验证逻辑和交付逻辑。
+- 核心理念是：市场驱动、快速验证、指数思维、AI 协作。
 
-### Philosophy
+## What You Get
 
-**10X vs 100X: What's the Difference?**
+Current catalog:
+- 49 skills total
+- 22 component skills
+- 20 interactive skills
+- 7 workflow skills
 
-| Concept | Focus | Description |
-|---------|-------|-------------|
-| **10X PM** | Personal Efficiency | Individual productivity gains - work faster, better |
-| **100X PM** | Organizational Leverage | Change team/organization output curve through systems |
+High-signal tracks:
 
-**Our Focus: 100X Only**
+| Track | What it helps with | Recommended starting skills |
+| --- | --- | --- |
+| 100X Core | Market-first prioritization, fast validation, leverage thinking | `market-driven-prioritization`, `rapid-iteration-cycle`, `10x-hypothesis-framework` |
+| Discovery & Strategy | Problem framing, positioning, opportunity mapping | `discovery-interview-prep`, `positioning-workshop`, `opportunity-solution-tree`, `product-strategy-session` |
+| Delivery & Artifacts | PRDs, roadmaps, user stories, epic breakdown | `prd-development`, `roadmap-planning`, `user-story`, `epic-breakdown-advisor` |
+| Business & Growth | SaaS health, pricing, revenue, market sizing | `business-health-diagnostic`, `finance-based-pricing-advisor`, `saas-revenue-growth-metrics`, `tam-sam-som-calculator` |
+| AI-Shaped PM Leadership | Context engineering, AI readiness, PM leadership leverage | `context-engineering-advisor`, `ai-shaped-readiness-advisor`, `director-readiness-advisor`, `vp-cpo-readiness-advisor` |
 
-10X is "work harder," 100X is "fewer decisions but higher accuracy" - turning uncertainty into controllable variables.
+## Start Here
 
----
+If you only have 15 minutes, start with [START_HERE.md](START_HERE.md).
 
-### The 6 MECE Decision Categories
+Suggested first paths:
 
-Every PM must answer these 6 questions. Each has unique failure modes:
+| Your goal | Start with | Then use |
+| --- | --- | --- |
+| Pick the right next bet | `market-driven-prioritization` | `rapid-iteration-cycle` |
+| Turn messy discovery into a shippable plan | `problem-framing-canvas` | `prd-development` |
+| Improve roadmap quality | `prioritization-advisor` | `roadmap-planning` |
+| Diagnose a SaaS business | `business-health-diagnostic` | `saas-revenue-growth-metrics` |
+| Make your PM team more AI-native | `context-engineering-advisor` | `ai-shaped-readiness-advisor` |
 
-| Category | Question | Failure Mode |
-|----------|----------|--------------|
-| **Outcome** | What result should users get? | Building useless products |
-| **Evidence** | How do we prove it works? | Blind optimization |
-| **Solution** | What do we build/not build? | Endless rework |
-| **Delivery** | How do we ship on time? | Death by delay |
-| **Risk** | How do we fail safely? | Catastrophic launches |
-| **Alignment** | Who decides, who blocks? | Internal耗 |
+中文建议：
+- 如果你想先感受到差异化价值，优先试 `market-driven-prioritization`、`rapid-iteration-cycle`、`business-health-diagnostic`。
+- 如果你想直接落地团队协作，优先试 `prd-development`、`user-story`、`roadmap-planning`。
+- 如果你在探索“PM + Claude Code”工作流，优先试 `context-engineering-advisor` 和 `ai-shaped-readiness-advisor`。
 
----
+## How To Use
 
-### 12 Core Skill Cards
+### Option 1: Use Directly From This Repo
 
-#### A. Outcome (2 cards)
-1. Problem Framing & Outcome Spec
-2. Service Blueprint (Product is Service)
-
-#### B. Evidence (2 cards)
-3. Metrics Tree & Counter Metrics
-4. Experiment Design (A/B or Quasi-experiment)
-
-#### C. Solution (2 cards)
-5. MVP Cutline & Non-goals
-6. Edge Cases & Non-functional Requirements
-
-#### D. Delivery (2 cards)
-7. Milestone Plan & Critical Path
-8. Launch Readiness Review (LRR)
-
-#### E. Risk (2 cards)
-9. Rollout & Rollback Plan
-10. Abuse & Threat Model
-
-#### F. Alignment (2 cards)
-11. Stakeholder Map & Decision Owner
-12. Exec Narrative (1 page)
-
----
-
-### 3 Playbooks
-
-| Playbook | When to Use | Duration |
-|----------|-------------|----------|
-| **startup_mvp_0_to_1** | New product from 0 to 1 | 2-4 weeks |
-| **bigtech_feature_launch** | New feature in large org | 4-8 weeks |
-| **regulated_platform_change** | Financial/Security/Infrastructure | 8-12 weeks |
-
----
-
-### Quick Start
-
-**For Startup:**
-```
-1 → 5 → 7 → 3 → 9 (required)
-2 → 4 (optional)
+```bash
+git clone https://github.com/Johnnnmai/100x-product-managers.git
+cd 100x-product-managers
 ```
 
-**For Big Tech:**
-```
-1 → 3 → 4 → 6 → 8 → 9 → 10 → 11 → 12 (required)
-2 → 7 (optional)
-```
+Then call a skill by path in your agent:
 
-**For Regulated Products:**
-```
-1 → 2 → 3 → 6 → 8 → 9 → 10 → 11 → 12 (required)
-+ Compliance checklist, audit logging spec
+```text
+Using skills/prd-development/SKILL.md, create a PRD for a mobile onboarding redesign. Ask up to 3 clarifying questions first.
 ```
 
----
+### Option 2: Install With `skills.sh`
 
-## 中文
+List the skills:
 
-### 我们的理念
-
-```
-🎯 市场驱动：构建市场需要的，而非我们认为的
-⚡ 快速行动：速度是核心竞争力
-🔄 快速迭代：快速学习，快速失败，快速转向
-📈 100倍思维：瞄准100倍增长，而非10%
+```bash
+npx skills add Johnnnmai/100x-product-managers --list
 ```
 
-我们相信：
-- **市场驱动**：市场决定什么成功，而非内部观点
-- **速度即战略**：在快速移动的市场中，速度就是战略
-- **快速学习**：假设测试成本很低，快速失败，快速学习
-- **指数思维**：100倍思维而非10%改进
+Install one for Codex:
 
----
-
-### 核心理念
-
-**10X vs 100X：区别是什么？**
-
-| 概念 | 重点 | 描述 |
-|------|------|------|
-| **10X PM** | 个人效率 | 个人生产力提升 - 更快、更好地工作 |
-| **100X PM** | 组织杠杆 | 通过系统改变团队/组织的产出曲线 |
-
-**我们的重点：只做100X**
-
-10X是"更努力"，100X是"更少决策但更高准确率"——把不确定性变成可控变量。
-
----
-
-### 6类 MECE 决策框架
-
-每个PM必须回答这6个问题。每类都有独特的失败模式：
-
-| 类别 | 问题 | 失败模式 |
-|------|------|----------|
-| **Outcome 结果** | 用户应该获得什么结果？ | 构建无用的产品 |
-| **Evidence 证据** | 如何证明它有效？ | 盲目优化 |
-| **Solution 方案** | 构建什么、不构建什么？ | 无限返工 |
-| **Delivery 交付** | 如何按时发布？ | 拖延致死 |
-| **Risk 风险** | 如何安全失败？ | 灾难性发布 |
-| **Alignment 对齐** | 谁决定、谁阻塞？ | 内部消耗 |
-
----
-
-### 12张核心 Skill Cards
-
-#### A. Outcome 结果 (2张)
-1. 问题定义与结果规范
-2. 服务蓝图（产品即服务）
-
-#### B. Evidence 证据 (2张)
-3. 指标树与反指标
-4. 实验设计 (A/B 或准实验)
-
-#### C. Solution 方案 (2张)
-5. MVP 切分线与非目标
-6. 边缘情况与非功能需求
-
-#### D. Delivery 交付 (2张)
-7. 里程碑计划与关键路径
-8. 发布就绪审查 (LRR)
-
-#### E. Risk 风险 (2张)
-9. 灰度发布与回滚计划
-10. 滥用与威胁模型
-
-#### F. Alignment 对齐 (2张)
-11. 利益相关方地图与决策所有者
-12. 高管叙事（一页纸）
-
----
-
-### 3个 Playbooks
-
-| Playbook | 适用场景 | 时长 |
-|----------|----------|------|
-| **startup_mvp_0_to_1** | 从0到1的新产品 | 2-4周 |
-| **bigtech_feature_launch** | 大厂新功能 | 4-8周 |
-| **regulated_platform_change** | 金融/安全/基础设施 | 8-12周 |
-
----
-
-### 快速开始
-
-**Startup 场景：**
-```
-1 → 5 → 7 → 3 → 9（必做）
-2 → 4（可选）
+```bash
+npx skills add Johnnnmai/100x-product-managers --skill prd-development -a codex -g
 ```
 
-**Big Tech 场景：**
-```
-1 → 3 → 4 → 6 → 8 → 9 → 10 → 11 → 12（必做）
-2 → 7（可选）
+Install one for Claude Code:
+
+```bash
+npx skills add Johnnnmai/100x-product-managers --skill market-driven-prioritization -a claude-code -g
 ```
 
-**受监管产品场景：**
-```
-1 → 2 → 3 → 6 → 8 → 9 → 10 → 11 → 12（必做）
-+ 合规清单、审计日志规范
-```
+More detailed platform guides:
+- [Using PM Skills with Claude](docs/Using%20PM%20Skills%20with%20Claude.md)
+- [Using PM Skills with Codex](docs/Using%20PM%20Skills%20with%20Codex.md)
+- [Using PM Skills with ChatGPT](docs/Using%20PM%20Skills%20with%20ChatGPT.md)
 
----
+## How This Repo Is Positioned
 
-## Directory Structure
+This repo is not trying to be a generic project-management pack.
 
-```
+Our positioning:
+- strong on PM judgment, validation, prioritization, and business thinking
+- increasingly strong on AI-shaped PM operating systems
+- intentionally narrow on generic PMO/admin workflows unless they directly improve product decisions or shipping quality
+
+Practical rule:
+- include Claude Code and agent-workflow skills when they help PMs ship better decisions faster
+- avoid broad, generic project-management content that dilutes the PM + AI thesis
+
+## Repository Structure
+
+```text
 100x-product-managers/
-├── README.md                    # This file
-├── 00_Glossary/
-│   └── 100x_pm.md             # Terminology definitions
-├── 01_Skill_Cards/
-│   ├── template.md             # Skill card template
-│   ├── outcome/               # Category A
-│   │   ├── 01_problem_framing.md
-│   │   └── 02_service_blueprint.md
-│   ├── evidence/             # Category B
-│   │   ├── 03_metrics_tree.md
-│   │   └── 04_experiment_design.md
-│   ├── solution/             # Category C
-│   │   ├── 05_mvp_cutline.md
-│   │   └── 06_edge_cases.md
-│   ├── delivery/             # Category D
-│   │   ├── 07_milestone_plan.md
-│   │   └── 08_launch_readiness.md
-│   ├── risk/                # Category E
-│   │   ├── 09_rollout_rollback.md
-│   │   └── 10_threat_model.md
-│   └── alignment/            # Category F
-│       ├── 11_stakeholder_map.md
-│       └── 12_exec_narrative.md
-├── 02_Playbooks/
-│   ├── startup_mvp_0_to_1.md
-│   ├── bigtech_feature_launch.md
-│   └── regulated_platform_change.md
-└── 03_Artifacts/
-    └── [Referenced in skill cards]
+├── skills/                         # All skills
+├── docs/                           # Usage guides, launch docs, maintenance notes
+├── research/                       # Source material and essays
+├── app/                            # Streamlit playground
+├── scripts/                        # Packaging, search, validation, and helper scripts
+└── START_HERE.md                   # Recommended first-run paths
 ```
 
----
+## Quality Bar
+
+Before promotion or release, this repo should always have:
+- current install instructions
+- working feedback links
+- a clear first-skill onboarding path
+- metadata-conformant skill files
+- no stale repo-owner references in user-facing docs
+
+## Contributing
+
+See:
+- [CONTRIBUTING.md](CONTRIBUTING.md)
+- [docs/Building PM Skills.md](docs/Building%20PM%20Skills.md)
 
 ## License
 

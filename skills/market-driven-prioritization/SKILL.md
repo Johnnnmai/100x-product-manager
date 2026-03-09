@@ -1,184 +1,179 @@
 ---
 name: market-driven-prioritization
-description: Prioritize features based on market validation rather than internal opinions. Ask "Does the market need this?" before "Can we build this?"
+description: Prioritize work using market evidence, not internal confidence. Validate demand before committing build capacity.
 type: component
 ---
 
-## English
+## Purpose
 
-### Purpose
+Use this skill to rank features, initiatives, or bets based on **market evidence** rather than stakeholder energy, internal politics, or narrative momentum.
 
-Prioritize features, initiatives, or projects based on **market validation** rather than internal opinions or political alignment. Ask "Does the market need this?" before "Can we build this?"
+The core discipline is simple: ask *"Does the market need this?"* before asking *"Can we build this?"* A strong PM organization does not just prioritize by impact and effort. It also prioritizes by how real the demand signal is.
 
-This skill ensures every prioritization decision is backed by market evidence, not just internal assumptions.
+### 中文
 
-### Key Concepts
+这个技能用于基于 **市场证据** 做优先级判断，而不是被内部意见、声音大的人、或者“看起来很重要”的叙事带着走。
 
-**Market Validation Status:**
+核心原则只有一句话：先问 *市场需不需要*，再问 *团队能不能做*。
 
-| Status | Description | Priority |
-|--------|-------------|----------|
-| 🔴 **Not Validated** | Assumptions only, no market evidence | Lowest |
-| 🟡 **Partially Validated** | Some signals, need more validation | Medium |
-| 🟢 **Validated** | Clear market demand, data-supported | Highest |
+## Key Concepts
 
-**Market Validation Criteria:**
+### Validation Status
 
-1. **User Demand Evidence**
-   - Do users explicitly ask for this?
-   - Is there search/data evidence of demand?
-   - Are competitors building this?
+| Status | Meaning | Default treatment |
+| --- | --- | --- |
+| Not validated | mostly assumptions | do not build yet |
+| Partially validated | some signals, still uncertain | validate fast |
+| Validated | strong evidence of demand | candidate for execution |
 
-2. **Market Timing**
-   - Is the market ready for this?
-   - Are there regulatory/external tailwinds?
-   - Is there a window of opportunity?
+### Evidence Types
 
-3. **Competitive Advantage**
-   - Does this create defensibility?
-   - Does this capture market share?
-   - Does this block competitors?
+Good evidence can include:
+- repeated customer requests
+- churn or loss reasons
+- usage or search behavior
+- willingness to pay
+- competitive pressure with customer relevance
+- regulatory or market timing shifts
 
-### When to Use This
+Weak evidence often sounds like:
+- "leadership thinks this matters"
+- "competitors have it"
+- "AI is hot right now"
+- "users will probably want this"
 
-- Prioritizing features for next quarter
-- Making build vs. buy decisions
-- Evaluating new product ideas
-- Allocating engineering resources
+### The Real Priority Rule
 
-### When NOT to Use This
+If something is **high potential but weakly validated**, the next priority is usually not delivery. The next priority is **validation**.
 
-- When you have clear regulatory requirements (compliance comes first)
-- When there's no time for validation (emergency features)
+### When To Use It
 
----
+- quarterly planning
+- feature ranking
+- build vs. buy debates
+- new product bets
+- allocation of engineering bandwidth
 
-## 中文
+### When Not To Use It
 
-### 目的
+- urgent compliance work
+- production incidents
+- contractual must-do items with no real decision space
 
-基于**市场验证**而非内部观点或政治倾向来优先排序功能、计划或项目。在问"我们能构建这个吗？"之前，先问"市场需要这个吗？"
+### 中文
 
-此技能确保每个优先排序决策都有市场证据支持，而非仅仅是内部假设。
+优先级不是只看影响力和投入，还要看证据强度。
 
-### 核心概念
+高潜力但低验证的项目，不应该直接进入开发，而应该先进入验证队列。
 
-**市场验证状态：**
+## Application
 
-| 状态 | 描述 | 优先级 |
-|------|------|--------|
-| 🔴 **未验证** | 仅有假设，无市场证据 | 最低 |
-| 🟡 **部分验证** | 一些信号，需要更多验证 | 中等 |
-| 🟢 **已验证** | 明确市场需求，数据支持 | 最高 |
+### Step 1: List the Candidates
 
-**市场验证标准：**
+Create a simple table with:
+- item name
+- user problem
+- expected impact
+- current evidence
 
-1. **用户需求证据**
-   - 用户是否明确要求这个？
-   - 是否有搜索/数据证据证明需求？
-   - 竞争对手是否在构建这个？
+### Step 2: Score Validation Honestly
 
-2. **市场时机**
-   - 市场是否准备好了？
-   - 是否有监管/外部顺风？
-   - 是否有时机窗口？
+For each candidate, label it:
+- not validated
+- partially validated
+- validated
 
-3. **竞争优势**
-   - 这是否创造了护城河？
-   - 这是否占据了市场份额？
-   - 这是否阻止了竞争对手？
+Then write down the actual evidence. If there is no evidence, say so directly.
 
-### 何时使用
+### Step 3: Combine Validation With Impact
 
-- 为下季度优先排序功能
-- 做出构建vs购买决策
-- 评估新产品想法
-- 分配工程资源
+Use this default decision logic:
 
-### 何时不使用
+| Condition | Default move |
+| --- | --- |
+| Validated + high impact | prioritize for delivery |
+| Validated + medium/low impact | schedule deliberately |
+| Partially validated + high impact | run fast validation next |
+| Partially validated + low impact | deprioritize |
+| Not validated + high impact | design a proof test first |
+| Not validated + low impact | drop or park |
 
-- 当有明确的监管要求时（合规优先）
-- 当没有时间验证时（紧急功能）
+### Step 4: Turn Uncertainty Into Validation Tasks
 
----
+For partially validated or unvalidated items, define the fastest next step:
+- 5 customer calls
+- smoke test landing page
+- prototype demo
+- pricing or willingness-to-pay conversation
+- usage-data cut
 
-## Application / 应用
+### Step 5: Publish the Decision
 
-### Step 1: List All Candidates / 列出所有候选项
+End with:
+- what gets built now
+- what gets validated next
+- what gets dropped
+- what assumptions remain
 
-List all features/initiatives to prioritize with their basic description.
+Suggested output format:
 
-### Step 2: Assess Market Validation Status / 评估市场验证状态
+```markdown
+| Item | Impact | Validation | Evidence | Decision |
+| --- | --- | --- | --- | --- |
+```
 
-For each candidate, assign one of these statuses: 🔴 Not Validated, 🟡 Partially Validated, 🟢 Validated
+### 中文
 
-### Step 3: Prioritize by Validation + Impact / 按验证状态+影响力优先
+推荐流程：
+1. 先列候选项
+2. 诚实判断验证状态
+3. 把“验证强度 + 影响力”一起看
+4. 对不确定项设计最快验证动作
+5. 明确输出：现在做什么，先验证什么，直接砍什么
 
-**Priority Order:**
-1. 🟢 Validated + High Impact (DO FIRST)
-2. 🟢 Validated + Low Impact (Schedule)
-3. 🟡 Partially Validated + High Impact (Validate Fast)
-4. 🟡 Partially Validated + Low Impact (Deprioritize)
-5. 🔴 Not Validated + High Impact (Pivot)
-6. 🔴 Not Validated + Low Impact (Drop)
+## Examples
 
-### Output Template / 输出模板
+### Example: B2B SaaS Q2 Prioritization
 
-| Feature | Impact | Validation Status | Validation Evidence | Priority |
-|---------|--------|-----------------|-------------------|----------|
-| | High/Med/Low | 🔴/🟡/🟢 | | P1/P2/P3/P4 |
+| Item | Impact | Validation | Evidence | Decision |
+| --- | --- | --- | --- | --- |
+| API integration | High | Validated | 5 enterprise accounts requested it | Build now |
+| Mobile app | High | Not validated | internal assumption only | Validate first |
+| Dashboard redesign | Medium | Partially validated | mixed customer feedback | Run targeted research |
+| Dark mode | Low | Partially validated | nice-to-have comments only | Deprioritize |
 
----
+### 中文
 
-## Key Principle / 关键原则
+这个例子里最常见的错误是把 “高影响” 误当成 “高优先级”。如果没有证据，高影响只是想象中的影响。
 
-**Speed matters**: If something is 🟡 Partial + High Impact, the priority is NOT to build it—it's to VALIDATE it fast.
+## Common Pitfalls
 
-**速度很重要**：如果某个项目是🟡部分验证+高影响力，优先级不是构建它——而是快速验证它！
+### Treating Internal Opinion As Market Signal
 
----
+If the only evidence is internal conviction, the item is not validated.
 
-## Common Pitfalls / 常见陷阱
+### Prioritizing Excitement Instead of Evidence
 
-### Pitfall 1: Internal Opinion as Validation
-**Symptom:** "We think users want this"
+Trend pressure, AI pressure, and competitor pressure often create false urgency.
 
-**Fix:** Always ask for market evidence. What data supports this?
+### Leaving the Next Step Ambiguous
 
-### Pitfall 2: Prioritizing Without Validation
-**Symptom:** Building features that are "obviously needed"
+If an item is not ready to build, say what validation step should happen next. Otherwise it will return in the next planning cycle as the same unresolved debate.
 
-**Fix:** Even obvious needs should be validated. The market is always right.
+### 中文
 
-### Pitfall 3: Analysis Paralysis
-**Symptom:** Never validating because "perfect data" doesn't exist
+常见问题：
+- 把内部共识当成市场需求
+- 因为热点或竞争焦虑而误判优先级
+- 说“先不做”，但没有给出验证动作
 
-**Fix:** Start with what you have. 5 user interviews > 0 interviews.
+## References
 
----
+Related skills:
+- `skills/prioritization-advisor/SKILL.md`
+- `skills/problem-statement/SKILL.md`
+- `skills/discovery-process/SKILL.md`
+- `skills/rapid-iteration-cycle/SKILL.md`
 
-## Examples / 示例
-
-**Scenario:** Prioritizing new features for a B2B SaaS product
-
-| Feature | Impact | Validation Status | Priority |
-|---------|--------|-------------------|----------|
-| API Integration | High | 🟢 Validated (5 customers asked) | P1 |
-| Mobile App | High | 🔴 Not Validated (assumptions only) | P3 |
-| Dashboard Redesign | Medium | 🟡 Partial (mixed feedback) | P2 |
-| Dark Mode | Low | 🟡 Partial (nice to have) | P4 |
-
----
-
-## Related Skills / 相关技能
-
-- `skills/problem-statement/SKILL.md` — Define the problem first
-- `skills/discovery-process/SKILL.md` — Validate market needs
-- `skills/prioritization-advisor/SKILL.md` — Additional prioritization frameworks
-
----
-
-**Skill type:** Component
-**Suggested filename:** `market-driven-prioritization.md`
-**Suggested placement:** `/skills/components/`
-**Dependencies:** None
+Example:
+- `skills/market-driven-prioritization/examples/sample.md`

@@ -1,100 +1,88 @@
-# 100X Product Managers - Claude Code Guide
+# 100X Product Managers - Claude Guide
 
 ## Overview
 
-This is a Claude Code skill collection for Product Managers who believe in:
-- **Move Fast and Iterate Fast**
-- **Market-Driven Development**
-- **10x Thinking**
+This repository is a PM skill library for agent-assisted product work.
 
-## When to Use These Skills
+Use it when the user needs help with:
+- product discovery
+- prioritization
+- PM artifacts like PRDs and user stories
+- SaaS metrics, pricing, and business diagnostics
+- AI-shaped PM operating systems
 
-Use these skills when you need to:
+## Current Catalog
 
-### Core Thinking (Skills 1-3)
-- Prioritize features with market validation
-- Design fast iteration cycles (2-week MVPs)
-- Generate 10x growth hypotheses
+- 49 skills total
+- 22 component skills
+- 20 interactive skills
+- 7 workflow skills
 
-### Guided Discovery (Skills 4-6)
-- Detect market signals
-- Make launch decisions
-- Respond to competitive moves
+## Recommended Skill Tracks
 
-### End-to-End Processes (Skills 7-8)
-- Run 1-week market validation sprints
-- Execute 4-week 100x growth sprints
+### 100X Core
+- `market-driven-prioritization`
+- `rapid-iteration-cycle`
+- `10x-hypothesis-framework`
 
-## Key Principles
+### Discovery and Strategy
+- `discovery-interview-prep`
+- `positioning-workshop`
+- `opportunity-solution-tree`
+- `product-strategy-session`
 
-### 1. Always Ask "Does the Market Need This?"
-Before any feature discussion, validate market need first.
+### Delivery and Execution
+- `prd-development`
+- `roadmap-planning`
+- `user-story`
+- `epic-breakdown-advisor`
 
-### 2. Speed is a Competitive Advantage
-Every deliverable should emphasize fast iteration:
-- 2-week MVP cycles
-- Weekly experiments
-- Rapid hypothesis testing
+### Business and Growth
+- `business-health-diagnostic`
+- `finance-based-pricing-advisor`
+- `saas-revenue-growth-metrics`
+- `tam-sam-som-calculator`
 
-### 3. Think 10x, Not 10%
-Challenge assumptions: "What would 10x growth look like?"
+### AI-Shaped PM Leadership
+- `context-engineering-advisor`
+- `ai-shaped-readiness-advisor`
+- `director-readiness-advisor`
+- `vp-cpo-readiness-advisor`
 
-### 4. Market Signals > Opinions
-Base decisions on:
-- User data
-- Cohort analysis
-- Competitive moves
-- Market trends
+## Core Principles
 
-## Skill Structure
+### 1. Market Evidence Beats Internal Opinion
+Default to real demand signals, not stakeholder confidence.
 
-### Core Skills (skills/core/)
-- `market-driven-prioritization.md` - Market-first prioritization
-- `rapid-iteration-cycle.md` - 2-week MVP framework
-- `10x-hypothesis-framework.md` - Exponential growth thinking
+### 2. Speed Is Strategy
+Prefer fast validation and short learning loops over large speculative builds.
 
-### Interactive Skills (skills/interactive/)
-- `market-signal-detector.md` - Signal detection guide
-- `launch-decision-engine.md` - Go/no-go framework
-- `competitive-move-generator.md` - Response playbook
+### 3. 10x Thinking Is About Leverage
+Use exponential framing to find leverage, not to avoid execution discipline.
 
-### Workflow Skills (skills/workflows/)
-- `market-validation-sprint.md` - 1-week validation
-- `100x-growth-sprint.md` - 4-week growth execution
+### 4. AI Should Improve PM Judgment, Not Just Output Volume
+The best skills in this repo help users make better decisions and create stronger operating systems.
 
-## Philosophy
+## Working Norms
 
-See `docs/philosophy.md` for the detailed philosophy behind these skills.
+- Point users to `START_HERE.md` when they do not know which skill to use first.
+- Prefer explicit skill paths such as `skills/prd-development/SKILL.md`.
+- If the user is unclear, recommend one skill first instead of dumping a long catalog.
+- Keep the repo differentiated from generic project-management packs.
+- Favor PM + AI execution skills over broad PMO/admin content when expanding the catalog.
 
-## Comparison with Product-Manager-Skills
+## Repo Map
 
-This collection is designed to complement (not replace) Product-Manager-Skills:
+- `skills/` contains the skill library
+- `docs/` contains usage guides and launch docs
+- `research/` contains source essays and notes
+- `app/` contains the Streamlit playground
+- `scripts/` contains packaging, validation, and helper utilities
 
-| Aspect | Product-Manager-Skills | 100X PM |
-|--------|----------------------|---------|
-| Quantity | 46 skills | 8 skills |
-| Philosophy | Comprehensive | Speed + Market |
-| Iteration | Not emphasized | Core |
-| Market-Driven | Secondary | Primary |
+## Quality Expectations
 
-## Usage Examples
-
-### Example 1: Prioritizing Features
-```
-User: "We have 10 features to build next quarter"
-
-Response: "Let me use market-driven-prioritization to evaluate each feature against market validation status."
-```
-
-### Example 2: Validating an Idea
-```
-User: "We want to add AI-powered search"
-
-Response: "Let's run rapid-iteration-cycle to validate this in 2 weeks first."
-```
-
-### Example 3: Growth Strategy
-```
-User: "How do we 10x our revenue?"
-
-Response: "Let's use 10x-hypothesis-framework to identify the biggest leverage points."
+Before shipping changes:
+- run `python scripts/check-skill-metadata.py`
+- verify install instructions still match the current GitHub repo
+- remove stale repo-owner references from user-facing docs
+- keep onboarding simple for first-time users

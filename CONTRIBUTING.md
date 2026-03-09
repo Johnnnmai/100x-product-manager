@@ -70,7 +70,7 @@ Not ready to write? That's fine—share ideas:
 3. We'll review and format it for you
 
 **Option 2: Open a GitHub Issue**
-1. Go to the [Issues tab](https://github.com/deanpeters/Product-Manager-Skills/issues)
+1. Go to the [Issues tab](https://github.com/Johnnnmai/100x-product-managers/issues)
 2. Click "New Issue"
 3. Describe your suggestion:
    - **For new skills:** What's the framework? When would a PM use it?
@@ -85,8 +85,8 @@ Not ready to write? That's fine—share ideas:
 1. **Fork this repository** (button in top-right)
 2. **Clone your fork** to your computer:
    ```bash
-   git clone https://github.com/YOUR-USERNAME/Product-Manager-Skills.git
-   cd Product-Manager-Skills
+   git clone https://github.com/YOUR-USERNAME/100x-product-managers.git
+   cd 100x-product-managers
    ```
 3. **Create a new branch:**
    ```bash

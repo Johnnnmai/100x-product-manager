@@ -2,7 +2,7 @@
 
 A local web app for browsing and test-driving PM skills against available LLM APIs before committing to installing them in Claude Code, Cowork, or Codex.
 
-**Status:** Streamlit (beta). This is a new feature in flight and we are actively testing and refining it. Feedback is welcome via [GitHub Issues](https://github.com/deanpeters/Product-Manager-Skills/issues) or [LinkedIn](https://linkedin.com/in/deanpeters).
+**Status:** Streamlit (beta). This is a new feature in flight and we are actively testing and refining it. Feedback is welcome via [GitHub Issues](https://github.com/Johnnnmai/100x-product-managers/issues).
 
 **Pedagogic goal:** Lower the barrier from "I've heard about this skill" to "I've seen it work in my context." Users pick a theme, read what they're getting into, then run the skill — with full multi-turn conversation for interactive skills, progress tracking, and an explicit bail path at every step.
 

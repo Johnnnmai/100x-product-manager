@@ -1,195 +1,184 @@
 ---
 name: 10x-hypothesis-framework
-description: Think exponential, not incremental. Identify levers that could 10x your business.
+description: Think exponential, not incremental. Identify leverage points that could transform growth instead of merely improving it.
 type: component
 ---
 
-## English
+## Purpose
 
-### Purpose
+Use this skill to generate **high-leverage growth hypotheses** when incremental optimization is no longer enough. The goal is not to brainstorm moonshots for their own sake. The goal is to identify the few shifts that could materially change the growth curve of the business.
 
-Think about **exponential growth** rather than incremental improvements. Ask "What change can bring 10x growth?" instead of "How do we grow 10%?"
+This is useful when a PM team is trapped in 10 percent thinking: more traffic, slightly better onboarding, marginally lower churn. This skill forces a more valuable question: *what would have to be true for this business to get dramatically better, not just slightly better?*
 
-Most PMs think in 10% increments. This skill trains you to think in 10x multipliers—identifying high-leverage opportunities that can fundamentally change the business.
+### 中文
 
-### Key Concepts
+这个技能用于生成 **高杠杆增长假设**。重点不是空想“颠覆式创新”，而是识别哪些变化真正有机会改写业务增长曲线。
 
-**The Problem with 10%:**
+当团队陷入“提升 10%”的思维时，这个技能会强迫你换一个问题：*如果要把结果做出数量级差异，真正的杠杆在哪里？*
 
-| 10% Thinking | 10x Thinking |
-|--------------|--------------|
-| Optimize existing | Redefine the problem |
-| Incremental | Exponential |
-| Reduce friction | Remove the need |
-| Better features | Different model |
-| More traffic | Viral loops |
-| Lower churn | Delight users |
+## Key Concepts
 
-**The 10x Question:**
-For each growth lever, ask:
-- "What if this was 10x better?"
-- "What would 10x look like?"
-- "What would we do differently?"
+### 10 Percent Thinking vs. 10x Thinking
 
-### When to Use This
+| 10 percent thinking | 10x thinking |
+| --- | --- |
+| optimize the current flow | question the current model |
+| improve a metric in place | change the mechanism behind the metric |
+| ship more features | find stronger leverage |
+| reduce friction | remove entire steps |
+| scale effort | redesign the system |
 
-- Annual planning
-- Setting OKRs
-- Finding growth opportunities
-- Breaking through plateaus
+### Where 10x Leverage Usually Hides
 
-### When NOT to Use This
+- acquisition model changes
+- activation redesign
+- retention loops
+- pricing and packaging changes
+- distribution advantages
+- workflow automation or AI-native delivery
 
-- For tactical, short-term fixes
-- When you need quick wins (10x takes time)
+### When To Use It
 
----
+- annual or half-year planning
+- growth plateaus
+- category inflection points
+- investor or exec strategy discussions
 
-## 中文
+### When Not To Use It
 
-### 目的
+- short-term fire drills
+- bug triage
+- roadmap housekeeping
 
-思考**指数级增长**而非渐进式改进。问"什么变化能带来10倍增长？"而非"我们如何增长10%？"
+### 中文
 
-大多数PM以10%的增量思考。此技能训练你以10倍乘数思考——识别可以从根本上改变业务的高杠杆机会。
+`10x` 不是更激进地堆功能，而是重新寻找增长机制。
 
-### 核心概念
+常见杠杆点包括：
+- 获客方式变化
+- 激活链路重构
+- 留存循环
+- 定价与包装
+- 分发优势
+- AI/自动化带来的流程重构
 
-**10%的问题：**
+## Application
 
-| 10%思维 | 10倍思维 |
-|---------|----------|
-| 优化现有 | 重新定义问题 |
-| 渐进式 | 指数式 |
-| 减少摩擦 | 消除需求 |
-| 更好功能 | 不同模式 |
-| 更多流量 | 病毒式循环 |
-| 降低流失 | 取悦用户 |
+### Step 1: Pick the Growth Constraint
 
-**10倍问题：**
-对于每个增长杠杆，问：
-- "如果这个好10倍会怎样？"
-- "10倍会是什么样子？"
-- "我们会有什么不同的做法？"
+Start with one bottleneck, not a vague ambition.
 
-### 何时使用
+Examples:
+- low activation
+- stagnant expansion revenue
+- weak referral loops
+- flat retention after month three
 
-- 年度规划
-- 设定OKR
-- 寻找增长机会
-- 突破瓶颈
+### Step 2: Reframe the Question
 
-### 何时不使用
+Replace:
+- "How do we improve this by 10 percent?"
 
-- 对于战术性的短期修复
-- 当你需要快速获胜时（10倍需要时间）
+With:
+- "What would make this 10x better?"
+- "What model change would make the current constraint less relevant?"
+- "What would we do if the current process did not exist?"
 
----
+### Step 3: Generate 3-5 Leverage Hypotheses
 
-## Application / 应用
+For each hypothesis, write:
+- the leverage point
+- why it could be nonlinear
+- what metric it should move
+- what must be true for it to work
 
-### Step 1: Identify Current Constraints / 识别当前瓶颈
+Template:
 
-What are the bottlenecks limiting your growth?
+```text
+Hypothesis:
+If we change [mechanism], then [metric] could improve materially because [reason].
 
-| Category | Examples |
-|----------|----------|
-| Acquisition | Traffic, conversion rate |
-| Activation | Sign-up rate, onboarding completion |
-| Retention | Churn, engagement |
-| Revenue | ARPU, frequency |
-| Virality | Referral rate, NPS |
+This is potentially nonlinear because:
+- ...
 
-### Step 2: Ask the 10x Question / 问10倍问题
+The biggest assumption is:
+- ...
+```
 
-For each category, ask:
-- "What if this was 10x better?"
-- "What would 10x look like?"
-- "What would we do differently?"
+### Step 4: Cut Fantasy and Keep the Real Bets
 
-**Examples:**
-- 10x more traffic → Viral loop? SEO? Paid acquisition?
-- 10x better conversion → Better onboarding? AI personalization?
-- 10x retention → Different product? Subscription model?
-- 10x ARPU → New pricing? Premium tier? Enterprise?
+Keep only hypotheses that pass all three filters:
+- strategically meaningful
+- testable within a reasonable timeframe
+- connected to an actual business constraint
 
-### Step 3: Identify the 10x Levers / 识别10倍杠杆
+### Step 5: Convert the Best Idea Into a Fast Validation Plan
 
-Rank your opportunities by potential:
+Do not send 10x ideas straight into roadmap execution. Send them into a fast validation loop with:
+- one leading metric
+- one fastest proof test
+- one kill condition
 
-| Lever | Current | 10x Potential | Effort | Confidence |
-|-------|---------|---------------|--------|------------|
-| | | | High/Med/Low | High/Med/Low |
+### 中文
 
-### Step 4: Design Experiments / 设计实验
+操作顺序：
+1. 先找当前最大瓶颈
+2. 再把问题从“优化”改成“机制重构”
+3. 产出 3-5 个高杠杆假设
+4. 删掉不现实、不可验证、与核心约束无关的想法
+5. 把最好的想法转成快速验证计划，而不是直接立项
 
-For each top lever, design experiments:
+## Examples
 
-**Template:**
-- **Hypothesis:** If [lever change], then [metric] will 10x because [reason]
-- **Test:** [Minimum test description]
-- **Timeline:** [How fast can we test?]
-- **Success:** [What proves 10x potential?]
+### Example: B2B SaaS Expansion Revenue
 
----
+Current issue:
+- logos are stable
+- churn is acceptable
+- expansion revenue is flat
 
-## Key Principle / 关键原则
+Weak idea:
+- "add more premium features"
 
-**Think Exponential:**
-- Don't ask "How do we grow 10%?"
-- Ask "What would 10x growth require?"
-- Then work backwards from there
+Better 10x hypothesis:
+- "If we repackage the product around team workflows instead of seats, expansion could accelerate because value scales with usage depth, not just headcount."
 
-**指数思维：**
-- 不要问"我们如何增长10%？"
-- 问"10倍增长需要什么？"
-- 然后从那里倒推
+Fast validation:
+- test packaging with five customer calls
+- run pricing-page smoke test
+- measure upgrade intent and objection patterns
 
----
+### 中文
 
-## Common Pitfalls / 常见陷阱
+一个好的 10x 假设，通常不是“把原来做的事再做大一点”，而是“换一个更强的价值机制”。
 
-### Pitfall 1: Only Thinking 10%
-**Symptom:** Defaulting to "How do we improve 10%?"
+## Common Pitfalls
 
-**Fix:** Always ask "What's the 10x version?"
+### Treating 10x As Branding
 
-### Pitfall 2: 10x as Excuse for No Action
-**Symptom:** "We're waiting for a 10x idea"
+If the idea sounds dramatic but does not change the mechanism behind growth, it is not 10x thinking.
 
-**Fix:** Start with 10% and compound. 10x comes from iterating on what works.
+### Confusing Leverage With Fantasy
 
-### Pitfall 3: Not Testing 10x Hypotheses
-**Symptom:** Big ideas without validation
+If the hypothesis cannot be tested, challenged, or scoped, it is a slogan, not a product hypothesis.
 
-**Fix:** Treat 10x hypotheses just like any other—test them fast.
+### Skipping Validation
 
----
+The more nonlinear the idea sounds, the more important it is to validate cheaply before building heavily.
 
-## Examples / 示例
+### 中文
 
-**Scenario:** E-commerce platform growth
+常见错误：
+- 把 10x 当成口号
+- 把大想法误当成高杠杆
+- 跳过验证直接推进执行
 
-**Current:** 5% conversion rate, $50 AOV
+## References
 
-**10x Questions:**
-- 10x traffic → What if every user brought 10 new users? (Viral loop)
-- 10x conversion → What if checkout was instant? (One-click)
-- 10x AOV → What if users bought subscriptions? (SaaS model)
+Related skills:
+- `skills/market-driven-prioritization/SKILL.md`
+- `skills/rapid-iteration-cycle/SKILL.md`
+- `skills/prioritization-advisor/SKILL.md`
 
-**Selected Lever:** Subscription model → 10x revenue potential
-
----
-
-## Related Skills / 相关技能
-
-- `skills/market-driven-prioritization/SKILL.md` — Prioritize 10x opportunities
-- `skills/rapid-iteration-cycle/SKILL.md` — Test 10x hypotheses fast
-- `skills/prioritization-advisor/SKILL.md` — Additional frameworks
-
----
-
-**Skill type:** Component
-**Suggested filename:** `10x-hypothesis-framework.md`
-**Suggested placement:** `/skills/components/`
-**Dependencies:** None
+Source context:
+- 100X PM philosophy in this repository

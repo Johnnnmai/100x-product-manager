@@ -19,13 +19,13 @@ Claude Code is Anthropic's official command-line interface for Claude. It reads 
 
 1. **Clone this repo** to your local machine:
    ```bash
-   git clone https://github.com/deanpeters/Product-Manager-Skills.git
-   cd product-manager-skills
+   git clone https://github.com/Johnnnmai/100x-product-managers.git
+   cd 100x-product-managers
    ```
 
 2. **Navigate to the repo directory** in your terminal:
    ```bash
-   cd product-manager-skills
+   cd 100x-product-managers
    ```
 
 3. **Invoke Claude Code** with a skill reference:
@@ -90,12 +90,12 @@ If you prefer marketplace-style install, you can discover and install without cl
 
 2. **List skills in this repo**:
    ```bash
-   npx skills add deanpeters/Product-Manager-Skills --list
+   npx skills add Johnnnmai/100x-product-managers --list
    ```
 
 3. **Install directly for Claude Code**:
    ```bash
-   npx skills add deanpeters/Product-Manager-Skills --skill user-story -a claude-code -g
+   npx skills add Johnnnmai/100x-product-managers --skill user-story -a claude-code -g
    ```
 
 4. **Confirm what is installed for Claude Code**:
@@ -111,14 +111,14 @@ If you prefer marketplace-style install, you can discover and install without cl
 If you are on an older CLI that does not support `--agent`, install first, then copy manually:
 
 ```bash
-npx skills add deanpeters/Product-Manager-Skills@user-story
+npx skills add Johnnnmai/100x-product-managers@user-story
 mkdir -p ~/.claude/skills
 cp -R ~/.codex/skills/user-story ~/.claude/skills/
 ```
 
 Alternative install syntax (also shown on skills.sh pages):
    ```bash
-   npx skills add deanpeters/Product-Manager-Skills@user-story
+   npx skills add Johnnnmai/100x-product-managers@user-story
    ```
 
 <a id="github-zip-install"></a>
@@ -362,7 +362,7 @@ End-to-end processes. Use when running a complete PM cycle.
 - **README**: See the main [README.md](../README.md) for full skill catalog
 - **Skill Structure**: Each skill has Purpose, Key Concepts, Application, Examples, Common Pitfalls, References
 - **CLAUDE.md**: See [CLAUDE.md](../CLAUDE.md) for skill design philosophy
-- **Issues**: Report problems at [GitHub Issues](https://github.com/deanpeters/Product-Manager-Skills/issues)
+- **Issues**: Report problems at [GitHub Issues](https://github.com/Johnnnmai/100x-product-managers/issues)
 
 ---
 

@@ -8,8 +8,8 @@ For contributors working directly from a local clone:
 
 ```bash
 # 1) Clone and enter repo
-git clone https://github.com/deanpeters/Product-Manager-Skills.git
-cd Product-Manager-Skills
+git clone https://github.com/Johnnnmai/100x-product-managers.git
+cd 100x-product-managers
 
 # 2) Build a skill (guided wizard)
 ./scripts/build-a-skill.sh

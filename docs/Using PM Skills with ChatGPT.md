@@ -25,7 +25,7 @@ Availability can vary by plan and rollout region.
 Example:
 
 ```text
-Use skills/prioritization-advisor/SKILL.md from deanpeters/Product-Manager-Skills and guide me through choosing a framework for a B2B roadmap.
+Use skills/prioritization-advisor/SKILL.md from Johnnnmai/100x-product-managers and guide me through choosing a framework for a B2B roadmap.
 ```
 
 ---

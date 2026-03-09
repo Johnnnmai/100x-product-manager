@@ -1,193 +1,173 @@
 ---
 name: rapid-iteration-cycle
-description: Validate ideas fast using 2-week MVP sprints. Move fast, iterate faster, learn quickly.
+description: Validate ideas fast with short proof loops. Use lightweight tests to learn before scaling investment.
 type: workflow
 ---
 
-## English
+## Purpose
 
-### Purpose
+Use this workflow to validate a product idea, feature bet, or growth hypothesis **quickly** instead of turning uncertainty into a long roadmap commitment.
 
-Validate an idea, feature, or hypothesis **fast** (within 2 weeks) using rapid experimentation. Move fast, iterate faster.
+The job of this skill is to turn a vague product bet into a short learning loop: define the hypothesis, design the smallest credible test, gather evidence, and make a hard follow-up decision.
 
-This skill enables PMs to test hypotheses quickly, fail fast, and pivot when needed—reducing the cost of wrong decisions.
+### 中文
 
-### Key Concepts
+这个工作流用于在投入大量研发前，快速验证一个产品想法、功能假设或增长假设。
 
-**The Rapid Iteration Framework:**
+它的目标不是做一个“迷你版完整产品”，而是把不确定性压缩进一个短周期学习回路里。
 
-| Phase | Duration | Focus |
-|-------|----------|-------|
-| Define | Day 1 | Hypothesis + success metric |
-| Build | Days 2-5 | Minimum Viable Test (MVT) |
-| Test | Days 6-12 | Run experiment |
-| Decide | Days 13-14 | Go/No-go decision |
+## Key Concepts
 
-**Hypothesis Format:**
-"If [action], then [metric] will [change] because [reason]"
+### MVT, Not MVP
 
-**Success Metric:**
-- One primary metric
-- Define threshold: what level proves the hypothesis?
+This skill optimizes for a **minimum viable test**, not a minimum viable product.
 
-### When to Use This
+That means:
+- test the assumption, not the whole roadmap
+- use the smallest believable experience
+- prefer speed of learning over polish
 
-- Validating new product ideas
-- Testing feature hypotheses
-- Quick market validation
-- Reducing risk of large investments
+### Standard Cadence
 
-### When NOT to Use This
+| Phase | Typical timing | Output |
+| --- | --- | --- |
+| Define | Day 1 | hypothesis, metric, kill condition |
+| Build | Days 2-5 | test asset or prototype |
+| Test | Days 6-12 | real-user exposure and evidence |
+| Decide | Days 13-14 | scale, iterate, or stop |
 
-- When you have clear requirements (no need to validate)
-- For compliance-critical features
-- When sample size is too small for meaningful results
+### Good Hypothesis Format
 
----
+```text
+If we change [thing], then [metric or behavior] should improve because [reason].
+```
 
-## 中文
+### When To Use It
 
-### 目的
+- new feature bets
+- onboarding experiments
+- pricing or packaging tests
+- market validation before roadmap commitment
 
-使用快速实验**快速**验证想法、功能或假设（2周内）。快速行动，更快迭代。
+### When Not To Use It
 
-此技能使PM能够快速测试假设，快速失败，并在需要时转向——降低错误决策的成本。
+- urgent defects
+- mandatory compliance work
+- work where the decision is already fixed
 
-### 核心概念
+### 中文
 
-**快速迭代框架：**
+关键点：
+- 做最小可行验证，不做最小可行产品
+- 用最短周期换最快学习
+- 结果必须能导向明确决策：扩、改、停
 
-| 阶段 | 时长 | 重点 |
-|------|------|------|
-| 定义 | 第1天 | 假设 + 成功指标 |
-| 构建 | 第2-5天 | 最小可行测试 (MVT) |
-| 测试 | 第6-12天 | 运行实验 |
-| 决定 | 第13-14天 | 通过/不通过决策 |
+## Application
 
-**假设格式：**
-"如果[行动]，[指标]将[变化]因为[原因]"
+### Phase 1: Define the Bet
 
-**成功指标：**
-- 一个主要指标
-- 定义阈值：什么程度证明假设成立？
+Write down:
+- the problem being tested
+- the hypothesis
+- the primary success metric
+- the kill condition
 
-### 何时使用
+If you cannot define the kill condition, the test is too vague.
 
-- 验证新产品想法
-- 测试功能假设
-- 快速市场验证
-- 降低大投资的风险
+### Phase 2: Design the Smallest Credible Test
 
-### 何时不使用
+Possible test formats:
+- clickable prototype
+- concierge workflow
+- fake-door or smoke test
+- pricing conversation
+- limited beta with manual backend
 
-- 当有明确需求时（无需验证）
-- 对于合规关键功能
-- 当样本量太小无法获得有意义结果时
+Ask:
+- what is the smallest version that still produces believable evidence?
 
----
+### Phase 3: Run the Test
 
-## Application / 应用
+Decide before launch:
+- target audience
+- duration
+- sample threshold
+- what qualitative evidence you will collect
 
-### Phase 1: Define / 定义 (Day 1)
+Avoid changing the test halfway through unless the test is clearly broken.
 
-**What are we testing?**
-- State the hypothesis clearly
-- "If [action], then [metric] will [change] because [reason]"
+### Phase 4: Decide
 
-**What's the simplest test?**
-- Minimum Viable Test (MVT), not MVP
-- What's the smallest thing that tests this hypothesis?
+Use one of three outcomes:
 
-**What's our success metric?**
-- One primary metric
-- Define threshold
+| Outcome | Meaning | Next move |
+| --- | --- | --- |
+| Validated | evidence supports the bet | scale or invest further |
+| Partially validated | some signal, still unclear | revise and rerun |
+| Invalidated | evidence does not support the bet | stop or pivot |
 
-### Phase 2: Build / 构建 (Days 2-5)
+### Phase 5: Capture the Learning
 
-**Speed Principles:**
-- Use existing components
-- Fake it if needed (no real backend)
-- 80/20: 20% effort for 80% learning
+Always document:
+- what was tested
+- what signal was observed
+- what surprised the team
+- what decision follows now
 
-**Deliverable:**
-- Not a perfect product
-- A testable hypothesis in front of real users
+### 中文
 
-### Phase 3: Test / 测试 (Days 6-12)
+执行顺序：
+1. 先定义假设、主指标、终止条件
+2. 设计最小但可信的验证方式
+3. 运行测试并收集定量/定性证据
+4. 明确输出：通过、部分通过、未通过
+5. 把学习沉淀成下一步动作
 
-**Run the experiment:**
-- Get it in front of users ASAP
-- Minimum 100 users or 7 days of data
-- Don't peek! (statistical validity)
+## Examples
 
-**Gather evidence:**
-- Quantitative: Metrics, conversion, usage
-- Qualitative: Feedback, interviews
+### Example: Onboarding Simplification
 
-### Phase 4: Decide / 决定 (Days 13-14)
+Hypothesis:
+- if onboarding drops from five steps to two, activation should improve because fewer users abandon the flow
 
-| Result | Action |
-|--------|--------|
-| ✅ Validated | Scale it |
-| 🟡 Partial | Iterate fast |
-| ❌ Invalidated | Pivot fast |
+MVT:
+- launch a simplified prototype for a controlled cohort
 
----
+Decision:
+- if activation increases by at least 15 percent without lowering downstream quality, expand the test
 
-## Key Principle / 关键原则
+### 中文
 
-**Move Fast, Iterate Faster:**
-- A bad test is better than no test
-- Speed reveals what matters
-- Iteration compounds learning
+一个好例子通常满足三点：
+- 测试对象清楚
+- 成败标准清楚
+- 下一步动作清楚
 
-**快速行动，更快迭代：**
-- 糟糕的测试优于没有测试
-- 速度揭示什么重要
-- 迭代累积学习
+## Common Pitfalls
 
----
+### Building Too Much
 
-## Common Pitfalls / 常见陷阱
+If the team spends most of the cycle building infrastructure, the test is too heavy.
 
-### Pitfall 1: Building MVP Instead of MVT
-**Symptom:** Spending 2 weeks building a full MVP
+### Using Too Many Metrics
 
-**Fix:** Ask "What's the smallest test that validates this hypothesis?"
+One primary metric is better than five weak ones. Use secondary metrics only as guardrails.
 
-### Pitfall 2: No Clear Success Metric
-**Symptom:** "We'll know it when we see it"
+### Running the Test Without a Decision Rule
 
-**Fix:** Define success threshold upfront. What proves the hypothesis?
+If nobody knows what result is enough to continue, the experiment becomes theater.
 
-### Pitfall 3: Peeking
-**Symptom:** Checking results before experiment ends
+### 中文
 
-**Fix:** Wait for statistical validity. Set a firm end date.
+常见错误：
+- 把验证做成开发项目
+- 指标太多导致结论模糊
+- 开始前没有定义“什么结果算通过”
 
----
+## References
 
-## Examples / 示例
-
-**Scenario:** Validating a new onboarding flow
-
-**Hypothesis:** "If we simplify onboarding from 5 steps to 2, then activation rate will increase 20% because fewer steps reduce drop-off"
-
-**MVT:** Create a landing page that shows the simplified flow, track sign-up intent
-
-**Result:** 25% lift → Validated → Built full feature
-
----
-
-## Related Skills / 相关技能
-
-- `skills/market-driven-prioritization/SKILL.md` — Prioritize what to validate
-- `skills/experiment-design/SKILL.md` — More rigorous experiment design
-- `skills/discovery-process/SKILL.md` — Deeper discovery process
-
----
-
-**Skill type:** Workflow
-**Suggested filename:** `rapid-iteration-cycle.md`
-**Suggested placement:** `/skills/workflows/`
-**Dependencies:** None
+Related skills:
+- `skills/market-driven-prioritization/SKILL.md`
+- `skills/pol-probe/SKILL.md`
+- `skills/pol-probe-advisor/SKILL.md`
+- `skills/discovery-process/SKILL.md`

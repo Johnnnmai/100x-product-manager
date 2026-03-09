@@ -5,7 +5,7 @@
 - **Post Title:** Product Manager Skills v0.5 — Streamlit (beta) Playground
 - **Post Subtitle:** Local skill test-driving with safer key handling, provider/model choice, and clearer workflow execution.
 - **Opening (first 160 chars):** v0.5 now includes Streamlit (beta): run skills locally with Anthropic/OpenAI/Ollama support, explicit workflow phases, and feedback-first iteration.
-- **Primary Link:** [Product Manager Skills repo](https://github.com/deanpeters/Product-Manager-Skills)
+- **Primary Link:** [100X Product Managers repo](https://github.com/Johnnnmai/100x-product-managers)
 
 ---
 
@@ -22,10 +22,9 @@ What shipped:
 - Workflow UX fixes so phase-based skills (like PRD) run clearly phase by phase
 
 This is a feature in flight. Feedback is welcome:
-- [GitHub Issues](https://github.com/deanpeters/Product-Manager-Skills/issues)
-- [Dean on LinkedIn](https://linkedin.com/in/deanpeters)
+- [GitHub Issues](https://github.com/Johnnnmai/100x-product-managers/issues)
 
-Release: [Product Manager Skills v0.5](https://github.com/deanpeters/Product-Manager-Skills)
+Release: [100X Product Managers](https://github.com/Johnnnmai/100x-product-managers)
 
 ---
 
@@ -69,5 +68,4 @@ What changed in this beta:
 This is intentionally marked **beta**. It is a feature in flight, and we expect to improve it quickly from real usage.
 
 If something feels unclear or broken, we want that feedback early:
-- [GitHub Issues](https://github.com/deanpeters/Product-Manager-Skills/issues)
-- [LinkedIn](https://linkedin.com/in/deanpeters)
+- [GitHub Issues](https://github.com/Johnnnmai/100x-product-managers/issues)
