@@ -83,7 +83,7 @@ Do not add new commands casually. Strengthen these first:
 
 ## Local Workflow
 
-The target repo slug is `100x-pm-skills`, but the mature history may still temporarily live on the `100x-product-managers` remote until the GitHub rename is completed.
+The public repo slug is `100x-product-manager`.
 
 Use one canonical local repo and worktrees for major initiatives. See [docs/local-repo-workflow.md](docs/local-repo-workflow.md).
 

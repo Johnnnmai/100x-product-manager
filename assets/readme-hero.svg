@@ -1,0 +1,34 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="card" x1="760" y1="58" x2="1064" y2="282" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFC" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#F8FAFC" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="360" rx="28" fill="url(#bg)"/>
+  <circle cx="110" cy="82" r="62" fill="#F59E0B" fill-opacity="0.22"/>
+  <circle cx="1030" cy="310" r="96" fill="#93C5FD" fill-opacity="0.12"/>
+  <rect x="760" y="58" width="304" height="224" rx="24" fill="url(#card)" stroke="#E2E8F0" stroke-opacity="0.18"/>
+  <rect x="80" y="74" width="128" height="34" rx="17" fill="#111827"/>
+  <text x="104" y="96" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">PUBLIC REPO</text>
+  <text x="80" y="158" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="64" font-weight="800">100X PM</text>
+  <text x="80" y="196" fill="#BFDBFE" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="600">AI Product OS for PMs and Founders</text>
+  <text x="80" y="236" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="24">Turn rough ideas into scoped direction, agent-ready specs,</text>
+  <text x="80" y="268" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="24">evals, and delegated execution.</text>
+  <rect x="80" y="300" width="138" height="32" rx="16" fill="#EFF6FF"/>
+  <rect x="228" y="300" width="138" height="32" rx="16" fill="#DBEAFE"/>
+  <rect x="376" y="300" width="138" height="32" rx="16" fill="#BFDBFE"/>
+  <text x="105" y="321" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">shape ideas</text>
+  <text x="253" y="321" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">write PRDs</text>
+  <text x="399" y="321" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">design evals</text>
+  <text x="792" y="108" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">What good output looks like</text>
+  <text x="792" y="146" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="16">1. Clear problem framing</text>
+  <text x="792" y="176" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="16">2. Explicit trade-offs</text>
+  <text x="792" y="206" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="16">3. Agent-readable execution</text>
+  <text x="792" y="236" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="16">4. Metrics and guardrails</text>
+  <text x="792" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="16">5. Real next action</text>
+</svg>

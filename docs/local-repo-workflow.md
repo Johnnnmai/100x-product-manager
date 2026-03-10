@@ -6,19 +6,19 @@ Keep one canonical local repo for 100X PM.
 
 ## Canonical Setup
 
-- local folder name: `100x-pm-skills`
+- preferred local folder name: `100x-product-manager`
 - keep one long-lived local checkout only
 - keep `main` clean
 - use one worktree per major initiative
 
 ## Keep / Retire
 
-- Keep the mature repo history now served from `100x-pm-skills`
+- Keep the mature repo history now served from `100x-product-manager`
 - Retire `100x-product-manager-skills`
 
 ## Local Migration Rule
 
-1. keep `100x-pm-skills` as the only long-lived local repo
+1. keep `100x-product-manager` as the only long-lived local repo once local cleanup is done
 2. treat the old `100x-product-managers` local folder as temporary archive only
 3. delete the old local folder once the new canonical clone is fully verified
 
@@ -28,9 +28,9 @@ Recommended structure:
 
 ```text
 c:\Users\14153\Documents\个人品牌书籍制作\
-  100x-pm-skills\
-  100x-pm-skills-feature-readme\
-  100x-pm-skills-feature-agent-prd\
+  100x-product-manager\
+  100x-product-manager-feature-readme\
+  100x-product-manager-feature-agent-prd\
 ```
 
 ## Branch Hygiene
@@ -41,4 +41,5 @@ c:\Users\14153\Documents\个人品牌书籍制作\
 
 ## Current Remote Reality
 
-The canonical public slug is `100x-pm-skills`.
+The canonical public slug is `100x-product-manager`.
+The current local folder may still be named `100x-pm-skills` until you do the final filesystem cleanup.

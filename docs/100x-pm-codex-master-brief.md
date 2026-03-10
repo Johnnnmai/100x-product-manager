@@ -3,7 +3,7 @@
 ## Canonical Identity
 
 - Public brand: `100X PM`
-- Target repo slug: `100x-pm-skills`
+- Target repo slug: `100x-product-manager`
 - Hero subtitle: `AI Product OS for PMs and Founders`
 
 ## Core Positioning

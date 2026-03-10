@@ -25,7 +25,7 @@ Availability can vary by plan and rollout region.
 Example:
 
 ```text
-Use commands/pm-command-center.md from Johnnnmai/100x-pm-skills and route me to the right workflow for a B2B roadmap decision.
+Use commands/pm-command-center.md from Johnnnmai/100x-product-manager and route me to the right workflow for a B2B roadmap decision.
 ```
 
 ---

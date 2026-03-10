@@ -1,126 +1,139 @@
+<p align="center">
+  <img src="assets/readme-hero.svg" alt="100X PM" width="100%">
+</p>
+
 # 100X PM
 
-**AI Product OS for PMs and Founders**
+<p align="center"><strong>AI Product OS for PMs and Founders</strong></p>
+<p align="center">Turn rough ideas into scoped direction, agent-readable specs, evals, and delegated execution.</p>
 
-Turn rough ideas into compelling, scoped, shippable product direction.
+<p align="center">
+  <img alt="Public repo" src="https://img.shields.io/badge/repo-public-111827?style=flat-square">
+  <img alt="10 commands" src="https://img.shields.io/badge/commands-10-111827?style=flat-square">
+  <img alt="Pilot benchmark" src="https://img.shields.io/badge/pilot%20benchmark-4%20tasks-111827?style=flat-square">
+  <img alt="License" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-111827?style=flat-square">
+</p>
 
-- Shape rough ideas into wedges, scope, and first moves
-- Validate whether demand is real with evidence, not noise
-- Write specs for both humans and agents
-- Define metrics, experiments, evals, fallback, and guardrails
-- Turn roadmaps into delegated human and agent execution
+> 100X PM is not about writing faster. It is about reducing ambiguity, forcing trade-offs, and getting to shippable product judgment faster.
 
-中文一句话：
+中文一句话：  
 **100X PM 不是让 AI 更会写，而是让 PM 和 founder 更快把模糊问题收敛成可落地的判断与执行。**
 
 ## Start Here
 
 - [START_HERE.md](START_HERE.md)
+- [INSTALL.md](INSTALL.md)
 - [MUST_INSTALL.md](MUST_INSTALL.md)
 - [PACKS.md](PACKS.md)
 - [PRINCIPLES.md](PRINCIPLES.md)
-- [INSTALL.md](INSTALL.md)
 
-## What Is 100X PM?
+## What You Can Do Today
 
-100X PM is not about doing 100x more work.
+| If your situation looks like this | Run this | Expected output |
+| --- | --- | --- |
+| I only have a rough idea | [shape-idea](commands/shape-idea.md) | 2-3 scoped directions, a recommended wedge, risks, and first move |
+| I need to know if demand is real | [validate-demand](commands/validate-demand.md) | evidence-backed demand memo |
+| I need a spec humans and agents can execute | [agent-prd](commands/agent-prd.md) | dual-mode PRD with constraints and review rules |
+| I need to decide what wins now vs later | [prioritize](commands/prioritize.md) | ranked decision with explicit trade-offs |
+| I am shipping an AI feature | [design-eval](commands/design-eval.md) | pass/fail logic, red flags, fallback, and review triggers |
+| I need to turn direction into execution | [run-roadmap](commands/run-roadmap.md) | milestones, ownership, dependencies, and tracking cadence |
+| I do not know where to start | [pm-command-center](commands/pm-command-center.md) | routed next command and shortest path |
 
-It means becoming the kind of PM or founder who can:
+## Install In 2 Minutes
 
-- frame the right problem before drafting solutions
-- make explicit trade-offs instead of hiding behind process
-- define success with evidence, metrics, guardrails, and time windows
-- design AI behavior through prompts, evals, fallback logic, and constraints
-- ship the smallest viable test when execution cost is lower than more internal debate
-- use systems, workflows, and leverage to create outsized outcomes
+```bash
+git clone https://github.com/Johnnnmai/100x-product-manager.git
+cd 100x-product-manager
+```
 
-中文理解：
+Use one of these prompt patterns:
 
-- 先定义问题，再给方案
-- 先讲取舍，再讲功能
-- 先定义成功，再开始执行
-- 不只是使用 AI，而是定义 AI 的行为
-- 当执行成本低于继续空想的成本，就更快落地去验证
+```text
+Using commands/shape-idea.md:
+Run the command exactly.
+Make assumptions explicit.
+Give me 2-3 scoped options, recommend one, and end with the next command.
+```
 
-**100X PM is not faster typing. It is sharper judgment, faster convergence, and stronger leverage.**
+Platform guides:
 
-## What Do You Need To Do Today?
+- [Using 100X PM with Claude](docs/Using%20PM%20Skills%20with%20Claude.md)
+- [Using 100X PM with Codex](docs/Using%20PM%20Skills%20with%20Codex.md)
+- [Using 100X PM with ChatGPT](docs/Using%20PM%20Skills%20with%20ChatGPT.md)
 
-- Rough idea, weak instinct, no clear wedge yet: [shape-idea](commands/shape-idea.md)
-- Need to know if demand is real: [validate-demand](commands/validate-demand.md)
-- Need a spec that humans and agents can execute: [agent-prd](commands/agent-prd.md)
-- Need to decide what to do now vs later: [prioritize](commands/prioritize.md)
-- Need success metrics and thresholds: [define-metrics](commands/define-metrics.md)
-- Need a test design, not just an opinion: [design-experiment](commands/design-experiment.md)
-- Shipping an AI feature and need evals: [design-eval](commands/design-eval.md)
-- Need to turn a direction into delegated execution: [run-roadmap](commands/run-roadmap.md)
-- Need to turn work into distribution: [make-content](commands/make-content.md)
-- Not sure where to start: [pm-command-center](commands/pm-command-center.md)
+## 10 Public Commands
 
-## 10 Must-Install Commands
-
-1. `pm-command-center`: route the job, stage, and shortest next workflow
-2. `shape-idea`: go from rough idea to wedge, scope, risk, and next move
-3. `validate-demand`: turn comments, notes, tickets, and URLs into evidence-backed demand judgment
-4. `agent-prd`: produce a PRD that works for both human review and agent execution
-5. `prioritize`: force explicit trade-offs and what to defer
-6. `define-metrics`: define success metrics, counter metrics, thresholds, and windows
-7. `design-experiment`: turn a hypothesis into a real experiment plan
-8. `design-eval`: define pass/fail criteria, test cases, fallback, and review triggers
-9. `run-roadmap`: split a direction into milestones, ownership, and tracking rules
-10. `make-content`: convert product work into reusable public content
+1. `pm-command-center`
+2. `shape-idea`
+3. `validate-demand`
+4. `agent-prd`
+5. `prioritize`
+6. `define-metrics`
+7. `design-experiment`
+8. `design-eval`
+9. `run-roadmap`
+10. `make-content`
 
 Full details live in [MUST_INSTALL.md](MUST_INSTALL.md).
 
-## Core Capabilities
+## Why This Repo Exists
 
-### Direction
+Most PM + AI repos stop at "write better prompts."
 
-- rough idea to problem framing
-- target user hypothesis
-- first wedge
-- scope down
-- evidence-backed demand judgment
+100X PM is built around a stronger claim:
 
-### Decision
+- average PM work gets stuck in ambiguity, weak prioritization, noisy demand, and unclear success
+- top PM work is nonlinear because it converges faster, wastes less work, and turns decisions into operating systems
+- AI matters when it shapes direction, defines behavior, and splits execution, not when it only drafts text
 
-- dual-mode PRDs for humans and agents
-- explicit trade-offs
-- metrics and thresholds
-- experiments
-- AI evals, fallback, and guardrails
+If you want the short version:
 
-### Delegation
-
-- roadmap themes and milestones
-- human vs agent work split
-- task contracts
-- tracking cadence
-- reuse and content packaging
+**This is not a loose prompt library. It is a public operating system for turning idea -> evidence -> scope -> spec -> metrics -> eval -> roadmap -> delegated execution.**
 
 ## Proof Of Value
 
-We are not going to invent benchmark numbers for the homepage.
+We are not publishing invented homepage metrics. We are publishing inspectable artifacts.
 
-Proof should come from public artifacts, a documented test plan, and raw runs other people can inspect.
+### Live proof layers
 
 | Proof layer | What it compares | Status |
 | --- | --- | --- |
-| Before/after artifacts | same input, plain output vs command-guided output | live |
-| Blind-scored benchmark | baseline vs 100X PM across canonical PM tasks | planned |
-| Real workflow metrics | time to acceptable draft, edit burden, reuse | planned |
+| Before/after artifacts | same input, plain prompt vs command-guided output | live |
+| Pilot benchmark wave 1 | same-model baseline vs 100X PM on 4 canonical tasks | live |
+| Blind-scored benchmark | reviewer-blinded scoring across canonical tasks | planned |
 
-Current proof:
+### Before / after examples
 
 - [PRD before/after](examples/before-after/prd-before-after.md)
 - [Prioritization before/after](examples/before-after/prioritization-before-after.md)
 - [AI eval before/after](examples/before-after/eval-before-after.md)
-- [Public value test plan](docs/value-test-plan.md)
 
-Benchmark templates:
+### Pilot benchmark wave 1
 
+Wave 1 is a same-model, single-operator pilot. It is public because the raw prompts, outputs, and scorecards are in the repo. It is not yet blinded.
+
+| Task | Baseline avg | 100X PM avg | Delta | Time to acceptable draft | Summary |
+| --- | --- | --- | --- | --- | --- |
+| `shape-idea` | 2.3/5 | 4.1/5 | +1.8 | 18 min -> 10 min | [run](examples/value-tests/runs/2026-03-10-shape-idea-summary.md) |
+| `agent-prd` | 2.9/5 | 4.4/5 | +1.5 | 25 min -> 14 min | [run](examples/value-tests/runs/2026-03-10-agent-prd-summary.md) |
+| `prioritize` | 3.0/5 | 4.3/5 | +1.3 | 16 min -> 9 min | [run](examples/value-tests/runs/2026-03-10-prioritize-summary.md) |
+| `design-eval` | 2.1/5 | 4.4/5 | +2.3 | 20 min -> 11 min | [run](examples/value-tests/runs/2026-03-10-design-eval-summary.md) |
+
+Full benchmark package:
+
+- [Value test plan](docs/value-test-plan.md)
+- [Wave 1 summary](examples/value-tests/runs/2026-03-10-wave-1-summary.md)
 - [Scorecard template](examples/value-tests/scorecard-template.md)
 - [Task run template](examples/value-tests/task-run-template.md)
+
+## Repo Layout
+
+- `commands/`: the public front door
+- `skills/`: the reusable execution layer behind commands
+- `packs/`: grouped operating paths for common PM jobs
+- `examples/`: before/after artifacts and benchmark runs
+- `docs/`: setup, usage, and operating guidance
+- `app/`: Streamlit beta playground
 
 ## Packs
 
@@ -135,7 +148,7 @@ This repo is organized around practical packs, not a random skill supermarket.
 - [Career & Interviews](PACKS.md#career--interviews)
 - [Content & Distribution](PACKS.md#content--distribution)
 
-## Integrations
+## Optional Integrations
 
 Supported as optional layers, not mandatory runtime dependencies:
 
@@ -143,36 +156,7 @@ Supported as optional layers, not mandatory runtime dependencies:
 - `Context Hub`: curated external context and versioned knowledge
 - `claude-mem`: working memory and context compression
 - `Paperclip`: optional orchestration layer for business goals and agent assignment
-- `OASIS` and `MiroFish`: optional strategy lab for simulation, not default day-to-day PM execution
-
-## Install
-
-Clone the final canonical repo:
-
-```bash
-git clone https://github.com/Johnnnmai/100x-pm-skills.git
-cd 100x-pm-skills
-```
-
-Platform guides:
-
-- [docs/Using PM Skills with Claude.md](docs/Using%20PM%20Skills%20with%20Claude.md)
-- [docs/Using PM Skills with Codex.md](docs/Using%20PM%20Skills%20with%20Codex.md)
-- [docs/Using PM Skills with ChatGPT.md](docs/Using%20PM%20Skills%20with%20ChatGPT.md)
-
-## Why This Is Different
-
-Most PM + AI repos stop at “write better prompts.”
-
-100X PM is built around a stronger claim:
-
-- average PM work gets stuck in ambiguity, weak prioritization, noisy demand, and unclear success
-- top PM work is nonlinear because it converges faster, wastes less work, and turns decisions into operating systems
-- AI is useful when it helps shape direction, define behavior, and split execution, not when it only drafts text
-
-If you want the short version:
-
-**This repo is not a PM skills library. It is an AI Product OS for turning idea -> evidence -> scope -> spec -> metrics -> eval -> roadmap -> delegated execution.**
+- `OASIS` and `MiroFish`: optional strategy lab for simulation, not default day-to-day execution
 
 ## License
 

@@ -1,11 +1,11 @@
 # 100X PM Repository Rules
 
-This repository is the canonical local implementation of **100X PM**: an AI Product OS for PMs and founders.
+This repository is the canonical implementation of **100X PM**: an AI Product OS for PMs and founders.
 
 ## Product Direction
 
 - Brand name: `100X PM`
-- Target repo slug: `100x-pm-skills`
+- Target repo slug: `100x-product-manager`
 - Hero subtitle: `AI Product OS for PMs and Founders`
 - Core promise: rough idea -> evidence -> scope -> agent-readable spec -> metrics -> eval -> roadmap -> delegated execution
 
@@ -33,7 +33,7 @@ When editing public docs, keep these commands as the main entrypoints:
 9. `run-roadmap`
 10. `make-content`
 
-Do not reintroduce a “must-install skills” front door that fights this model.
+Do not reintroduce a "must-install skills" front door that fights this model.
 
 ## 100X PM Operating Rules
 
@@ -76,11 +76,11 @@ Skills should stay concise, portable, and composable.
 
 - Folder name: lowercase kebab-case
 - Main file: `skills/<skill-name>/SKILL.md`
-- Prefer a compact frontmatter and explicit output format
+- Prefer compact frontmatter and explicit output formats
 - Include concrete anti-patterns or failure modes
 - Reference the next skill when sequencing matters
 
-If you add a new skill for the new command system, prefer the 100X PM metadata style:
+If you add a new skill for the 100X PM system, prefer metadata that includes:
 
 - `name`
 - `title`
@@ -109,7 +109,7 @@ Avoid stale counts, vague marketplace language, and mismatched headlines.
 - Keep one canonical local repo.
 - Keep `main` clean.
 - Use one worktree per major initiative.
-- Do not keep long-lived duplicate local folders for “old” and “new.”
-- If a repo rename is blocked remotely, the local folder name can still move first.
+- Do not keep long-lived duplicate local folders for old and new states.
+- The public repo is `100x-product-manager`; local folder cleanup can happen separately.
 
 See [docs/local-repo-workflow.md](docs/local-repo-workflow.md).

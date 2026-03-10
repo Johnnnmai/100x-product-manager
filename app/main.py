@@ -1,7 +1,7 @@
 """100X PM Playground — Streamlit app for browsing and test-driving PM skills.
 
 Usage:
-    cd /path/to/100x-pm-skills
+    cd /path/to/100x-product-manager
     pip install -r app/requirements.txt
     streamlit run app/main.py
 """
@@ -489,10 +489,10 @@ def render_sidebar(skill: dict | None = None):
         st.divider()
         st.caption("Streamlit (beta) · New feature in flight")
         st.caption(
-            "[Feedback via GitHub ↗](https://github.com/Johnnnmai/100x-pm-skills/issues)"
+            "[Feedback via GitHub ↗](https://github.com/Johnnnmai/100x-product-manager/issues)"
         )
         st.caption(f"{len(load_skills())} PM skills · CC BY-NC-SA 4.0")
-        st.caption("[GitHub ↗](https://github.com/Johnnnmai/100x-pm-skills)")
+        st.caption("[GitHub ↗](https://github.com/Johnnnmai/100x-product-manager)")
 
 
 # ─── Screen: Home ─────────────────────────────────────────────────────────────
@@ -501,7 +501,7 @@ def render_home(skills: list):
     st.title("100X PM Playground (beta)")
     st.markdown(
         f"Streamlit (beta): browse {len(skills)} PM skills, preview the system behind the commands, and test-drive skills before installing them in Claude Code, Codex, or ChatGPT. "
-        "Feedback welcome via [GitHub issues](https://github.com/Johnnnmai/100x-pm-skills/issues)."
+        "Feedback welcome via [GitHub issues](https://github.com/Johnnnmai/100x-product-manager/issues)."
     )
     skills_by_name = {skill["name"]: skill for skill in skills}
 

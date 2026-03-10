@@ -10,8 +10,8 @@ For contributors working directly from a local clone:
 
 ```bash
 # 1) Clone and enter repo
-git clone https://github.com/Johnnnmai/100x-pm-skills.git
-cd 100x-pm-skills
+git clone https://github.com/Johnnnmai/100x-product-manager.git
+cd 100x-product-manager
 
 # 2) Build a skill (guided wizard)
 ./scripts/build-a-skill.sh

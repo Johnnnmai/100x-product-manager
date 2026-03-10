@@ -2,7 +2,7 @@
 
 A local web app for browsing and test-driving the skills behind the 100X PM command system before committing to a full workflow in Claude Code, ChatGPT, or Codex.
 
-**Status:** Streamlit (beta). This is a new feature in flight and we are actively testing and refining it. Feedback is welcome via [GitHub Issues](https://github.com/Johnnnmai/100x-pm-skills/issues).
+**Status:** Streamlit (beta). This is a new feature in flight and we are actively testing and refining it. Feedback is welcome via [GitHub Issues](https://github.com/Johnnnmai/100x-product-manager/issues).
 
 **Pedagogic goal:** Lower the barrier from “I have heard about this repo” to “I have seen a real skill work in my context.” The beta app remains skill-first, but the public repo front door is now command-first.
 

@@ -726,7 +726,7 @@ See `CONTRIBUTING.md` for general contribution guidelines.
 ## Support
 
 **Issues:**
-- GitHub Issues: https://github.com/Johnnnmai/100x-pm-skills/issues
+- GitHub Issues: https://github.com/Johnnnmai/100x-product-manager/issues
 - Include: OS, agent used, error messages, input content (if not sensitive)
 
 **Questions:**

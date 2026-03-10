@@ -1,26 +1,26 @@
 # Start Here
 
-If you are new here, think of **100X PM** as a system for multiplying judgment, not just writing faster.
+If you are new here, think of **100X PM** as a public operating system for multiplying judgment, not just writing faster.
 
 ## Fastest Path
 
 1. Open [commands/pm-command-center.md](commands/pm-command-center.md)
-2. If all you have is a rough idea, start with [commands/shape-idea.md](commands/shape-idea.md)
-3. If you need proof before motion, start with [commands/validate-demand.md](commands/validate-demand.md)
-4. If scope is approved and execution needs a spec, start with [commands/agent-prd.md](commands/agent-prd.md)
-5. If you are planning work across humans and agents, start with [commands/run-roadmap.md](commands/run-roadmap.md)
+2. If all you have is a rough idea, run [commands/shape-idea.md](commands/shape-idea.md)
+3. If you need proof before motion, run [commands/validate-demand.md](commands/validate-demand.md)
+4. If scope is approved and execution needs a spec, run [commands/agent-prd.md](commands/agent-prd.md)
+5. If you are planning work across humans and agents, run [commands/run-roadmap.md](commands/run-roadmap.md)
 
 ## If Your Situation Looks Like This
 
-- “I only have a rough idea.” -> `shape-idea`
-- “I have feedback and signals, but I do not know if demand is real.” -> `validate-demand`
-- “I need a PRD that an engineer and an agent can both use.” -> `agent-prd`
-- “I need to decide what to cut or defer.” -> `prioritize`
-- “I need metrics, thresholds, and instrumentation.” -> `define-metrics`
-- “I need to test a hypothesis in the market.” -> `design-experiment`
-- “I am shipping an AI feature and need evals.” -> `design-eval`
-- “I need a roadmap with ownership and tracking.” -> `run-roadmap`
-- “I want to turn the work into public content.” -> `make-content`
+- "I only have a rough idea." -> `shape-idea`
+- "I have signals, but I do not know if demand is real." -> `validate-demand`
+- "I need a PRD that an engineer and an agent can both execute." -> `agent-prd`
+- "I need to decide what to cut or defer." -> `prioritize`
+- "I need metrics, thresholds, and instrumentation." -> `define-metrics`
+- "I need to test a hypothesis in the market." -> `design-experiment`
+- "I am shipping an AI feature and need evals." -> `design-eval`
+- "I need a roadmap with ownership and tracking." -> `run-roadmap`
+- "I want to turn the work into public content." -> `make-content`
 
 ## Recommended Prompt Pattern
 

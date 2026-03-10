@@ -168,7 +168,8 @@ Put one small table in `README.md`:
 | Proof layer | What it compares | Status |
 | --- | --- | --- |
 | Before/after artifacts | same input, plain prompt vs command-guided output | live |
-| Blind-scored benchmark | baseline vs 100X PM across canonical PM tasks | in progress |
+| Pilot benchmark wave 1 | baseline vs 100X PM on 4 canonical PM tasks | live |
+| Blind-scored benchmark | baseline vs 100X PM across canonical PM tasks | planned |
 | Real workflow metrics | time to acceptable draft, edit burden, reuse | planned |
 
 ### Layer 2: artifact proof
@@ -224,7 +225,8 @@ Current public proof:
 - [examples/before-after/prd-before-after.md](../examples/before-after/prd-before-after.md)
 - [examples/before-after/prioritization-before-after.md](../examples/before-after/prioritization-before-after.md)
 - [examples/before-after/eval-before-after.md](../examples/before-after/eval-before-after.md)
+- [examples/value-tests/runs/2026-03-10-wave-1-summary.md](../examples/value-tests/runs/2026-03-10-wave-1-summary.md)
 
 Next build step:
 
-- add benchmark run artifacts under `examples/value-tests/runs/`
+- expand the pilot into blinded review under `examples/value-tests/runs/`

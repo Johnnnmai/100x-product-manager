@@ -3,7 +3,7 @@
 ## Canonical Identity
 
 - Public brand: `100X PM`
-- Repo slug: `100x-pm-skills`
+- Repo slug: `100x-product-manager`
 - Subtitle: `AI Product OS for PMs and Founders`
 
 ## Clone
@@ -11,8 +11,8 @@
 Preferred final form:
 
 ```bash
-git clone https://github.com/Johnnnmai/100x-pm-skills.git
-cd 100x-pm-skills
+git clone https://github.com/Johnnnmai/100x-product-manager.git
+cd 100x-product-manager
 ```
 
 ## Use It As A Command System

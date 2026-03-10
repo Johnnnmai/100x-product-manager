@@ -19,13 +19,13 @@ Claude Code is Anthropic's official command-line interface for Claude. It reads 
 
 1. **Clone this repo** to your local machine:
    ```bash
-   git clone https://github.com/Johnnnmai/100x-pm-skills.git
-   cd 100x-pm-skills
+   git clone https://github.com/Johnnnmai/100x-product-manager.git
+   cd 100x-product-manager
    ```
 
 2. **Navigate to the repo directory** in your terminal:
    ```bash
-   cd 100x-pm-skills
+   cd 100x-product-manager
    ```
 
 3. **Invoke Claude Code** with a skill reference:
@@ -108,12 +108,12 @@ If you prefer marketplace-style install, you can discover and install without cl
 
 2. **List skills in this repo**:
    ```bash
-   npx skills add Johnnnmai/100x-pm-skills --list
+   npx skills add Johnnnmai/100x-product-manager --list
    ```
 
 3. **Install directly for Claude Code**:
    ```bash
-   npx skills add Johnnnmai/100x-pm-skills --skill user-story -a claude-code -g
+   npx skills add Johnnnmai/100x-product-manager --skill user-story -a claude-code -g
    ```
 
 4. **Confirm what is installed for Claude Code**:
@@ -129,14 +129,14 @@ If you prefer marketplace-style install, you can discover and install without cl
 If you are on an older CLI that does not support `--agent`, install first, then copy manually:
 
 ```bash
-npx skills add Johnnnmai/100x-pm-skills@user-story
+npx skills add Johnnnmai/100x-product-manager@user-story
 mkdir -p ~/.claude/skills
 cp -R ~/.codex/skills/user-story ~/.claude/skills/
 ```
 
 Alternative install syntax (also shown on skills.sh pages):
    ```bash
-   npx skills add Johnnnmai/100x-pm-skills@user-story
+   npx skills add Johnnnmai/100x-product-manager@user-story
    ```
 
 <a id="github-zip-install"></a>
@@ -188,7 +188,7 @@ If you want deeper tool/repo integrations (instead of ZIP upload workflows), use
 ### Troubleshooting
 
 **Claude says it cannot find a file**:
-- Verify you're in the `100x-pm-skills` directory
+- Verify you're in the `100x-product-manager` directory
 - Check the file path is correct (case-sensitive)
 - Use `ls skills/` to confirm skill names
 
@@ -210,7 +210,7 @@ Claude Cowork is Anthropic's workspace integration (similar to Cursor, Windsurf,
 
 1. **Open the repo in Cowork**:
    - File → Open Workspace
-   - Select `100x-pm-skills` folder
+   - Select `100x-product-manager` folder
 
 2. **Reference skills naturally**:
    ```
@@ -247,7 +247,7 @@ For persistent access across sessions:
 
 1. **Add skills to Cowork's knowledge base**:
    - Settings → Knowledge Modules
-   - Add Folder: `100x-pm-skills/skills`
+   - Add Folder: `100x-product-manager/skills`
 
 2. **Skills become globally available**:
    ```
@@ -280,7 +280,7 @@ Cowork will:
 ### Troubleshooting
 
 **Cowork doesn't recognize a skill**:
-- Verify the workspace includes the `100x-pm-skills` folder
+- Verify the workspace includes the `100x-product-manager` folder
 - Check Settings → Knowledge Modules to confirm skills are loaded
 - Try using the full path: `skills/user-story/SKILL.md`
 
@@ -380,7 +380,7 @@ End-to-end processes. Use when running a complete PM cycle.
 - **README**: See the main [README.md](../README.md) for full skill catalog
 - **Skill Structure**: Each skill has Purpose, Key Concepts, Application, Examples, Common Pitfalls, References
 - **CLAUDE.md**: See [CLAUDE.md](../CLAUDE.md) for skill design philosophy
-- **Issues**: Report problems at [GitHub Issues](https://github.com/Johnnnmai/100x-pm-skills/issues)
+- **Issues**: Report problems at [GitHub Issues](https://github.com/Johnnnmai/100x-product-manager/issues)
 
 ---
 
