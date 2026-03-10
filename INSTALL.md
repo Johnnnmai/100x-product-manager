@@ -3,7 +3,7 @@
 ## Canonical Identity
 
 - Public brand: `100X PM`
-- Target repo slug: `100x-pm-skills`
+- Repo slug: `100x-pm-skills`
 - Subtitle: `AI Product OS for PMs and Founders`
 
 ## Clone
@@ -12,13 +12,6 @@ Preferred final form:
 
 ```bash
 git clone https://github.com/Johnnnmai/100x-pm-skills.git
-cd 100x-pm-skills
-```
-
-If the GitHub rename is not completed yet, clone the mature source repo and keep the local folder named `100x-pm-skills`:
-
-```bash
-git clone https://github.com/Johnnnmai/100x-product-managers.git 100x-pm-skills
 cd 100x-pm-skills
 ```
 

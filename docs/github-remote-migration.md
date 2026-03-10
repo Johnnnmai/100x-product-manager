@@ -1,34 +1,22 @@
-# GitHub Remote Migration Checklist
+# GitHub Remote Migration Record
 
-Use this once GitHub authentication is fixed.
+Migration status as of March 10, 2026:
 
-## 1. Re-authenticate
+- mature repo renamed from `Johnnnmai/100x-product-managers`
+- canonical repo is now `Johnnnmai/100x-pm-skills`
+- local `origin` should point to `https://github.com/Johnnnmai/100x-pm-skills.git`
+- thin repo `Johnnnmai/100x-product-manager-skills` has been archived
 
-```bash
-gh auth login
-gh auth status
-```
-
-## 2. Rename The Mature Repo
-
-Keep this repo history and rename it:
+## Canonical Remote
 
 ```bash
-gh repo rename -R Johnnnmai/100x-product-managers 100x-pm-skills --yes
+git remote set-url origin https://github.com/Johnnnmai/100x-pm-skills.git
+git remote -v
 ```
 
-## 3. Verify Redirect And New Slug
+## Thin Repo Retirement
 
-```bash
-gh repo view Johnnnmai/100x-pm-skills
-gh repo view Johnnnmai/100x-product-managers
-```
-
-The old slug should redirect.
-
-## 4. Freeze The Thin Repo
-
-Before deleting `Johnnnmai/100x-product-manager-skills`, verify that the useful assets were migrated locally:
+Useful assets were migrated before retirement:
 
 - `commands/`
 - `packs/`
@@ -37,25 +25,11 @@ Before deleting `Johnnnmai/100x-product-manager-skills`, verify that the useful 
 - root docs
 - before/after examples
 
-## 5. Archive Or Delete The Thin Repo
+If you want the GitHub account to expose only one repo identity, the next cleanup step is deleting the archived thin repo from the GitHub web UI or API.
 
-If you want a short safety window:
+## Local Cleanup
 
-```bash
-gh repo archive Johnnnmai/100x-product-manager-skills --yes
-```
+After the new canonical local folder is fully verified:
 
-Then delete from the GitHub web UI after final verification.
-
-## 6. Update Local Origin
-
-In the canonical local repo:
-
-```bash
-git remote set-url origin https://github.com/Johnnnmai/100x-pm-skills.git
-git remote -v
-```
-
-## 7. Retire The Old Local Folder
-
-After the renamed remote is verified and the new local folder is your active workspace, the old `100x-product-managers` local folder can be deleted.
+- keep `c:\Users\14153\Documents\个人品牌书籍制作\100x-pm-skills`
+- retire the old local `100x-product-managers` folder

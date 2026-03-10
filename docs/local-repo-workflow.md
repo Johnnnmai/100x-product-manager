@@ -13,16 +13,14 @@ Keep one canonical local repo for 100X PM.
 
 ## Keep / Retire
 
-- Keep the mature repo history from `100x-product-managers`
-- Retire `100x-product-manager-skills` after useful assets are migrated
+- Keep the mature repo history now served from `100x-pm-skills`
+- Retire `100x-product-manager-skills`
 
 ## Local Migration Rule
 
-If the remote rename is not done yet:
-
-1. keep the mature remote as the source of truth
-2. use `100x-pm-skills` as the local folder name anyway
-3. treat the old local folder as temporary archive only
+1. keep `100x-pm-skills` as the only long-lived local repo
+2. treat the old `100x-product-managers` local folder as temporary archive only
+3. delete the old local folder once the new canonical clone is fully verified
 
 ## Worktree Pattern
 
@@ -43,5 +41,4 @@ c:\Users\14153\Documents\个人品牌书籍制作\
 
 ## Current Remote Reality
 
-The target public slug is `100x-pm-skills`.
-Until the GitHub rename is completed, the mature history may still be served from `100x-product-managers`.
+The canonical public slug is `100x-pm-skills`.

@@ -154,8 +154,6 @@ git clone https://github.com/Johnnnmai/100x-pm-skills.git
 cd 100x-pm-skills
 ```
 
-If the GitHub rename has not been completed yet, the local implementation still lives on top of the mature `100x-product-managers` history. See [INSTALL.md](INSTALL.md) and [docs/local-repo-workflow.md](docs/local-repo-workflow.md).
-
 Platform guides:
 
 - [docs/Using PM Skills with Claude.md](docs/Using%20PM%20Skills%20with%20Claude.md)
