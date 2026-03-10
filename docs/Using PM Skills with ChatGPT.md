@@ -1,4 +1,4 @@
-# Using PM Skills with ChatGPT
+# Using 100X PM with ChatGPT
 
 You can use this skills repo with ChatGPT in three ways, depending on how repeatable you want the setup.
 
@@ -25,7 +25,7 @@ Availability can vary by plan and rollout region.
 Example:
 
 ```text
-Use skills/prioritization-advisor/SKILL.md from Johnnnmai/100x-product-managers and guide me through choosing a framework for a B2B roadmap.
+Use commands/pm-command-center.md from Johnnnmai/100x-pm-skills and route me to the right workflow for a B2B roadmap decision.
 ```
 
 ---

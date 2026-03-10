@@ -1,63 +1,115 @@
-# Repository Guidelines
+# 100X PM Repository Rules
 
-## Project Structure & Module Organization
-- `skills/<skill-name>/SKILL.md` holds each skill. Skill folders use lowercase kebab-case names (e.g., `skills/user-story/SKILL.md`).
-- `research/` contains reference essays that inform skills.
-- `docs/` contains usage guides, including `docs/Using PM Skills with Codex.md`.
-- `app/` contains the Streamlit (beta) playground (`app/main.py`) and setup docs (`app/STREAMLIT_INTERFACE.md`).
-- Root docs like `README.md`, `CONTRIBUTING.md`, `PLANS.md`, and `CLAUDE.md` explain catalog, contribution flow, and skill distillation.
+This repository is the canonical local implementation of **100X PM**: an AI Product OS for PMs and founders.
 
-## Build, Test, and Development Commands
-This is a Markdown-first repository with no build system or automated tests.
-- `rg --files` lists all files quickly.
-- `rg "SKILL.md"` finds skill definitions.
-- `rg "skill-name"` verifies references before submitting.
-- `streamlit run app/main.py` launches the Streamlit (beta) skill playground.
+## Product Direction
 
-## Coding Style & Naming Conventions
-- Write in Markdown with clear headings and short paragraphs.
-- Skills must follow the standard sections: Purpose, Key Concepts, Application, Examples, Common Pitfalls, References.
-- Include frontmatter fields (`name`, `description`, `type`) at the top of each skill file.
-- Keep `name` <= 64 characters and `description` <= 200 characters for Claude web upload compatibility.
-- Ensure the skill folder name matches the frontmatter `name` exactly (lowercase kebab-case).
-- Use fenced code blocks with language tags for commands or templates.
-- Keep language concise and opinionated; avoid filler.
+- Brand name: `100X PM`
+- Target repo slug: `100x-pm-skills`
+- Hero subtitle: `AI Product OS for PMs and Founders`
+- Core promise: rough idea -> evidence -> scope -> agent-readable spec -> metrics -> eval -> roadmap -> delegated execution
 
-## Testing Guidelines
-No automated tests exist. Validate changes by:
-- Ensuring linked skill paths resolve (e.g., `skills/prd-development/SKILL.md`).
-- Confirming examples and references are accurate and consistent.
-- Skimming for structure compliance and readability.
-- For Claude web upload, ensure frontmatter is valid YAML and use the packaging helper to generate `Skill.md` copies.
+## Working Model
 
-## Operating Principle (Dogfood First)
-- Use this repo's own definitions, scripts, and standards before making structural decisions.
-- If deciding skill type/category, anchor to local criteria in `README.md`, `CLAUDE.md`, and relevant `SKILL.md` files.
-- Prefer proving decisions with repo tools (`scripts/find-a-skill.sh`, `scripts/test-a-skill.sh`, `scripts/check-skill-metadata.py`) over opinion.
+Use this repo as a system, not a prompt dump.
 
-## Cross-Repo Boundary
-- This repository is the shared PM skills library, not the Productside playbook distribution repo.
-- Productside playbook skill content must be created/edited in `/Users/deanpeters/Code/productside_playbook_skills`.
-- When supporting Productside work, treat this repo as read-only reference/tooling unless explicitly asked to change this repo.
+- Commands are the front door.
+- Skills are the execution layer behind commands.
+- Packs are grouped operating paths, not random categories.
+- Documentation should optimize for first-run usefulness, not internal completeness.
 
-## Claude Custom Skills Compatibility
-- Claude web uploads require `Skill.md` (case-sensitive). Use `scripts/package-claude-skills.sh`.
-- Any scripts under a skill should be deterministic, avoid network calls, and be documented in the skill.
-- Review skills and scripts for safety before sharing or running.
+## Front-Door Priority
 
-## Commit & Pull Request Guidelines
-- Commit messages in history use the imperative voice with a clear subject (e.g., `Add agent-orchestration-advisor skill`), sometimes followed by an issue tag and an em dash for context.
-- PRs should include a short summary, link relevant issues, and note skill type (component/interactive/workflow).
-- If adding a new skill, update the catalog in `README.md` to keep counts and tables accurate.
+When editing public docs, keep these commands as the main entrypoints:
 
-## Release Checklist
-- Update skill counts and tables in `README.md`.
-- Ensure new skills are linked in the correct section (Component/Interactive/Workflow).
-- Spot-check cross-links from `README.md` and `CONTRIBUTING.md`.
-- Confirm any renamed skills update paths and references.
-- If Streamlit beta changed, update `app/STREAMLIT_INTERFACE.md`, `app/.env.example`, and release notes in `README.md`/`docs/announcements/`.
+1. `pm-command-center`
+2. `shape-idea`
+3. `validate-demand`
+4. `agent-prd`
+5. `prioritize`
+6. `define-metrics`
+7. `design-experiment`
+8. `design-eval`
+9. `run-roadmap`
+10. `make-content`
 
-## Skill Quality Expectations
-- Agent-ready, self-contained, and practical.
-- Include at least one concrete example and one explicit anti-pattern.
-- Define jargon on first use and keep tradeoffs explicit.
+Do not reintroduce a “must-install skills” front door that fights this model.
+
+## 100X PM Operating Rules
+
+1. Define the problem before proposing the solution.
+2. Use evidence, not noise, to validate demand.
+3. Define success before shipping.
+4. Make trade-offs explicit.
+5. AI PM is not prompt writing; it includes evals, fallback, guardrails, and behavior design.
+6. If execution cost is lower than thinking cost, ship the smallest viable test.
+7. Aggressive iteration beats polished hesitation.
+8. Leverage beats effort.
+9. PRDs should increasingly be readable by both humans and agents.
+10. The best PMs create non-linear outcomes, not just better documents.
+
+## Agent Behavior In This Repo
+
+When adding or editing commands, skills, or docs:
+
+- Prefer autonomous-first exploration for rough ideas.
+- If ambiguity is high, enumerate meaningful options before taking action.
+- Before irreversible action, require a choice or make the chosen assumption explicit.
+- Do not present simulated insight as validated truth.
+- After review, reflection, or error discovery, capture the learning in repo docs or process notes when the lesson is reusable.
+
+## PRD Standard
+
+Command and skill outputs for specs should default to dual-mode artifacts:
+
+- human-readable summary
+- agent-readable task spec
+- constraints and dependencies
+- success metrics
+- fallback or escalation rules
+- required context
+- output expectations
+
+## Skill Standard
+
+Skills should stay concise, portable, and composable.
+
+- Folder name: lowercase kebab-case
+- Main file: `skills/<skill-name>/SKILL.md`
+- Prefer a compact frontmatter and explicit output format
+- Include concrete anti-patterns or failure modes
+- Reference the next skill when sequencing matters
+
+If you add a new skill for the new command system, prefer the 100X PM metadata style:
+
+- `name`
+- `title`
+- `type`
+- `tier`
+- `pack`
+- `brand_mode`
+- `public_safe`
+- `best_for`
+- `outputs`
+- `xpm_dimension`
+- `xpm_rules`
+
+## Documentation Standard
+
+Public docs should answer three questions quickly:
+
+1. What is 100X PM?
+2. What should I run first?
+3. What concrete output will I get?
+
+Avoid stale counts, vague marketplace language, and mismatched headlines.
+
+## Local Repo Management
+
+- Keep one canonical local repo.
+- Keep `main` clean.
+- Use one worktree per major initiative.
+- Do not keep long-lived duplicate local folders for “old” and “new.”
+- If a repo rename is blocked remotely, the local folder name can still move first.
+
+See [docs/local-repo-workflow.md](docs/local-repo-workflow.md).

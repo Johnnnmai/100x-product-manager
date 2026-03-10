@@ -16,6 +16,16 @@ The `add-a-skill.sh` utility streamlines skill creation by:
 
 This utility is **adapter-driven**. It works out of the box with Claude Code, supports a manual mode (`--agent manual`) that works with any AI CLI, and can be extended via custom adapters.
 
+### Generation Defaults
+
+Use these defaults when reviewing or editing generated output:
+
+- `description` should start with `Use when...` and describe the trigger, not the workflow.
+- Keep `SKILL.md` lean and move bulky source notes into `references/`, `examples/`, `assets/`, or `scripts/` only when needed.
+- Make the artifact/output explicit.
+- Include at least one concrete example and one explicit anti-pattern.
+- Prefer portable folder structure over repo-specific cleverness.
+
 ---
 
 ## Quick Start
@@ -146,7 +156,7 @@ Files to create:
 
 YAML frontmatter:
   name: prioritization-framework-advisor
-  description: Guide PMs through feature prioritization using RICE framework with tradeoff analysis
+  description: Use when competing bets need a fast prioritization decision and the team needs a consistent scoring method
   type: interactive
 
 Sections:
@@ -222,7 +232,9 @@ All skills passed validation ✓
 1. Review SKILL.md files
 2. Check examples and templates
 3. Verify structure and content
-4. Approve installation or exit
+4. Check that `description` reads like trigger metadata, not a workflow summary
+5. Check whether bulky material should move into `references/`, `examples/`, or `scripts/`
+6. Approve installation or exit
 
 **Optional:** Opens skills directory in your editor/file browser
 
@@ -714,7 +726,7 @@ See `CONTRIBUTING.md` for general contribution guidelines.
 ## Support
 
 **Issues:**
-- GitHub Issues: https://github.com/Johnnnmai/100x-product-managers/issues
+- GitHub Issues: https://github.com/Johnnnmai/100x-pm-skills/issues
 - Include: OS, agent used, error messages, input content (if not sensitive)
 
 **Questions:**

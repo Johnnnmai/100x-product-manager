@@ -1,6 +1,6 @@
 ---
 name: skill-authoring-workflow
-description: Turn raw PM content into a compliant, publish-ready skill by choosing build/add paths, running conformance checks, and updating docs before commit.
+description: Use when creating or revising a PM skill and you need the right build path, validation checks, and doc updates before commit.
 type: workflow
 ---
 
@@ -146,6 +146,7 @@ Result:
 
 - Shipping vibes, not standards.
 - Choosing `workflow` when the task is really a component template.
+- Writing descriptions that summarize the workflow instead of the trigger.
 - Bloated descriptions that exceed upload limits.
 - Forgetting to update README counts after adding a skill.
 - Treating generated output as final without review.
@@ -157,6 +158,7 @@ Result:
 - `CLAUDE.md`
 - `docs/Building PM Skills.md`
 - `docs/Add-a-Skill Utility Guide.md`
+- `docs/github-skills-best-practices.md`
 - `scripts/add-a-skill.sh`
 - `scripts/build-a-skill.sh`
 - `scripts/find-a-skill.sh`

@@ -1,94 +1,53 @@
 # Start Here
 
-Use this file if you found the repo from GitHub, XHS, LinkedIn, or a friend and want value fast without reading the whole library.
+If you are new here, think of **100X PM** as a system for multiplying judgment, not just writing faster.
 
-## Fastest Path to Value
+## Fastest Path
 
-Pick one starter pack based on the job you need done this week.
+1. Open [commands/pm-command-center.md](commands/pm-command-center.md)
+2. If all you have is a rough idea, start with [commands/shape-idea.md](commands/shape-idea.md)
+3. If you need proof before motion, start with [commands/validate-demand.md](commands/validate-demand.md)
+4. If scope is approved and execution needs a spec, start with [commands/agent-prd.md](commands/agent-prd.md)
+5. If you are planning work across humans and agents, start with [commands/run-roadmap.md](commands/run-roadmap.md)
 
-### 1. PM Job Hunt
+## If Your Situation Looks Like This
 
-Start with:
-1. `skills/pm-resume-teardown/SKILL.md`
-2. `skills/pm-mock-interview-workflow/SKILL.md`
-3. `skills/bigtech-vs-startup-decision-advisor/SKILL.md`
+- “I only have a rough idea.” -> `shape-idea`
+- “I have feedback and signals, but I do not know if demand is real.” -> `validate-demand`
+- “I need a PRD that an engineer and an agent can both use.” -> `agent-prd`
+- “I need to decide what to cut or defer.” -> `prioritize`
+- “I need metrics, thresholds, and instrumentation.” -> `define-metrics`
+- “I need to test a hypothesis in the market.” -> `design-experiment`
+- “I am shipping an AI feature and need evals.” -> `design-eval`
+- “I need a roadmap with ownership and tracking.” -> `run-roadmap`
+- “I want to turn the work into public content.” -> `make-content`
 
-Best for:
-- PM resume rewrites
-- mock interview prep
-- deciding between startup and big tech roles
-
-### 2. Discovery & Validation
-
-Start with:
-1. `skills/discovery-interview-prep/SKILL.md`
-2. `skills/problem-framing-canvas/SKILL.md`
-3. `skills/opportunity-solution-tree/SKILL.md`
-
-Best for:
-- customer discovery planning
-- turning messy research into a decision
-- validating before building
-
-### 3. Growth & Finance
-
-Start with:
-1. `skills/business-health-diagnostic/SKILL.md`
-2. `skills/finance-based-pricing-advisor/SKILL.md`
-3. `skills/acquisition-channel-advisor/SKILL.md`
-
-Best for:
-- SaaS health reviews
-- pricing decisions
-- growth channel trade-offs
-
-### 4. AI-Shaped PM
-
-Start with:
-1. `skills/ai-shaped-readiness-advisor/SKILL.md`
-2. `skills/context-engineering-advisor/SKILL.md`
-3. `skills/pol-probe-advisor/SKILL.md`
-
-Best for:
-- PM teams using AI but not yet changing how work gets done
-- diagnosing context stuffing
-- compressing validation loops
-
-## Suggested Prompt Pattern
-
-Use this shape in Claude Code, Codex, or ChatGPT:
+## Recommended Prompt Pattern
 
 ```text
-Using skills/<skill-name>/SKILL.md:
-1. Ask up to 3 clarifying questions first.
-2. Follow the skill structure exactly.
-3. Output markdown I can reuse in real work.
-4. End with risks, assumptions, and next steps.
+Using commands/<command-name>.md:
+1. Follow the command exactly.
+2. If ambiguity is high, surface meaningful options before acting.
+3. Make assumptions explicit.
+4. Produce markdown I can reuse.
+5. End with risks, open questions, and the next recommended command.
 ```
 
-## If You Only Try One Skill
+## Chinese Quick Guide
 
-| Situation | Try this first |
-| --- | --- |
-| PM resume is not converting | `pm-resume-teardown` |
-| Need sharper discovery interviews | `discovery-interview-prep` |
-| Need to know if the business is healthy | `business-health-diagnostic` |
-| Need a better PRD from messy inputs | `prd-development` |
-| Want PM work to become more AI-native | `ai-shaped-readiness-advisor` |
+- 只有一个粗糙想法：先跑 `shape-idea`
+- 有很多反馈但不知道值不值得做：先跑 `validate-demand`
+- 方向大致确定，需要给 human 和 agent 都能执行的规格：先跑 `agent-prd`
+- 要把方向拆成 roadmap 和任务：先跑 `run-roadmap`
 
-## Chinese Quick Guide / 中文快速入口
+## What Good Output Looks Like
 
-- 想先解决求职问题：从 `pm-resume-teardown` 开始
-- 想先解决访谈与 discovery：从 `discovery-interview-prep` 开始
-- 想先看懂业务增长和定价：从 `business-health-diagnostic` 开始
-- 想先把 AI 真正嵌进 PM 工作流：从 `ai-shaped-readiness-advisor` 开始
+A good first run should not give you generic text. It should give you:
 
-## Next
+- a sharper problem statement
+- a narrower scope
+- explicit trade-offs
+- a success metric draft
+- a concrete next move
 
-After your first run:
-1. Save the output you would actually reuse.
-2. Note where the skill felt generic, weak, or too abstract.
-3. Open an issue or improve the skill locally.
-
-Repo:
-- https://github.com/Johnnnmai/100x-product-managers
+If the output still feels vague, use [commands/pm-command-center.md](commands/pm-command-center.md) and route to the shortest tighter loop.

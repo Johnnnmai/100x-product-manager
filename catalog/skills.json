@@ -1,0 +1,62 @@
+[
+  {
+    "id": "pm-command-center",
+    "type": "command",
+    "path": "commands/pm-command-center.md",
+    "purpose": "Route the user to the shortest useful workflow."
+  },
+  {
+    "id": "shape-idea",
+    "type": "command",
+    "path": "commands/shape-idea.md",
+    "purpose": "Turn a rough idea into a wedge, scope, and next move."
+  },
+  {
+    "id": "validate-demand",
+    "type": "command",
+    "path": "commands/validate-demand.md",
+    "purpose": "Judge whether demand is real with evidence."
+  },
+  {
+    "id": "agent-prd",
+    "type": "command",
+    "path": "commands/agent-prd.md",
+    "purpose": "Write a spec for both human review and agent execution."
+  },
+  {
+    "id": "prioritize",
+    "type": "command",
+    "path": "commands/prioritize.md",
+    "purpose": "Make trade-offs explicit and decide what to defer."
+  },
+  {
+    "id": "define-metrics",
+    "type": "command",
+    "path": "commands/define-metrics.md",
+    "purpose": "Define success, thresholds, and windows."
+  },
+  {
+    "id": "design-experiment",
+    "type": "command",
+    "path": "commands/design-experiment.md",
+    "purpose": "Turn a hypothesis into a real test."
+  },
+  {
+    "id": "design-eval",
+    "type": "command",
+    "path": "commands/design-eval.md",
+    "purpose": "Define AI evals, fallback, and review triggers."
+  },
+  {
+    "id": "run-roadmap",
+    "type": "command",
+    "path": "commands/run-roadmap.md",
+    "purpose": "Split direction into milestones, owners, and tracking."
+  },
+  {
+    "id": "make-content",
+    "type": "command",
+    "path": "commands/make-content.md",
+    "purpose": "Turn internal work into external distribution."
+  }
+]

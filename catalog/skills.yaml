@@ -1,0 +1,150 @@
+commands:
+  - id: pm-command-center
+    path: commands/pm-command-center.md
+    purpose: Route the user to the shortest useful workflow.
+    skills:
+      - idea-explorer
+      - demand-reality-checker
+      - agent-readable-prd-writer
+      - roadmap-orchestrator
+  - id: shape-idea
+    path: commands/shape-idea.md
+    purpose: Turn a rough idea into a wedge, scope, and next move.
+    skills:
+      - idea-explorer
+      - opportunity-wedge-selector
+      - idea-scope-down-architect
+      - problem-framing-canvas
+      - success-metric-spec-writer
+  - id: validate-demand
+    path: commands/validate-demand.md
+    purpose: Judge whether demand is real with evidence.
+    skills:
+      - evidence-collector
+      - market-signal-harvester
+      - evidence-triangulator
+      - demand-reality-checker
+      - user-insight-synthesizer
+  - id: agent-prd
+    path: commands/agent-prd.md
+    purpose: Write a spec for both human review and agent execution.
+    skills:
+      - problem-statement
+      - agent-readable-prd-writer
+      - prd-development
+      - prd-coverage-checker
+  - id: prioritize
+    path: commands/prioritize.md
+    purpose: Make trade-offs explicit and decide what to defer.
+    skills:
+      - prioritization-advisor
+      - market-driven-prioritization
+      - feature-investment-advisor
+  - id: define-metrics
+    path: commands/define-metrics.md
+    purpose: Define success, counter metrics, thresholds, and windows.
+    skills:
+      - success-metric-spec-writer
+      - ab-test-designer
+  - id: design-experiment
+    path: commands/design-experiment.md
+    purpose: Turn a hypothesis into a real test.
+    skills:
+      - ab-test-designer
+      - rapid-iteration-cycle
+  - id: design-eval
+    path: commands/design-eval.md
+    purpose: Define AI evals, fallback, and review triggers.
+    skills:
+      - eval-design-for-ai-feature
+      - fallback-and-guardrail-designer
+      - token-budget-optimizer
+  - id: run-roadmap
+    path: commands/run-roadmap.md
+    purpose: Split direction into milestones, owners, and tracking.
+    skills:
+      - roadmap-orchestrator
+      - task-delegation-planner
+      - task-tracking-operator
+      - roadmap-planning
+  - id: make-content
+    path: commands/make-content.md
+    purpose: Turn internal work into external distribution.
+    skills:
+      - xhs-proof-of-work-post
+      - seo-brief-builder
+      - geo-entity-brief
+
+core_skills:
+  - id: idea-explorer
+    path: skills/idea-explorer/SKILL.md
+    type: interactive
+    pack: direction-discovery
+  - id: idea-scope-down-architect
+    path: skills/idea-scope-down-architect/SKILL.md
+    type: interactive
+    pack: direction-discovery
+  - id: opportunity-wedge-selector
+    path: skills/opportunity-wedge-selector/SKILL.md
+    type: interactive
+    pack: direction-discovery
+  - id: evidence-collector
+    path: skills/evidence-collector/SKILL.md
+    type: component
+    pack: demand-insights
+  - id: market-signal-harvester
+    path: skills/market-signal-harvester/SKILL.md
+    type: component
+    pack: demand-insights
+  - id: evidence-triangulator
+    path: skills/evidence-triangulator/SKILL.md
+    type: interactive
+    pack: demand-insights
+  - id: demand-reality-checker
+    path: skills/demand-reality-checker/SKILL.md
+    type: interactive
+    pack: demand-insights
+  - id: user-insight-synthesizer
+    path: skills/user-insight-synthesizer/SKILL.md
+    type: component
+    pack: demand-insights
+  - id: agent-readable-prd-writer
+    path: skills/agent-readable-prd-writer/SKILL.md
+    type: component
+    pack: prd-scope
+  - id: prd-coverage-checker
+    path: skills/prd-coverage-checker/SKILL.md
+    type: interactive
+    pack: prd-scope
+  - id: success-metric-spec-writer
+    path: skills/success-metric-spec-writer/SKILL.md
+    type: component
+    pack: metrics-experiments
+  - id: ab-test-designer
+    path: skills/ab-test-designer/SKILL.md
+    type: interactive
+    pack: metrics-experiments
+  - id: eval-design-for-ai-feature
+    path: skills/eval-design-for-ai-feature/SKILL.md
+    type: interactive
+    pack: ai-pm-evals
+  - id: fallback-and-guardrail-designer
+    path: skills/fallback-and-guardrail-designer/SKILL.md
+    type: interactive
+    pack: ai-pm-evals
+  - id: roadmap-orchestrator
+    path: skills/roadmap-orchestrator/SKILL.md
+    type: workflow
+    pack: roadmaps-delegation
+  - id: task-delegation-planner
+    path: skills/task-delegation-planner/SKILL.md
+    type: interactive
+    pack: roadmaps-delegation
+  - id: task-tracking-operator
+    path: skills/task-tracking-operator/SKILL.md
+    type: component
+    pack: roadmaps-delegation
+  - id: token-budget-optimizer
+    path: skills/token-budget-optimizer/SKILL.md
+    type: component
+    pack: ai-pm-evals

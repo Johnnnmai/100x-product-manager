@@ -2,14 +2,16 @@
 
 This guide explains how we turn real-world PM frameworks and source materials into agent-ready skills in this repo.
 
+For the public-repo patterns we now mirror on purpose, read [`github-skills-best-practices.md`](github-skills-best-practices.md) first.
+
 ## Local Clone Quickstart
 
 For contributors working directly from a local clone:
 
 ```bash
 # 1) Clone and enter repo
-git clone https://github.com/Johnnnmai/100x-product-managers.git
-cd 100x-product-managers
+git clone https://github.com/Johnnnmai/100x-pm-skills.git
+cd 100x-pm-skills
 
 # 2) Build a skill (guided wizard)
 ./scripts/build-a-skill.sh
@@ -35,7 +37,7 @@ Use `scripts/add-a-skill.sh` to automatically convert raw PM content into formal
 ./scripts/add-a-skill.sh research/your-framework.md
 ```
 
-See [`Add-a-Skill Utility Guide.md`](Add-a-Skill%20Utility%20Guide.md) for complete guide.
+See [`Add-a-Skill Utility Guide.md`](Add-a-Skill%20Utility%20Guide.md) for the full flow.
 
 **2. Guided Wizard (Build-a-Bear style)**
 Use `scripts/build-a-skill.sh` for a multi-turn interactive flow. It prompts for frontmatter and each required section in order, then writes a compliant skill and validates it.
@@ -77,6 +79,16 @@ Pick the smallest type that fits the job.
 - Interactive: A guided decision flow with 3-5 questions and 3-5 numbered recommendations.
 - Workflow: A multi-phase process that orchestrates other skills and includes decision points.
 
+## Borrowed From Effective Public Skill Repos
+
+These are the defaults worth copying because they improve discovery, portability, and actual reuse:
+
+- `description` is retrieval metadata. Start with `Use when...` and describe the trigger, not the workflow.
+- Keep `SKILL.md` scannable. Put heavy source notes in `references/`, deterministic helpers in `scripts/`, reusable files in `assets/`, and worked scenarios in `examples/`.
+- Keep the skill portable. A skill folder should still make sense if copied into Claude Code, Codex, Letta, or a project-local skills directory.
+- Commands orchestrate; skills specialize. Do not hide several reusable jobs inside one oversized skill.
+- Include one concrete example and one explicit anti-pattern.
+
 ## Distill The Source
 
 Use source material (posts, books, internal playbooks) to extract the minimum that makes the framework work.
@@ -91,12 +103,14 @@ Use source material (posts, books, internal playbooks) to extract the minimum th
 
 ## Draft The Skill File
 
-Create a new folder in `skills/<skill-name>/SKILL.md` with lowercase kebab-case naming. Every skill must use the standard section order and frontmatter fields.
+Create a new folder in `skills/<skill-name>/SKILL.md` with lowercase kebab-case naming.
+
+Every skill must have `name`, `description`, and `type` in frontmatter. Other repo-specific metadata is optional, but these three fields are the portable core.
 
 ```markdown
 ---
 name: skill-name
-description: One-line description that includes when to use it (≤ 200 chars for Claude web uploads)
+description: Use when a PM or founder hits a specific trigger and needs this skill
 type: component
 ---
 
@@ -113,18 +127,35 @@ type: component
 ## References
 ```
 
+Recommended folder shape:
+
+```text
+skills/
+  skill-name/
+    SKILL.md
+    examples/        # only if needed
+    references/      # only if needed
+    scripts/         # only if needed
+    assets/          # only if needed
+```
+
+Use supporting folders only when they reduce the size or cognitive load of `SKILL.md`.
+
 ## Quality Bar
 
 - Keep language opinionated and practical.
 - Use short paragraphs and concrete instructions.
+- Make `description` trigger-first. It should start with `Use when...` and should not summarize the workflow.
 - Include a clear example and an explicit anti-pattern.
 - Define jargon on first use.
 - Make tradeoffs explicit.
+- Keep the portable core lean. If the skill needs long reference material, split it into `references/` or `examples/`.
 - If you plan to upload to Claude web custom skills, keep `name` <= 64 chars and `description` <= 200 chars.
 
 ## Optional Scripts (Deterministic Helpers)
 
 Some skills benefit from small deterministic helpers (calculators, template generators). If you add one:
+
 - Place it in `skills/<skill-name>/scripts/`.
 - Keep it deterministic (no network calls, no external dependencies).
 - Document usage in the skill file under Application.
@@ -133,14 +164,14 @@ Some skills benefit from small deterministic helpers (calculators, template gene
 
 Assume the source is a post about demo regret and stage fright. The goal is to help PMs design a demo that lands with the audience and avoids common traps.
 
-**Decision:** This is likely a workflow if you want multi-phase execution (briefing, narrative, rehearsal, contingency). If you only want a short Q and A flow that outputs a demo outline, make it interactive.
+**Decision:** This is likely a workflow if you want multi-phase execution (briefing, narrative, rehearsal, contingency). If you only want a short Q&A flow that outputs a demo outline, make it interactive.
 
 Sample workflow frontmatter and structure:
 
 ```markdown
 ---
 name: product-demo
-description: Plan and run product demos that land with the audience, avoid demo regret, and include rehearsal and contingency planning. Use when preparing a demo for stakeholders, customers, or executives.
+description: Use when preparing a product demo for stakeholders, customers, or executives and you need a tighter narrative plus contingency planning
 type: workflow
 ---
 

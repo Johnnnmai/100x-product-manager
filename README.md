@@ -1,199 +1,180 @@
-# 100X PM Skills / 100X 产品经理技能体系
+# 100X PM
 
-**52 battle-tested PM skills** for Claude Code, Codex, ChatGPT, and agentic product work.
+**AI Product OS for PMs and Founders**
 
-This repo is for PMs who want more than prompt templates.
+Turn rough ideas into compelling, scoped, shippable product direction.
 
-- Structured PM skills, not one-off prompts
-- Fast entry points, not prompt archaeology
-- Stronger judgment, not just nicer wording
-- A practical 100X PM lens after the install path is clear
+- Shape rough ideas into wedges, scope, and first moves
+- Validate whether demand is real with evidence, not noise
+- Write specs for both humans and agents
+- Define metrics, experiments, evals, fallback, and guardrails
+- Turn roadmaps into delegated human and agent execution
 
-Supported paths:
-- `Claude Code`
-- `Codex`
-- `ChatGPT + GitHub / Projects / custom GPTs`
-- `skills.sh`
-- `Streamlit (beta)` local playground
-
-## Updates & Announcements
-
-- **2026-03-09:** [GitHub Refresh + XHS Launch Asset Set](docs/announcements/2026-03-09-github-refresh-xhs-launch.md)
-- **Announcement index:** [docs/announcements/README.md](docs/announcements/README.md)
-
-## Why This Exists
-
-Most AI PM work breaks in the same place:
-
-The model can produce text, but it does not reliably understand PM judgment, trade-offs, sequencing, or validation logic.
-
-This repo packages repeatable product frameworks into reusable skills so the agent can:
-- ask sharper questions before drafting
-- turn fuzzy inputs into decision-ready outputs
-- connect discovery, strategy, execution, and business thinking
-- help PMs work in more agentic, AI-shaped ways
-
-中文说明：
-- 这不是“提示词大全”，而是一套可安装、可复用、可组合的 PM skills。
-- 重点不是让 AI 更会写，而是让 AI 更像一个懂 PM 逻辑、验证逻辑、商业逻辑的工作伙伴。
-- GitHub 首页优先解决“我现在能怎么用”，100X PM 方法论放在后面做差异化。
-
-## What You Get
-
-Current catalog:
-- **52 skills total**
-- **22 component skills**
-- **22 interactive skills**
-- **8 workflow skills**
-
-High-signal categories:
-
-| Category | What it helps with | Example skills |
-| --- | --- | --- |
-| PM Job Hunt | Resume positioning, mock interviews, role selection | `pm-resume-teardown`, `pm-mock-interview-workflow`, `bigtech-vs-startup-decision-advisor` |
-| Discovery & Validation | Customer interviews, problem framing, opportunity mapping | `discovery-interview-prep`, `problem-framing-canvas`, `opportunity-solution-tree` |
-| Delivery & Artifacts | PRDs, roadmaps, stories, epic framing | `prd-development`, `roadmap-planning`, `user-story`, `epic-breakdown-advisor` |
-| Growth & Finance | Business health, pricing, SaaS metrics, market sizing | `business-health-diagnostic`, `finance-based-pricing-advisor`, `acquisition-channel-advisor`, `tam-sam-som-calculator` |
-| AI-Shaped PM | Context engineering, agent orchestration, org readiness | `context-engineering-advisor`, `ai-shaped-readiness-advisor`, `pol-probe-advisor`, `skill-authoring-workflow` |
+中文一句话：
+**100X PM 不是让 AI 更会写，而是让 PM 和 founder 更快把模糊问题收敛成可落地的判断与执行。**
 
 ## Start Here
 
-If you only have 10-15 minutes, start with [START_HERE.md](START_HERE.md).
+- [START_HERE.md](START_HERE.md)
+- [MUST_INSTALL.md](MUST_INSTALL.md)
+- [PACKS.md](PACKS.md)
+- [PRINCIPLES.md](PRINCIPLES.md)
+- [INSTALL.md](INSTALL.md)
 
-### Starter Packs
+## What Is 100X PM?
 
-| Starter pack | Best for | Start with | Then use |
-| --- | --- | --- | --- |
-| **PM Job Hunt** | PM 求职、面试准备、职业选择 | `pm-resume-teardown` | `pm-mock-interview-workflow`, `bigtech-vs-startup-decision-advisor` |
-| **Discovery & Validation** | 把模糊问题变成可验证的 PM 判断 | `discovery-interview-prep` | `problem-framing-canvas`, `opportunity-solution-tree` |
-| **Growth & Finance** | 看清业务健康度、定价和增长问题 | `business-health-diagnostic` | `finance-based-pricing-advisor`, `acquisition-channel-advisor` |
-| **AI-Shaped PM** | 让 PM 工作从“会写字”升级到“会跑系统” | `ai-shaped-readiness-advisor` | `context-engineering-advisor`, `pol-probe-advisor` |
+100X PM is not about doing 100x more work.
 
-Recommended first-skill prompts:
+It means becoming the kind of PM or founder who can:
 
-```text
-Using skills/pm-resume-teardown/SKILL.md, pressure-test my PM resume for senior PM roles. Ask clarifying questions first, then show the highest-impact fixes.
-```
+- frame the right problem before drafting solutions
+- make explicit trade-offs instead of hiding behind process
+- define success with evidence, metrics, guardrails, and time windows
+- design AI behavior through prompts, evals, fallback logic, and constraints
+- ship the smallest viable test when execution cost is lower than more internal debate
+- use systems, workflows, and leverage to create outsized outcomes
 
-```text
-Use skills/discovery-interview-prep/SKILL.md to prepare 6 churn interviews for mid-market B2B customers. Give me a sharp question guide and the mistakes to avoid.
-```
+中文理解：
 
-```text
-Use skills/business-health-diagnostic/SKILL.md to assess our SaaS business health. Show red flags, what matters most, and what to do next.
-```
+- 先定义问题，再给方案
+- 先讲取舍，再讲功能
+- 先定义成功，再开始执行
+- 不只是使用 AI，而是定义 AI 的行为
+- 当执行成本低于继续空想的成本，就更快落地去验证
 
-```text
-Use skills/ai-shaped-readiness-advisor/SKILL.md to assess whether my PM org is just using AI tools or actually redesigning work around AI.
-```
+**100X PM is not faster typing. It is sharper judgment, faster convergence, and stronger leverage.**
 
-## Featured Skills
+## What Do You Need To Do Today?
 
-If you are deciding what to try first, these are the strongest front-door skills right now:
+- Rough idea, weak instinct, no clear wedge yet: [shape-idea](commands/shape-idea.md)
+- Need to know if demand is real: [validate-demand](commands/validate-demand.md)
+- Need a spec that humans and agents can execute: [agent-prd](commands/agent-prd.md)
+- Need to decide what to do now vs later: [prioritize](commands/prioritize.md)
+- Need success metrics and thresholds: [define-metrics](commands/define-metrics.md)
+- Need a test design, not just an opinion: [design-experiment](commands/design-experiment.md)
+- Shipping an AI feature and need evals: [design-eval](commands/design-eval.md)
+- Need to turn a direction into delegated execution: [run-roadmap](commands/run-roadmap.md)
+- Need to turn work into distribution: [make-content](commands/make-content.md)
+- Not sure where to start: [pm-command-center](commands/pm-command-center.md)
 
-- `pm-resume-teardown` - Diagnose why a PM resume will or will not convert, then rewrite the highest-value bullets
-- `pm-mock-interview-workflow` - Run a full interview prep loop: target role, story inventory, mock questions, debrief, 7-day practice plan
-- `discovery-interview-prep` - Turn messy research goals into a focused interview plan with the right method
-- `business-health-diagnostic` - Connect growth, retention, unit economics, and capital efficiency instead of staring at one metric
-- `finance-based-pricing-advisor` - Evaluate pricing changes with revenue, churn, conversion, and payback trade-offs
-- `ai-shaped-readiness-advisor` - Separate AI theater from real operating-model change
+## 10 Must-Install Commands
 
-## How To Use
+1. `pm-command-center`: route the job, stage, and shortest next workflow
+2. `shape-idea`: go from rough idea to wedge, scope, risk, and next move
+3. `validate-demand`: turn comments, notes, tickets, and URLs into evidence-backed demand judgment
+4. `agent-prd`: produce a PRD that works for both human review and agent execution
+5. `prioritize`: force explicit trade-offs and what to defer
+6. `define-metrics`: define success metrics, counter metrics, thresholds, and windows
+7. `design-experiment`: turn a hypothesis into a real experiment plan
+8. `design-eval`: define pass/fail criteria, test cases, fallback, and review triggers
+9. `run-roadmap`: split a direction into milestones, ownership, and tracking rules
+10. `make-content`: convert product work into reusable public content
 
-### Option 1: Use Skills Directly From This Repo
+Full details live in [MUST_INSTALL.md](MUST_INSTALL.md).
+
+## Core Capabilities
+
+### Direction
+
+- rough idea to problem framing
+- target user hypothesis
+- first wedge
+- scope down
+- evidence-backed demand judgment
+
+### Decision
+
+- dual-mode PRDs for humans and agents
+- explicit trade-offs
+- metrics and thresholds
+- experiments
+- AI evals, fallback, and guardrails
+
+### Delegation
+
+- roadmap themes and milestones
+- human vs agent work split
+- task contracts
+- tracking cadence
+- reuse and content packaging
+
+## Proof Of Value
+
+We are not going to invent benchmark numbers for the homepage.
+
+Proof should come from public artifacts, a documented test plan, and raw runs other people can inspect.
+
+| Proof layer | What it compares | Status |
+| --- | --- | --- |
+| Before/after artifacts | same input, plain output vs command-guided output | live |
+| Blind-scored benchmark | baseline vs 100X PM across canonical PM tasks | planned |
+| Real workflow metrics | time to acceptable draft, edit burden, reuse | planned |
+
+Current proof:
+
+- [PRD before/after](examples/before-after/prd-before-after.md)
+- [Prioritization before/after](examples/before-after/prioritization-before-after.md)
+- [AI eval before/after](examples/before-after/eval-before-after.md)
+- [Public value test plan](docs/value-test-plan.md)
+
+Benchmark templates:
+
+- [Scorecard template](examples/value-tests/scorecard-template.md)
+- [Task run template](examples/value-tests/task-run-template.md)
+
+## Packs
+
+This repo is organized around practical packs, not a random skill supermarket.
+
+- [Direction & Discovery](PACKS.md#direction--discovery)
+- [Demand & Insights](PACKS.md#demand--insights)
+- [PRD & Scope](PACKS.md#prd--scope)
+- [Metrics & Experiments](PACKS.md#metrics--experiments)
+- [AI PM & Evals](PACKS.md#ai-pm--evals)
+- [Roadmaps & Delegation](PACKS.md#roadmaps--delegation)
+- [Career & Interviews](PACKS.md#career--interviews)
+- [Content & Distribution](PACKS.md#content--distribution)
+
+## Integrations
+
+Supported as optional layers, not mandatory runtime dependencies:
+
+- `Scrapling`: web evidence ingestion and market signal collection
+- `Context Hub`: curated external context and versioned knowledge
+- `claude-mem`: working memory and context compression
+- `Paperclip`: optional orchestration layer for business goals and agent assignment
+- `OASIS` and `MiroFish`: optional strategy lab for simulation, not default day-to-day PM execution
+
+## Install
+
+Clone the final canonical repo:
 
 ```bash
-git clone https://github.com/Johnnnmai/100x-product-managers.git
-cd 100x-product-managers
+git clone https://github.com/Johnnnmai/100x-pm-skills.git
+cd 100x-pm-skills
 ```
 
-Then call a skill by path in your agent:
-
-```text
-Using skills/prd-development/SKILL.md, create a PRD for a mobile onboarding redesign. Ask up to 3 clarifying questions first.
-```
-
-### Option 2: Install With `skills.sh`
-
-List the skills:
-
-```bash
-npx skills add Johnnnmai/100x-product-managers --list
-```
-
-Install one for Codex:
-
-```bash
-npx skills add Johnnnmai/100x-product-managers --skill pm-resume-teardown -a codex -g
-```
-
-Install one for Claude Code:
-
-```bash
-npx skills add Johnnnmai/100x-product-managers --skill discovery-interview-prep -a claude-code -g
-```
+If the GitHub rename has not been completed yet, the local implementation still lives on top of the mature `100x-product-managers` history. See [INSTALL.md](INSTALL.md) and [docs/local-repo-workflow.md](docs/local-repo-workflow.md).
 
 Platform guides:
-- [Using PM Skills with Claude](docs/Using%20PM%20Skills%20with%20Claude.md)
-- [Using PM Skills with Codex](docs/Using%20PM%20Skills%20with%20Codex.md)
-- [Using PM Skills with ChatGPT](docs/Using%20PM%20Skills%20with%20ChatGPT.md)
-- [PM Skills Playground (beta)](app/STREAMLIT_INTERFACE.md)
 
-## Why 100X PM
+- [docs/Using PM Skills with Claude.md](docs/Using%20PM%20Skills%20with%20Claude.md)
+- [docs/Using PM Skills with Codex.md](docs/Using%20PM%20Skills%20with%20Codex.md)
+- [docs/Using PM Skills with ChatGPT.md](docs/Using%20PM%20Skills%20with%20ChatGPT.md)
 
-This repo is positioned as a practical PM skills marketplace first, but it is not generic.
+## Why This Is Different
 
-The differentiator is the **100X PM** lens:
-- market-driven decisions over internal opinion
-- speed as strategy, not just execution hygiene
-- validation before heavy investment
-- leverage systems over isolated heroic work
-- AI-shaped PM operating models over prompt theater
+Most PM + AI repos stop at “write better prompts.”
 
-### 10X vs 100X
+100X PM is built around a stronger claim:
 
-| Concept | Focus | Description |
-| --- | --- | --- |
-| **10X PM** | Personal efficiency | The PM works faster |
-| **100X PM** | Organizational leverage | The team makes better decisions faster with more reusable systems |
+- average PM work gets stuck in ambiguity, weak prioritization, noisy demand, and unclear success
+- top PM work is nonlinear because it converges faster, wastes less work, and turns decisions into operating systems
+- AI is useful when it helps shape direction, define behavior, and split execution, not when it only drafts text
 
-### The 6 MECE Decision Categories
+If you want the short version:
 
-| Category | Core question | Failure mode |
-| --- | --- | --- |
-| **Outcome** | What result should users get? | Building something useless |
-| **Evidence** | How do we know this works? | Blind optimization |
-| **Solution** | What do we build or not build? | Endless rework |
-| **Delivery** | How do we ship without drift? | Delay and confusion |
-| **Risk** | How do we fail safely? | Bad launches with no rollback |
-| **Alignment** | Who decides, who blocks, who needs context? | Internal drag |
-
-## Repository Structure
-
-```text
-100x-product-managers/
-├── skills/                         # Skill folders, each with SKILL.md
-├── docs/                           # Usage guides, launch copy, maintenance notes
-├── research/                       # Source material and essays
-├── app/                            # Streamlit playground
-├── scripts/                        # Packaging, search, validation, helper scripts
-└── START_HERE.md                   # Fast first-run paths
-```
-
-## Quality Bar
-
-Before promotion or release, this repo should always have:
-- current install instructions
-- working feedback links
-- a clear first-skill onboarding path
-- metadata-conformant skill files
-- no stale repo-owner references in active user-facing docs
-
-## Contributing
-
-See:
-- [CONTRIBUTING.md](CONTRIBUTING.md)
-- [docs/Building PM Skills.md](docs/Building%20PM%20Skills.md)
+**This repo is not a PM skills library. It is an AI Product OS for turning idea -> evidence -> scope -> spec -> metrics -> eval -> roadmap -> delegated execution.**
 
 ## License
 

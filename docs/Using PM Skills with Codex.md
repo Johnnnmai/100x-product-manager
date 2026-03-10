@@ -1,6 +1,6 @@
-# Using 100X PM Skills with Codex
+# Using 100X PM with Codex
 
-Codex can apply these skills directly from your repo files. There are two practical paths:
+Codex can apply the 100X PM command system and its backing skills directly from your repo files. There are two practical paths:
 - Local workspace (Codex in your coding environment)
 - Codex on ChatGPT (`chatgpt.com/codex`) with GitHub connected
 - Skills marketplace install via `npx skills`
@@ -90,27 +90,27 @@ Discover first:
 
 ```bash
 npx skills find product management
-npx skills add Johnnnmai/100x-product-managers --list
+npx skills add Johnnnmai/100x-pm-skills --list
 ```
 
 Install for Codex:
 
 ```bash
-npx skills add Johnnnmai/100x-product-managers --skill <skill-name> -a codex -g
+npx skills add Johnnnmai/100x-pm-skills --skill <skill-name> -a codex -g
 ```
 
 Examples:
 
 ```bash
-npx skills add Johnnnmai/100x-product-managers --skill user-story -a codex -g
-npx skills add Johnnnmai/100x-product-managers --skill prd-development -a codex -g
-npx skills add Johnnnmai/100x-product-managers --skill finance-based-pricing-advisor -a codex -g
+npx skills add Johnnnmai/100x-pm-skills --skill user-story -a codex -g
+npx skills add Johnnnmai/100x-pm-skills --skill prd-development -a codex -g
+npx skills add Johnnnmai/100x-pm-skills --skill finance-based-pricing-advisor -a codex -g
 ```
 
 Equivalent GitHub URL form (also supported on skills.sh pages):
 
 ```bash
-npx skills add https://github.com/Johnnnmai/100x-product-managers --skill <skill-name>
+npx skills add https://github.com/Johnnnmai/100x-pm-skills --skill <skill-name>
 ```
 
 Show installed skills for Codex:
@@ -125,7 +125,7 @@ If you have the repo locally, use the built-in discovery utility first, then ins
 
 ```bash
 ./scripts/find-a-skill.sh --keyword pricing --type interactive
-npx skills add Johnnnmai/100x-product-managers --skill finance-based-pricing-advisor -a codex -g
+npx skills add Johnnnmai/100x-pm-skills --skill finance-based-pricing-advisor -a codex -g
 ```
 
 This gives you better local filtering before install.
@@ -140,11 +140,11 @@ If you do not want to clone this repo:
    ```
 2. List available skills in this repo:
    ```bash
-   npx skills add Johnnnmai/100x-product-managers --list
+   npx skills add Johnnnmai/100x-pm-skills --list
    ```
 3. Install the one you want:
    ```bash
-   npx skills add Johnnnmai/100x-product-managers --skill <skill-name> -a codex -g
+   npx skills add Johnnnmai/100x-pm-skills --skill <skill-name> -a codex -g
    ```
 
 You can also browse on [skills.sh](https://skills.sh/) and copy the command from each skill page.

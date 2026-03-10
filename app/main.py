@@ -1,7 +1,7 @@
-"""PM Skills Playground — Streamlit app for browsing and test-driving PM skills.
+"""100X PM Playground — Streamlit app for browsing and test-driving PM skills.
 
 Usage:
-    cd /path/to/100x-product-managers
+    cd /path/to/100x-pm-skills
     pip install -r app/requirements.txt
     streamlit run app/main.py
 """
@@ -111,39 +111,39 @@ TYPE_BADGES = {
 
 STARTER_PACKS = [
     {
-        "label": "PM Job Hunt",
-        "description": "Resume signal, interview prep, and big-tech vs startup role choice.",
+        "label": "Shape Idea",
+        "description": "Go from rough idea to wedge, scope, and first move.",
         "skills": [
-            "pm-resume-teardown",
-            "pm-mock-interview-workflow",
-            "bigtech-vs-startup-decision-advisor",
+            "idea-explorer",
+            "opportunity-wedge-selector",
+            "idea-scope-down-architect",
         ],
     },
     {
-        "label": "Discovery & Validation",
-        "description": "Customer interviews, problem framing, and opportunity mapping.",
+        "label": "Validate Demand",
+        "description": "Turn signals, notes, and URLs into evidence-backed demand judgment.",
         "skills": [
-            "discovery-interview-prep",
-            "problem-framing-canvas",
-            "opportunity-solution-tree",
+            "evidence-collector",
+            "market-signal-harvester",
+            "demand-reality-checker",
         ],
     },
     {
-        "label": "Growth & Finance",
-        "description": "Business health, pricing, and acquisition-channel decisions.",
+        "label": "Agent PRD",
+        "description": "Write a PRD that works for both human review and agent execution.",
         "skills": [
-            "business-health-diagnostic",
-            "finance-based-pricing-advisor",
-            "acquisition-channel-advisor",
+            "problem-statement",
+            "agent-readable-prd-writer",
+            "prd-coverage-checker",
         ],
     },
     {
-        "label": "AI-Shaped PM",
-        "description": "AI-shaped readiness, context engineering, and probe design.",
+        "label": "Run Roadmap",
+        "description": "Split direction into milestones, ownership, and tracking.",
         "skills": [
-            "ai-shaped-readiness-advisor",
-            "context-engineering-advisor",
-            "pol-probe-advisor",
+            "roadmap-orchestrator",
+            "task-delegation-planner",
+            "task-tracking-operator",
         ],
     },
 ]
@@ -398,7 +398,7 @@ def build_phase_prompt(
 
 def render_sidebar(skill: dict | None = None):
     with st.sidebar:
-        st.markdown("## 🧰 PM Skills Playground (beta)")
+        st.markdown("## 🧰 100X PM Playground (beta)")
 
         providers = available_providers()
         if providers:
@@ -489,19 +489,19 @@ def render_sidebar(skill: dict | None = None):
         st.divider()
         st.caption("Streamlit (beta) · New feature in flight")
         st.caption(
-            "[Feedback via GitHub ↗](https://github.com/Johnnnmai/100x-product-managers/issues)"
+            "[Feedback via GitHub ↗](https://github.com/Johnnnmai/100x-pm-skills/issues)"
         )
         st.caption(f"{len(load_skills())} PM skills · CC BY-NC-SA 4.0")
-        st.caption("[GitHub ↗](https://github.com/Johnnnmai/100x-product-managers)")
+        st.caption("[GitHub ↗](https://github.com/Johnnnmai/100x-pm-skills)")
 
 
 # ─── Screen: Home ─────────────────────────────────────────────────────────────
 
 def render_home(skills: list):
-    st.title("100X PM Skills Playground (beta)")
+    st.title("100X PM Playground (beta)")
     st.markdown(
-        f"Streamlit (beta): browse {len(skills)} PM skills, jump into starter packs, and test-drive skills before installing them in Claude Code, Codex, or ChatGPT. "
-        "Feedback welcome via [GitHub issues](https://github.com/Johnnnmai/100x-product-managers/issues)."
+        f"Streamlit (beta): browse {len(skills)} PM skills, preview the system behind the commands, and test-drive skills before installing them in Claude Code, Codex, or ChatGPT. "
+        "Feedback welcome via [GitHub issues](https://github.com/Johnnnmai/100x-pm-skills/issues)."
     )
     skills_by_name = {skill["name"]: skill for skill in skills}
 
@@ -994,7 +994,7 @@ def render_workflow_session(
 
 def main():
     st.set_page_config(
-        page_title="PM Skills Playground (beta)",
+        page_title="100X PM Playground (beta)",
         page_icon="🧰",
         layout="wide",
         initial_sidebar_state="expanded",
@@ -1035,3 +1035,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

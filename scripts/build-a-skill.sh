@@ -180,11 +180,20 @@ collect_frontmatter() {
     done
 
     while true; do
-        SKILL_DESCRIPTION="$(read_required_line "Description (<=200 chars)")"
-        if [[ ${#SKILL_DESCRIPTION} -le 200 ]]; then
-            break
+        SKILL_DESCRIPTION="$(read_required_line "Description (<=200 chars, start with 'Use when', trigger only)")"
+        if [[ ${#SKILL_DESCRIPTION} -gt 200 ]]; then
+            print_error "Description is ${#SKILL_DESCRIPTION} chars; must be <= 200."
+            continue
         fi
-        print_error "Description is ${#SKILL_DESCRIPTION} chars; must be <= 200."
+
+        if [[ ! "$SKILL_DESCRIPTION" =~ ^[Uu]se\ when ]]; then
+            print_warning "Best practice: start description with 'Use when' and describe the trigger, not the workflow."
+            if ! confirm "Keep this description anyway?" "n"; then
+                continue
+            fi
+        fi
+
+        break
     done
 
     choose_skill_type
