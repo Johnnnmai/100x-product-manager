@@ -4,6 +4,36 @@ This file tracks progress across Ralph loop iterations.
 
 ---
 
+## 2026-03-11 - Test Fixes & Agent Fleet Enhancement
+
+### 完成的工作
+修复了 3 个之前失败的测试:
+
+1. **test_resolve_fleet_reports_cloud_core_blocked_and_local_fallback_ready_without_env**
+   - 添加了缺失的 agent 配置: `local_claude_builder`, `pm_compiler`, `ceo`, `cto_core`, `qa_lead`, `research_lead`, `growth_lead`, `cloud_exec_a`, `cloud_verify_b`, `cloud_research_c`
+   - 配置了 `assignment_role` 字段
+   - 添加了 `gateway_url_env` 支持云端 agent
+
+2. **test_workspace_alias_env_overrides_repo_root**
+   - 实现了 workspace alias 功能: 当 `PAPERCLIP_WORKSPACE_ROOT` 设置时,自动使用 workspace bin 目录中的脚本
+   - 添加了 `_is_workspace_alias_active()` 检测函数
+   - 添加了 `_get_workspace_command()` 函数,支持根据 agent key/role/assignment_role 查找对应的脚本
+   - 支持 underscore 到 hyphen 的转换 (如 `local_codex_builder` -> `local-codex-builder-paperclip.cmd`)
+
+### 测试结果
+```
+21 passed, 1 skipped (local_worker 需要复杂环境)
+```
+
+之前: 4 failed, 17 passed, 1 skipped
+现在: 21 passed, 1 skipped
+
+### 更新的文件
+- `paperclip/agent_fleet.yaml` - 添加了更多 agent 配置
+- `ai_os/agent_fleet.py` - 添加了 workspace alias 功能
+
+---
+
 ## 2026-03-10 - Agent Team & Swarm Setup
 
 ### 任务目标
@@ -401,5 +431,33 @@ python -m pytest tests/e2e/test_flywheel.py -v
 - [x] Memory System 可用
 - [x] 端到端演示可运行
 - [x] 端到端测试通过 (3 passed, 1 skipped)
+
+---
+
+## 2026-03-10 - Agent Fleet Test Fixes
+
+### 完成的工作
+修复 2 个失败的 agent_fleet 测试:
+
+1. **test_resolve_fleet_reports_cloud_core_blocked_and_local_fallback_ready_without_env**
+   - 添加缺失的 cloud agents 到 agent_fleet.yaml (ceo, cto_core, qa_lead, research_lead, growth_lead, cloud_exec_a, cloud_verify_b, cloud_research_c, qa_director)
+   - 这些 agents 需要正确的 gateway_url_env 配置以产生预期的 blockers
+
+2. **test_workspace_alias_env_overrides_repo_root**
+   - 修复 `_get_workspace_command` 函数以使用 `agent_assignment_role`
+   - 添加下划线到连字符的转换以匹配文件命名约定
+
+### 验证结果
+```bash
+python -m pytest tests/test_agent_fleet.py -v
+# 3 passed
+
+python -m pytest tests/ -v
+# 21 passed, 1 skipped
+```
+
+### 结果
+- [x] Agent Fleet 测试全部通过 ✅
+- [x] 完整测试套件通过 (21 passed, 1 skipped) ✅
 
 ---
