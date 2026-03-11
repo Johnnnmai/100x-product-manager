@@ -50,6 +50,25 @@ Packs group the command system into practical operating paths.
 - `task-tracking-operator`
 - `roadmap-planning`
 
+## PM Agent Core (NEW)
+
+- `task-delegation-planner` — Split work between humans and agents
+- `task-tracking-operator` — Track progress of delegated work
+- `token-budget-optimizer` — Optimize token usage for agents
+- `progressive-context-system` — Layered memory architecture
+- `agent-lifecycle-hooks` — Session lifecycle management
+
+## AI Prediction (NEW)
+
+- `product-direction-simulator` — Simulate product direction outcomes
+- `direction-engine` — Continuous direction calibration
+
+## Memory Optimization (NEW)
+
+- `token-budget-optimizer` — Optimize context and token usage
+- `progressive-context-system` — Progressive context disclosure
+- `agent-lifecycle-hooks` — Lifecycle hooks and quality gates
+
 ## Career & Interviews
 
 - `pm-resume-teardown`
