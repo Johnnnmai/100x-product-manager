@@ -2,6 +2,10 @@
 
 If you are new here, think of **100X PM** as a public operating system for multiplying judgment, not just writing faster.
 
+By default, interact with 100X PM through **Lighty**, the mascot-guide that asks one routing question first:
+
+**Are we auditing a product, shaping a new idea, or building long-range vision?**
+
 ## Fastest Path
 
 1. Open [commands/pm-command-center.md](commands/pm-command-center.md)
@@ -11,9 +15,19 @@ If you are new here, think of **100X PM** as a public operating system for multi
 5. If scope is approved and execution needs a spec, run [commands/agent-prd.md](commands/agent-prd.md)
 6. If you are planning work across humans and agents, run [commands/run-roadmap.md](commands/run-roadmap.md)
 
+## Lighty Routing Modes
+
+- **Product audit mode**: use when the input is a site, app, product, review set, support log, or competitor context
+- **New idea mode**: use when the input is a rough product or startup idea
+- **Long-range vision mode**: use when the input is a pile of docs, strategy notes, or fragmented context
+
+If you are unsure, let Lighty route for you through `pm-command-center`.
+
 ## If Your Situation Looks Like This
 
+- "I want to audit an existing product with social signals and simulation." -> `find-winning-direction`
 - "I have a rough startup idea and need the wedge, business model, and launch channel." -> `find-winning-direction`
+- "I need to turn scattered context into a 3-5 year product direction." -> `find-winning-direction`
 - "I only have a rough idea." -> `shape-idea`
 - "I have signals, but I do not know if demand is real." -> `validate-demand`
 - "I need a PRD that an engineer and an agent can both execute." -> `agent-prd`
@@ -38,10 +52,10 @@ Using commands/<command-name>.md:
 Founder prompt shortcut:
 
 ```text
-Using commands/find-winning-direction.md:
-Turn this rough idea into 2-3 strategic options.
-Recommend the best wedge, business model, and first channel.
-Explain why this story can become large.
+Using commands/find-winning-direction.md with Lighty:
+First decide whether this is product audit mode, new idea mode, or long-range vision mode.
+Use market signals and OASIS-style persona simulation where useful.
+Recommend the best wedge, business model, first channel, and strategic narrative.
 End with the next execution command.
 ```
 
@@ -60,6 +74,8 @@ A good first run should not give you generic text. It should give you:
 - a tighter wedge
 - a plausible business model
 - a realistic first channel
+- a hypothesis set worth testing
+- a clearer user or market pain map
 - explicit trade-offs
 - a concrete next move
 

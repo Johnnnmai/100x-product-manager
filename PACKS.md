@@ -4,6 +4,7 @@ Packs group the command system into practical operating paths.
 
 ## Direction & Discovery
 
+- `find-winning-direction`
 - `shape-idea`
 - `pm-command-center`
 - `problem-framing-canvas`
@@ -50,24 +51,28 @@ Packs group the command system into practical operating paths.
 - `task-tracking-operator`
 - `roadmap-planning`
 
-## PM Agent Core (NEW)
+## PM Agent Core
 
-- `task-delegation-planner` — Split work between humans and agents
-- `task-tracking-operator` — Track progress of delegated work
-- `token-budget-optimizer` — Optimize token usage for agents
-- `progressive-context-system` — Layered memory architecture
-- `agent-lifecycle-hooks` — Session lifecycle management
+- `task-delegation-planner` - Split work between humans and agents
+- `task-tracking-operator` - Track progress of delegated work
+- `token-budget-optimizer` - Optimize token usage for agents
+- `progressive-context-system` - Layered memory architecture
+- `agent-lifecycle-hooks` - Session lifecycle management
 
-## AI Prediction (NEW)
+## AI Prediction
 
-- `product-direction-simulator` — Simulate product direction outcomes
-- `direction-engine` — Continuous direction calibration
+- `product-direction-validation` - Scrape, simulate, and validate strategic direction
+- `signal-harvester-enhanced` - Turn public signals into strategy-lab inputs
+- `persona-simulation-builder` - Build personas and market-twin inputs
+- `simulation-analyst` - Synthesize simulation outputs into PM decisions
+- `product-direction-simulator` - Simulate product direction outcomes
+- `direction-engine` - Continuous direction calibration
 
-## Memory Optimization (NEW)
+## Memory Optimization
 
-- `token-budget-optimizer` — Optimize context and token usage
-- `progressive-context-system` — Progressive context disclosure
-- `agent-lifecycle-hooks` — Lifecycle hooks and quality gates
+- `token-budget-optimizer` - Optimize context and token usage
+- `progressive-context-system` - Progressive context disclosure
+- `agent-lifecycle-hooks` - Lifecycle hooks and quality gates
 
 ## Career & Interviews
 

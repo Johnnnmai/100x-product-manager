@@ -9,12 +9,22 @@ This is the founder-facing front door for:
 - strategic narrative
 - execution handoff
 
+This is also **Lighty's primary workflow**.
+
+Lighty should first decide which of these three modes applies:
+
+1. **Product audit mode**: start from a live website, app, product, review set, or support log
+2. **New idea mode**: start from a rough concept, thesis, or founder instinct
+3. **Long-range vision mode**: start from fragmented internal context that needs a 3-5 year direction
+
 ## Input
 
 - rough product idea
 - target user or market guess
 - constraints, if known
 - any early signals, convictions, or fears
+- website or product URL, if auditing
+- messy docs, notes, or strategy context, if building long-range vision
 
 ## Output
 
@@ -26,12 +36,55 @@ This is the founder-facing front door for:
 - top risks and open questions
 - next execution command
 
+## Entry Modes
+
+### Product Audit Mode
+
+Use when the user gives:
+- a website
+- an app
+- a current product
+- reviews, tickets, support logs, or competitor pages
+
+Goal:
+- discover hidden pain points
+- generate stronger product hypotheses
+- validate them with market signals and simulation logic
+- turn them into strategy and execution
+
+### New Idea Mode
+
+Use when the user gives:
+- a startup idea
+- a fuzzy PM concept
+- a market they want to enter
+
+Goal:
+- narrow the wedge
+- make the business model explicit
+- choose the first channel
+- define the first operating plan
+
+### Long-Range Vision Mode
+
+Use when the user gives:
+- scattered notes
+- internal docs
+- roadmap chaos
+- fragmented product context
+
+Goal:
+- compress chaos into a 3-5 year direction
+- separate strategic bets from near-term execution
+- produce a phased roadmap and narrative
+
 ## Default Workflow
 
-1. Use `commands/shape-idea.md` logic to narrow the space
-2. Pressure-test the best option with `commands/validate-demand.md`
-3. If deeper strategy testing is needed, use `commands/validate-product-direction.md`
-4. Translate the chosen direction into spec and execution via `commands/agent-prd.md` and `commands/run-roadmap.md`
+1. Let Lighty classify the request into product audit, new idea, or long-range vision mode
+2. Use `Scrapling`-style signal gathering and `commands/validate-demand.md` logic to ground the work in external evidence
+3. If strategy uncertainty is high, use `commands/validate-product-direction.md` and the simulation skill chain for OASIS / MiroFish-style testing
+4. Use `commands/shape-idea.md` logic to narrow options if the space is still too broad
+5. Translate the chosen direction into spec and execution via `commands/agent-prd.md` and `commands/run-roadmap.md`
 
 ## Operating Rules
 
@@ -40,11 +93,13 @@ This is the founder-facing front door for:
 - Optimize for the strongest plausible wedge, not the biggest vague market
 - Separate fact, inference, and recommendation
 - Include ambition, but keep the first move grounded
+- If the input is a live product, look for pain points and leverage before drafting solutions
+- If the input is a vision question, separate 12-month execution from 3-5 year direction
 
 ## Response Shape
 
 1. Direction options
-2. Recommended wedge
+2. Recommended wedge or hypothesis set
 3. Business model
 4. Channel strategy
 5. Why this story can get big
@@ -60,7 +115,13 @@ This is the founder-facing front door for:
 
 ## Optional Strategy Lab
 
-If available, use `MiroFish` or `OASIS` as a second-layer strategy lab to simulate persona reactions. This is optional. The core output should still work without simulation.
+When advanced setup is available, use this stack:
+
+- `Scrapling` for public web and social signals
+- `OASIS` for persona-reaction and market-twin simulation
+- `MiroFish` for richer reporting and digital-twin style outputs
+
+The core output should still work without simulation, but the simulation layer is a core differentiator when available.
 
 ## Next Command
 

@@ -8,7 +8,7 @@ Use when you are not sure which job you are really doing yet. It routes you to t
 
 ## 2. `find-winning-direction`
 
-Use when the starting point is a rough founder or PM idea and you need a wedge, business model, channel, and strategic narrative worth pursuing.
+Use when the starting point is a rough founder or PM idea, an existing product to audit, or a pile of strategy context and you need a wedge, business model, channel, and strategic narrative worth pursuing.
 
 ## 3. `shape-idea`
 

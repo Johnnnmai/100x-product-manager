@@ -6,6 +6,7 @@
 
 <p align="center"><strong>AI Product OS for PMs and Founders</strong></p>
 <p align="center">Turn rough ideas into product direction, business model, channel strategy, and agent-ready execution.</p>
+<p align="center"><strong>Scrape the market. Simulate the users. Compile the strategy.</strong></p>
 
 <p align="center">
   <img alt="Public repo" src="https://img.shields.io/badge/repo-public-111827?style=flat-square">
@@ -27,11 +28,39 @@
 - [PACKS.md](PACKS.md)
 - [PRINCIPLES.md](PRINCIPLES.md)
 
+## Meet Lighty
+
+**Lighty** is the mascot-guide for 100X PM.
+
+Lighty routes every session into one of three modes:
+
+1. **Audit a product**: start from a website, app, or existing product
+2. **Shape a new idea**: start from a rough founder or PM concept
+3. **Build long-range vision**: start from messy docs, notes, and fragmented context
+
+Lighty is not just visual branding. Lighty represents the core 100X PM loop:
+
+- gather messy context
+- scrape public signals with `Scrapling`
+- simulate reactions with `OASIS`
+- tighten the wedge, business model, and channel
+- compile the answer into PRDs, roadmaps, and delegated execution
+
+## Three Ways To Use 100X PM
+
+| Mode | Typical input | What 100X PM does | Output |
+| --- | --- | --- | --- |
+| Audit a product | website URL, app, reviews, support logs, market chatter | scrape signals, generate hypotheses, simulate reactions, identify hidden pain points and leverage | product bets, pain point memo, business model moves, execution path |
+| Shape a new idea | rough startup idea, founder instinct, early market thesis | narrow to a wedge, design the business model, pick the first channel, pressure-test the narrative | winning direction, strategic story, first PRD, first roadmap |
+| Build long-range vision | internal docs, strategy notes, roadmap sprawl, fragmented market context | compress chaos into a 3-5 year direction and phased roadmap | long-range vision, capability map, phased roadmap, strategic narrative |
+
 ## What You Can Do Today
 
 | If your situation looks like this | Run this | Expected output |
 | --- | --- | --- |
+| I have a website, product, or app and want hidden pain points plus stronger strategic bets | [find-winning-direction](commands/find-winning-direction.md) | hypothesis set, pain point map, business model moves, channel bets, and next execution path |
 | I have a rough idea and need the founder version of "what should we build and how does it win?" | [find-winning-direction](commands/find-winning-direction.md) | wedge, business model, channel, narrative, risks, and next execution path |
+| I have too much product context and need a sharper 3-5 year direction | [find-winning-direction](commands/find-winning-direction.md) | direction options, long-range narrative, phased roadmap, and strategic risks |
 | I only have a rough idea | [shape-idea](commands/shape-idea.md) | 2-3 scoped directions, a recommended wedge, risks, and first move |
 | I need to know if demand is real | [validate-demand](commands/validate-demand.md) | evidence-backed demand memo |
 | I need a spec humans and agents can execute | [agent-prd](commands/agent-prd.md) | dual-mode PRD with constraints and review rules |
@@ -50,9 +79,11 @@ cd 100x-product-manager
 Use one of these prompt patterns:
 
 ```text
-Using commands/find-winning-direction.md:
+Using commands/find-winning-direction.md with Lighty:
 Run the command exactly.
+Tell me whether this is product audit mode, new idea mode, or long-range vision mode.
 Make assumptions explicit.
+Use market signals first, then simulate user reactions if useful.
 Give me the product wedge, business model, launch channel, strategic narrative, and the next command.
 ```
 
@@ -91,6 +122,21 @@ Most PM + AI repos stop at "write better prompts."
 If you want the short version:
 
 **This is not a loose prompt library. It is a public operating system for turning idea -> direction -> business model -> channel -> evidence -> scope -> spec -> metrics -> eval -> roadmap -> delegated execution.**
+
+## Why The Strategy Lab Matters
+
+The differentiated layer is not just prompting. It is the combination of:
+
+- **`Scrapling`** for public web, review, and social signals
+- **`OASIS`** for persona and market-reaction simulation
+- **`MiroFish`** for higher-fidelity digital-twin style reporting when advanced setup is available
+
+This gives 100X PM stronger raw material than a normal PM prompt workflow:
+
+- what users say in public
+- what target personas are likely to object to
+- what wedge is strong enough to support a business model
+- what belongs in strategy vs. what belongs in execution
 
 ## Proof Of Value
 
@@ -154,11 +200,12 @@ This repo is organized around practical packs, not a random skill supermarket.
 
 Supported as optional layers, not mandatory runtime dependencies:
 
-- `Scrapling`: web evidence ingestion and market signal collection
+- `Scrapling`: web evidence ingestion, social signals, and product-audit research
 - `Context Hub`: curated external context and versioned knowledge
 - `claude-mem`: working memory and context compression
 - `Paperclip`: optional orchestration layer for business goals and agent assignment
-- `OASIS` and `MiroFish`: optional strategy lab for simulation, not default day-to-day execution
+- `OASIS`: the simulation layer for market-twin and persona-reaction testing
+- `MiroFish`: the higher-fidelity reporting and digital-twin strategy lab layer
 
 ## License
 
