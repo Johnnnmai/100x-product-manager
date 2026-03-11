@@ -5,13 +5,15 @@ If you are new here, think of **100X PM** as a public operating system for multi
 ## Fastest Path
 
 1. Open [commands/pm-command-center.md](commands/pm-command-center.md)
-2. If all you have is a rough idea, run [commands/shape-idea.md](commands/shape-idea.md)
-3. If you need proof before motion, run [commands/validate-demand.md](commands/validate-demand.md)
-4. If scope is approved and execution needs a spec, run [commands/agent-prd.md](commands/agent-prd.md)
-5. If you are planning work across humans and agents, run [commands/run-roadmap.md](commands/run-roadmap.md)
+2. If you are a PM or founder with a rough idea and need direction, business model, and channel, run [commands/find-winning-direction.md](commands/find-winning-direction.md)
+3. If all you need is idea shaping, run [commands/shape-idea.md](commands/shape-idea.md)
+4. If you need proof before motion, run [commands/validate-demand.md](commands/validate-demand.md)
+5. If scope is approved and execution needs a spec, run [commands/agent-prd.md](commands/agent-prd.md)
+6. If you are planning work across humans and agents, run [commands/run-roadmap.md](commands/run-roadmap.md)
 
 ## If Your Situation Looks Like This
 
+- "I have a rough startup idea and need the wedge, business model, and launch channel." -> `find-winning-direction`
 - "I only have a rough idea." -> `shape-idea`
 - "I have signals, but I do not know if demand is real." -> `validate-demand`
 - "I need a PRD that an engineer and an agent can both execute." -> `agent-prd`
@@ -33,6 +35,16 @@ Using commands/<command-name>.md:
 5. End with risks, open questions, and the next recommended command.
 ```
 
+Founder prompt shortcut:
+
+```text
+Using commands/find-winning-direction.md:
+Turn this rough idea into 2-3 strategic options.
+Recommend the best wedge, business model, and first channel.
+Explain why this story can become large.
+End with the next execution command.
+```
+
 ## Chinese Quick Guide
 
 - 只有一个粗糙想法：先跑 `shape-idea`
@@ -44,10 +56,11 @@ Using commands/<command-name>.md:
 
 A good first run should not give you generic text. It should give you:
 
-- a sharper problem statement
-- a narrower scope
+- a sharper product direction
+- a tighter wedge
+- a plausible business model
+- a realistic first channel
 - explicit trade-offs
-- a success metric draft
 - a concrete next move
 
 If the output still feels vague, use [commands/pm-command-center.md](commands/pm-command-center.md) and route to the shortest tighter loop.

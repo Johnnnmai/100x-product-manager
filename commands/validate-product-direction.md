@@ -1,5 +1,9 @@
 # validate-product-direction
 
+This command remains the narrower validation engine behind founder-facing direction work.
+
+If you want the full founder workflow covering wedge, business model, channel, narrative, and execution path, start with `commands/find-winning-direction.md`.
+
 Use this when you have a product idea and want to validate it with real-world data and persona simulation before committing significant resources.
 
 ## Input

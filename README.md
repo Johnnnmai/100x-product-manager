@@ -5,16 +5,16 @@
 # 100X PM
 
 <p align="center"><strong>AI Product OS for PMs and Founders</strong></p>
-<p align="center">Turn rough ideas into scoped direction, agent-readable specs, evals, and delegated execution.</p>
+<p align="center">Turn rough ideas into product direction, business model, channel strategy, and agent-ready execution.</p>
 
 <p align="center">
   <img alt="Public repo" src="https://img.shields.io/badge/repo-public-111827?style=flat-square">
-  <img alt="10 commands" src="https://img.shields.io/badge/commands-10-111827?style=flat-square">
+  <img alt="11 commands" src="https://img.shields.io/badge/commands-11-111827?style=flat-square">
   <img alt="Pilot benchmark" src="https://img.shields.io/badge/pilot%20benchmark-4%20tasks-111827?style=flat-square">
   <img alt="License" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-111827?style=flat-square">
 </p>
 
-> 100X PM is not about writing faster. It is about reducing ambiguity, forcing trade-offs, and getting to shippable product judgment faster.
+> 100X PM is not about writing faster. It is about turning ambiguity into product direction, business logic, channel choices, and executable operating plans.
 
 中文一句话：  
 **100X PM 不是让 AI 更会写，而是让 PM 和 founder 更快把模糊问题收敛成可落地的判断与执行。**
@@ -31,6 +31,7 @@
 
 | If your situation looks like this | Run this | Expected output |
 | --- | --- | --- |
+| I have a rough idea and need the founder version of "what should we build and how does it win?" | [find-winning-direction](commands/find-winning-direction.md) | wedge, business model, channel, narrative, risks, and next execution path |
 | I only have a rough idea | [shape-idea](commands/shape-idea.md) | 2-3 scoped directions, a recommended wedge, risks, and first move |
 | I need to know if demand is real | [validate-demand](commands/validate-demand.md) | evidence-backed demand memo |
 | I need a spec humans and agents can execute | [agent-prd](commands/agent-prd.md) | dual-mode PRD with constraints and review rules |
@@ -49,10 +50,10 @@ cd 100x-product-manager
 Use one of these prompt patterns:
 
 ```text
-Using commands/shape-idea.md:
+Using commands/find-winning-direction.md:
 Run the command exactly.
 Make assumptions explicit.
-Give me 2-3 scoped options, recommend one, and end with the next command.
+Give me the product wedge, business model, launch channel, strategic narrative, and the next command.
 ```
 
 Platform guides:
@@ -61,18 +62,19 @@ Platform guides:
 - [Using 100X PM with Codex](docs/Using%20PM%20Skills%20with%20Codex.md)
 - [Using 100X PM with ChatGPT](docs/Using%20PM%20Skills%20with%20ChatGPT.md)
 
-## 10 Public Commands
+## 11 Public Commands
 
 1. `pm-command-center`
-2. `shape-idea`
-3. `validate-demand`
-4. `agent-prd`
-5. `prioritize`
-6. `define-metrics`
-7. `design-experiment`
-8. `design-eval`
-9. `run-roadmap`
-10. `make-content`
+2. `find-winning-direction`
+3. `shape-idea`
+4. `validate-demand`
+5. `agent-prd`
+6. `prioritize`
+7. `define-metrics`
+8. `design-experiment`
+9. `design-eval`
+10. `run-roadmap`
+11. `make-content`
 
 Full details live in [MUST_INSTALL.md](MUST_INSTALL.md).
 
@@ -88,7 +90,7 @@ Most PM + AI repos stop at "write better prompts."
 
 If you want the short version:
 
-**This is not a loose prompt library. It is a public operating system for turning idea -> evidence -> scope -> spec -> metrics -> eval -> roadmap -> delegated execution.**
+**This is not a loose prompt library. It is a public operating system for turning idea -> direction -> business model -> channel -> evidence -> scope -> spec -> metrics -> eval -> roadmap -> delegated execution.**
 
 ## Proof Of Value
 
