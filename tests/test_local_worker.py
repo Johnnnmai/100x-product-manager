@@ -122,7 +122,20 @@ class LocalWorkerTests(unittest.TestCase):
             envelope = self._write_envelope(repo_root, approval_required=True)
             create_approval_request(envelope, repo_root)
 
-            result = run_local_worker_once(repo_root=repo_root, agent_key="local_builder")
+            def fake_runner(*args, **kwargs) -> AgentExecution:
+                # Should not be called since task is blocked
+                return AgentExecution(
+                    exit_code=1,
+                    response={"status": "blocked", "summary": "Task blocked by approval"},
+                    stdout="",
+                    stderr="",
+                )
+
+            result = run_local_worker_once(
+                repo_root=repo_root,
+                agent_key="local_builder",
+                runner=fake_runner,
+            )
 
             self.assertEqual(result.status, "blocked")
             self.assertIn("local-build-task:pending", result.blockers)

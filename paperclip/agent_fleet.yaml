@@ -3,7 +3,7 @@ version: 2
 defaults:
   working_directory: "."
   instructions_file: "AGENTS.md"
-  heartbeat: true
+  heartbeat: false
 
 agents:
   - key: ceo
