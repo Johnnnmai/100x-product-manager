@@ -6,10 +6,17 @@ By default, interact with 100X PM through **Lighty**, the mascot-guide that asks
 
 **Are we auditing a product, shaping a new idea, or building long-range vision?**
 
+All three paths reuse the same engine:
+
+```text
+signal harvesting -> persona / market twin -> OASIS simulation
+-> strategy synthesis -> PRD / roadmap / agent handoff
+```
+
 ## Fastest Path
 
 1. Open [commands/pm-command-center.md](commands/pm-command-center.md)
-2. If you are a PM or founder with a rough idea and need direction, business model, and channel, run [commands/find-winning-direction.md](commands/find-winning-direction.md)
+2. If you already have a website, product, rough idea, or messy context, run [commands/find-winning-direction.md](commands/find-winning-direction.md)
 3. If all you need is idea shaping, run [commands/shape-idea.md](commands/shape-idea.md)
 4. If you need proof before motion, run [commands/validate-demand.md](commands/validate-demand.md)
 5. If scope is approved and execution needs a spec, run [commands/agent-prd.md](commands/agent-prd.md)
@@ -22,6 +29,13 @@ By default, interact with 100X PM through **Lighty**, the mascot-guide that asks
 - **Long-range vision mode**: use when the input is a pile of docs, strategy notes, or fragmented context
 
 If you are unsure, let Lighty route for you through `pm-command-center`.
+
+## The Short Decision Tree
+
+- if the input is a **website or current product**, start with `find-winning-direction` in **product audit mode**
+- if the input is a **rough founder or PM idea**, start with `find-winning-direction` in **new idea mode**
+- if the input is **strategy sprawl or messy docs**, start with `find-winning-direction` in **long-range vision mode**
+- if you do not know which mode applies, start with `pm-command-center`
 
 ## If Your Situation Looks Like This
 
@@ -54,14 +68,16 @@ Founder prompt shortcut:
 ```text
 Using commands/find-winning-direction.md with Lighty:
 First decide whether this is product audit mode, new idea mode, or long-range vision mode.
-Use market signals and OASIS-style persona simulation where useful.
-Recommend the best wedge, business model, first channel, and strategic narrative.
+Use market signals first, then persona / market-twin simulation.
+Recommend the best wedge, business model, first channel, strategic narrative, and execution path.
 End with the next execution command.
 ```
 
 ## Chinese Quick Guide
 
-- 只有一个粗糙想法：先跑 `shape-idea`
+- 给一个网站或现有产品：先跑 `find-winning-direction`，走 **审计模式**
+- 只有一个粗糙想法：先跑 `find-winning-direction`，走 **塑造模式**
+- 给一堆战略材料和文档：先跑 `find-winning-direction`，走 **愿景模式**
 - 有很多反馈但不知道值不值得做：先跑 `validate-demand`
 - 方向大致确定，需要给 human 和 agent 都能执行的规格：先跑 `agent-prd`
 - 要把方向拆成 roadmap 和任务：先跑 `run-roadmap`
@@ -76,7 +92,8 @@ A good first run should not give you generic text. It should give you:
 - a realistic first channel
 - a hypothesis set worth testing
 - a clearer user or market pain map
+- a strategic narrative that explains the bet
 - explicit trade-offs
-- a concrete next move
+- a concrete next move and next command
 
 If the output still feels vague, use [commands/pm-command-center.md](commands/pm-command-center.md) and route to the shortest tighter loop.

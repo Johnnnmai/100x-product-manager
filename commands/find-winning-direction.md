@@ -1,8 +1,8 @@
 # find-winning-direction
 
-Use this when you have a rough idea and need to turn it into a product direction that a PM or founder can actually bet on.
+Use this when the work is still upstream of execution and you need one workflow that can turn a product, an idea, or messy context into a direction a PM or founder can actually bet on.
 
-This is the founder-facing front door for:
+This is the strategic front door for:
 - wedge selection
 - business model design
 - channel strategy
@@ -34,6 +34,7 @@ Lighty should first decide which of these three modes applies:
 - recommended first channel
 - strategic narrative that explains why this can become large
 - top risks and open questions
+- execution path
 - next execution command
 
 ## Entry Modes
@@ -82,9 +83,10 @@ Goal:
 
 1. Let Lighty classify the request into product audit, new idea, or long-range vision mode
 2. Use `Scrapling`-style signal gathering and `commands/validate-demand.md` logic to ground the work in external evidence
-3. If strategy uncertainty is high, use `commands/validate-product-direction.md` and the simulation skill chain for OASIS / MiroFish-style testing
-4. Use `commands/shape-idea.md` logic to narrow options if the space is still too broad
-5. Translate the chosen direction into spec and execution via `commands/agent-prd.md` and `commands/run-roadmap.md`
+3. Build persona or market-twin inputs when user reaction and adoption uncertainty matter
+4. Use the OASIS / MiroFish-style simulation chain when it will materially sharpen the bet
+5. Use `commands/shape-idea.md` logic if the space is still too broad
+6. Translate the chosen direction into spec and execution via `commands/agent-prd.md` and `commands/run-roadmap.md`
 
 ## Operating Rules
 
@@ -95,29 +97,43 @@ Goal:
 - Include ambition, but keep the first move grounded
 - If the input is a live product, look for pain points and leverage before drafting solutions
 - If the input is a vision question, separate 12-month execution from 3-5 year direction
+- Separate strategic output from execution output
+- State where evidence ends and simulation-backed inference begins
 
 ## Response Shape
 
-1. Direction options
-2. Recommended wedge or hypothesis set
-3. Business model
-4. Channel strategy
-5. Why this story can get big
-6. Risks, assumptions, and unknowns
-7. Next command
+### Strategic Layer
+
+1. Detected mode
+2. Direction options
+3. Recommended wedge or hypothesis set
+4. Business model
+5. Channel strategy
+6. Why this story can get big
+7. Risks, assumptions, and unknowns
+
+### Execution Layer
+
+1. What should be validated next
+2. What should be written into a PRD
+3. What should enter the roadmap
+4. Next command
 
 ## Recommended Skills
 
 - `skills/product-direction-validation/SKILL.md`
 - `skills/market-signal-harvester/SKILL.md`
 - `skills/signal-harvester-enhanced/SKILL.md`
+- `skills/persona-simulation-builder/SKILL.md`
+- `skills/simulation-analyst/SKILL.md`
 - `skills/prioritization-advisor/SKILL.md`
 
 ## Optional Strategy Lab
 
-When advanced setup is available, use this stack:
+When simulation meaningfully improves the decision, use this stack:
 
 - `Scrapling` for public web and social signals
+- persona / market-twin building for simulation-ready profiles
 - `OASIS` for persona-reaction and market-twin simulation
 - `MiroFish` for richer reporting and digital-twin style outputs
 

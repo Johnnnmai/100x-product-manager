@@ -28,6 +28,14 @@
 - [PACKS.md](PACKS.md)
 - [PRINCIPLES.md](PRINCIPLES.md)
 
+## Fastest Path
+
+If you only remember one path, remember this:
+
+1. start at [pm-command-center](commands/pm-command-center.md) if you need routing
+2. run [find-winning-direction](commands/find-winning-direction.md) if you already have a URL, a rough idea, or messy strategy context
+3. move into `validate-demand`, `agent-prd`, and `run-roadmap` once the direction is sharp
+
 ## Meet Lighty
 
 **Lighty** is the mascot-guide for 100X PM.
@@ -42,9 +50,43 @@ Lighty is not just visual branding. Lighty represents the core 100X PM loop:
 
 - gather messy context
 - scrape public signals with `Scrapling`
+- build persona and market-twin inputs
 - simulate reactions with `OASIS`
-- tighten the wedge, business model, and channel
-- compile the answer into PRDs, roadmaps, and delegated execution
+- compile the answer into strategy, PRDs, roadmaps, and delegated execution
+
+## One Engine, Three Entry Modes
+
+100X PM should be understood as **one strategy engine**, not three disconnected tools.
+
+All three modes reuse the same chain:
+
+```text
+signal harvesting -> persona / market twin -> OASIS simulation
+-> strategy synthesis -> PRD / roadmap / agent handoff
+```
+
+The three entry modes are:
+
+| Entry mode | Best starting input | What it optimizes for |
+| --- | --- | --- |
+| **Audit a product** | website, app, product, reviews, support logs | hidden pain points, stronger hypotheses, sharper product bets |
+| **Shape a new idea** | rough idea, founder instinct, early thesis | wedge, business model, first channel, first execution plan |
+| **Build long-range vision** | scattered docs, strategy notes, roadmap sprawl | 3-5 year direction, phased roadmap, strategic narrative |
+
+## Hero Flow
+
+The launch hero path is **Audit a product**.
+
+Why:
+
+- the input is concrete
+- the output is easy to judge
+- it makes the OASIS + Scrapling story visible fast
+- it is the easiest public demo to understand
+
+The second path is **Shape a new idea**.
+
+The third path is **Build long-range vision**.
 
 ## Three Ways To Use 100X PM
 
@@ -58,7 +100,7 @@ Lighty is not just visual branding. Lighty represents the core 100X PM loop:
 
 | If your situation looks like this | Run this | Expected output |
 | --- | --- | --- |
-| I have a website, product, or app and want hidden pain points plus stronger strategic bets | [find-winning-direction](commands/find-winning-direction.md) | hypothesis set, pain point map, business model moves, channel bets, and next execution path |
+| I have a website, product, or app and want hidden pain points plus stronger strategic bets | [find-winning-direction](commands/find-winning-direction.md) | pain point map, hypothesis set, business model moves, channel bets, and next execution path |
 | I have a rough idea and need the founder version of "what should we build and how does it win?" | [find-winning-direction](commands/find-winning-direction.md) | wedge, business model, channel, narrative, risks, and next execution path |
 | I have too much product context and need a sharper 3-5 year direction | [find-winning-direction](commands/find-winning-direction.md) | direction options, long-range narrative, phased roadmap, and strategic risks |
 | I only have a rough idea | [shape-idea](commands/shape-idea.md) | 2-3 scoped directions, a recommended wedge, risks, and first move |
@@ -123,11 +165,12 @@ If you want the short version:
 
 **This is not a loose prompt library. It is a public operating system for turning idea -> direction -> business model -> channel -> evidence -> scope -> spec -> metrics -> eval -> roadmap -> delegated execution.**
 
-## Why The Strategy Lab Matters
+## Why This System Wins
 
 The differentiated layer is not just prompting. It is the combination of:
 
 - **`Scrapling`** for public web, review, and social signals
+- **persona / market-twin building** for simulation-ready profiles
 - **`OASIS`** for persona and market-reaction simulation
 - **`MiroFish`** for higher-fidelity digital-twin style reporting when advanced setup is available
 
@@ -137,6 +180,10 @@ This gives 100X PM stronger raw material than a normal PM prompt workflow:
 - what target personas are likely to object to
 - what wedge is strong enough to support a business model
 - what belongs in strategy vs. what belongs in execution
+
+The product story should be read as:
+
+**Scrape the market -> simulate the users -> compile the strategy -> hand execution to humans or agents.**
 
 ## Proof Of Value
 
@@ -196,16 +243,17 @@ This repo is organized around practical packs, not a random skill supermarket.
 - [Career & Interviews](PACKS.md#career--interviews)
 - [Content & Distribution](PACKS.md#content--distribution)
 
-## Optional Integrations
+## System Layers
 
-Supported as optional layers, not mandatory runtime dependencies:
+These layers define the system architecture, even when some of them are optional at local runtime:
 
 - `Scrapling`: web evidence ingestion, social signals, and product-audit research
-- `Context Hub`: curated external context and versioned knowledge
-- `claude-mem`: working memory and context compression
-- `Paperclip`: optional orchestration layer for business goals and agent assignment
+- persona / market-twin building: simulation-ready user profiles
 - `OASIS`: the simulation layer for market-twin and persona-reaction testing
 - `MiroFish`: the higher-fidelity reporting and digital-twin strategy lab layer
+- `Context Hub`: curated external context and versioned knowledge
+- `Paperclip`: orchestration layer for business goals and agent assignment
+- `claude-mem`: working memory and context compression
 
 ## License
 
