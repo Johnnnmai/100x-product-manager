@@ -27,6 +27,8 @@
 - [MUST_INSTALL.md](MUST_INSTALL.md)
 - [PACKS.md](PACKS.md)
 - [PRINCIPLES.md](PRINCIPLES.md)
+- [docs/core-sell-points.md](docs/core-sell-points.md)
+- [docs/front-door-e2e-validation.md](docs/front-door-e2e-validation.md)
 
 ## Fastest Path
 
@@ -195,7 +197,11 @@ We are not publishing invented homepage metrics. We are publishing inspectable a
 | --- | --- | --- |
 | Before/after artifacts | same input, plain prompt vs command-guided output | live |
 | Pilot benchmark wave 1 | same-model baseline vs 100X PM on 4 canonical tasks | live |
+| Front-door E2E pilot wave 2 | same-model baseline vs 100X PM across audit, idea, and vision modes | live |
 | Blind-scored benchmark | reviewer-blinded scoring across canonical tasks | planned |
+
+Wave 2 headline:
+across audit, idea, and vision modes, the command-guided workflow improved average quality by `+2.13`, reduced time to acceptable draft by `43.1%`, and reduced manual edits by `61.1%`.
 
 ### Before / after examples
 
@@ -218,8 +224,11 @@ Full benchmark package:
 
 - [Value test plan](docs/value-test-plan.md)
 - [Wave 1 summary](examples/value-tests/runs/2026-03-10-wave-1-summary.md)
+- [Wave 2 front-door summary](examples/value-tests/runs/2026-03-11-wave-2-front-door-summary.md)
 - [Scorecard template](examples/value-tests/scorecard-template.md)
 - [Task run template](examples/value-tests/task-run-template.md)
+- Recompute wave metrics:
+  `python scripts/verify-value-test-wave.py "examples/value-tests/runs/2026-03-11-find-winning-direction-*-scorecard.md"`
 
 ## Repo Layout
 

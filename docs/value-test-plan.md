@@ -226,7 +226,8 @@ Current public proof:
 - [examples/before-after/prioritization-before-after.md](../examples/before-after/prioritization-before-after.md)
 - [examples/before-after/eval-before-after.md](../examples/before-after/eval-before-after.md)
 - [examples/value-tests/runs/2026-03-10-wave-1-summary.md](../examples/value-tests/runs/2026-03-10-wave-1-summary.md)
+- [examples/value-tests/runs/2026-03-11-wave-2-front-door-summary.md](../examples/value-tests/runs/2026-03-11-wave-2-front-door-summary.md)
 
 Next build step:
 
-- expand the pilot into blinded review under `examples/value-tests/runs/`
+- expand the front-door pilot into blinded review under `examples/value-tests/runs/`
