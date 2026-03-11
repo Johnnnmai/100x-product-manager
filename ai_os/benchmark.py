@@ -1,9 +1,12 @@
 """Performance Benchmarking for AI OS Components"""
 import time
+import json
 from dataclasses import dataclass, field
 from typing import Any, Callable
 from pathlib import Path
 from datetime import datetime
+import tempfile
+import shutil
 
 
 @dataclass
@@ -92,8 +95,8 @@ def benchmark_memory_operations(repo_root: Path) -> BenchmarkResult:
         add_memory_entry(
             repo_root,
             category="benchmark_test",
-            content="Benchmark test entry",
-            source="benchmark"
+            title="Benchmark Test Entry",
+            content="Benchmark test entry content",
         )
 
     return bench.run(do_add)
@@ -101,29 +104,32 @@ def benchmark_memory_operations(repo_root: Path) -> BenchmarkResult:
 
 def benchmark_local_worker_discovery(repo_root: Path) -> BenchmarkResult:
     """Benchmark task discovery in local worker"""
-    from ai_os.local_worker import discover_tasks
+    from ai_os.local_worker import _discover_next_task
+    from ai_os.contracts import ExecutorType
 
     bench = Benchmark("task_discovery", iterations=50)
 
     def do_discover():
-        discover_tasks(repo_root / "ops" / "tasks" / "pending")
+        _discover_next_task(repo_root, ExecutorType.claude_code, None)
 
     return bench.run(do_discover)
 
 
 def benchmark_context_hub_operations(repo_root: Path) -> BenchmarkResult:
     """Benchmark context hub operations"""
-    from ai_os.context_hub import compile_context
+    from ai_os.context_hub import compile_context_bundle
+    from ai_os.contracts import ContextBundle
 
     bench = Benchmark("context_compile", iterations=20)
 
-    test_context = {
-        "mission": "Test mission",
-        "initiative": "Test initiative",
-        "constraints": []
-    }
+    test_bundle = ContextBundle(
+        bundle_id="benchmark-test",
+        context_type="mission",
+        content="Test mission content",
+        metadata={}
+    )
 
-    return bench.run(compile_context, test_context, repo_root)
+    return bench.run(compile_context_bundle, test_bundle, repo_root)
 
 
 def benchmark_swarm_orchestrator() -> BenchmarkResult:
@@ -149,21 +155,135 @@ def run_all_benchmarks(repo_root: Path | None = None) -> dict[str, BenchmarkResu
 
     results = {}
 
-    # Import benchmarks
+    # Benchmark functions that don't require complex setup
     benchmarks = [
         ("swarm_orchestrator", benchmark_swarm_orchestrator),
+        ("slugify", lambda: benchmark_slugify()),
+        ("json_serialization", benchmark_json_serialization),
+        ("path_operations", benchmark_path_operations),
+        ("yaml_cached_load", lambda: benchmark_yaml_cached_load(repo_root)),
     ]
 
-    # Only run certain benchmarks that don't require complex setup
     for name, bench_fn in benchmarks:
+        try:
+            if callable(bench_fn):
+                result = bench_fn()
+            else:
+                result = bench_fn
+            if result:
+                results[name] = result
+                print(f"{name}: avg={result.avg_time_ms:.3f}ms, min={result.min_time_ms:.3f}ms, max={result.max_time_ms:.3f}ms")
+        except Exception as e:
+            print(f"{name}: ERROR - {e}")
+
+    # Try to run more complex benchmarks with fallback
+    complex_benchmarks = [
+        ("agent_fleet_resolution", lambda: benchmark_agent_fleet_resolution(repo_root)),
+        ("memory_operations", lambda: benchmark_memory_operations(repo_root)),
+    ]
+
+    for name, bench_fn in complex_benchmarks:
         try:
             result = bench_fn()
             results[name] = result
             print(f"{name}: avg={result.avg_time_ms:.3f}ms, min={result.min_time_ms:.3f}ms, max={result.max_time_ms:.3f}ms")
         except Exception as e:
-            print(f"{name}: ERROR - {e}")
+            print(f"{name}: SKIPPED - {e}")
 
     return results
+
+
+def benchmark_slugify() -> BenchmarkResult:
+    """Benchmark slugify operations"""
+    from ai_os.fs_utils import slugify
+
+    bench = Benchmark("slugify", iterations=1000)
+    test_strings = [
+        "Test Task Name",
+        "Hello World",
+        "Special!@#Characters",
+        "Multiple   Spaces",
+        "UPPERCASE",
+        "mixedCase123",
+    ]
+
+    def do_slugify():
+        for s in test_strings:
+            slugify(s)
+
+    return bench.run(do_slugify)
+
+
+def benchmark_json_serialization() -> BenchmarkResult:
+    """Benchmark JSON serialization/deserialization"""
+    bench = Benchmark("json_serialization", iterations=500)
+
+    test_data = {
+        "name": "test_envelope",
+        "task_id": "task-001",
+        "epic_id": "epic-001",
+        "initiative_id": "initiative-001",
+        "description": "This is a test task description with some content",
+        "metadata": {"key1": "value1", "key2": 123},
+        "tags": ["tag1", "tag2", "tag3"],
+    }
+
+    def do_serialize():
+        json.dumps(test_data)
+
+    def doDeserialize():
+        json.loads(json.dumps(test_data))
+
+    # Combined serialize + deserialize
+    def do_both():
+        json.loads(json.dumps(test_data))
+
+    return bench.run(do_both)
+
+
+def benchmark_path_operations() -> BenchmarkResult:
+    """Benchmark path operations"""
+    bench = Benchmark("path_operations", iterations=1000)
+
+    base = Path("/test/repo/root")
+    subpath = "ops/tasks/compiled/task.json"
+
+    def do_path_ops():
+        p = base / subpath
+        p.exists()
+        p.parent.exists()
+        str(p)
+        p.suffix
+        p.stem
+
+    return bench.run(do_path_ops)
+
+
+def benchmark_yaml_cached_load(repo_root: Path) -> BenchmarkResult:
+    """Benchmark YAML cached loading"""
+    from ai_os.fs_utils import load_yaml, _cached_load_yaml
+
+    # Find a YAML file to benchmark
+    yaml_files = list(repo_root.glob("**/*.yaml"))[:5]
+    if not yaml_files:
+        # Create a temporary test file
+        import yaml
+        test_yaml = repo_root / "_test_bench.yaml"
+        test_yaml.write_text("key1: value1\nkey2: value2\n", encoding="utf-8")
+        yaml_files = [test_yaml]
+
+    bench = Benchmark("yaml_cached_load", iterations=200)
+    test_file = str(yaml_files[0])
+
+    def do_load():
+        # Clear cache to test cold cache
+        _cached_load_yaml.cache_clear()
+        load_yaml(test_file)
+
+    # Warm up cache
+    load_yaml(test_file)
+
+    return bench.run(do_load)
 
 
 if __name__ == "__main__":
