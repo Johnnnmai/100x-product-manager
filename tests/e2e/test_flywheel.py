@@ -40,10 +40,12 @@ agents:
     title: Local Builder Agent
     name: Local Builder
     role: builder
+    assignment_role: local_codex_builder
     adapter_type: claude_local
     command: claude
-    model: sonnet
-    skip_permissions: true
+    model: default
+    enable_search: true
+    ready: true
 """
     (tmp_path / "paperclip" / "agent_fleet.yaml").write_text(fleet_config)
 
