@@ -1,24 +1,35 @@
 <p align="center">
-  <img src="assets/readme-hero.svg" alt="100X PM" width="100%">
+  <img src="assets/readme-hero.svg" alt="100X PM with Lighty visual identity" width="100%">
 </p>
 
-# 100X PM
+<h1 align="center">100X PM</h1>
 
-<p align="center"><strong>AI Product OS for PMs and Founders</strong></p>
-<p align="center">Turn rough ideas into product direction, business model, channel strategy, and agent-ready execution.</p>
+<p align="center"><strong>Market-Twin Product Strategy OS for PMs and Founders</strong></p>
+<p align="center">Turn rough ideas, existing products, and messy strategy context into sharper direction, stronger business choices, and agent-ready execution.</p>
 <p align="center"><strong>Scrape the market. Simulate the users. Compile the strategy.</strong></p>
 
 <p align="center">
-  <img alt="Public repo" src="https://img.shields.io/badge/repo-public-111827?style=flat-square">
+  <a href="START_HERE.md"><strong>Start Here</strong></a> |
+  <a href="commands/find-winning-direction.md"><strong>Hero Workflow</strong></a> |
+  <a href="#proof-snapshot"><strong>Proof Snapshot</strong></a> |
+  <a href="docs/core-sell-points.md"><strong>Sell Points</strong></a> |
+  <a href="INSTALL.md"><strong>Install</strong></a>
+</p>
+
+<p align="center">
+  <img alt="3 entry modes" src="https://img.shields.io/badge/entry_modes-3-111827?style=flat-square">
   <img alt="11 commands" src="https://img.shields.io/badge/commands-11-111827?style=flat-square">
-  <img alt="Pilot benchmark" src="https://img.shields.io/badge/pilot%20benchmark-4%20tasks-111827?style=flat-square">
-  <img alt="License" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-111827?style=flat-square">
+  <img alt="Hero workflow product audit" src="https://img.shields.io/badge/hero-product_audit-2563EB?style=flat-square">
+  <img alt="Wave 2 overall pass" src="https://img.shields.io/badge/wave_2-overall_pass-16A34A?style=flat-square">
+  <img alt="Quality plus 2.13" src="https://img.shields.io/badge/quality-%2B2.13-111827?style=flat-square">
+  <img alt="Time 43.1 percent faster" src="https://img.shields.io/badge/time-43.1%25_faster-111827?style=flat-square">
+  <img alt="Manual edits down 61.1 percent" src="https://img.shields.io/badge/edits-61.1%25_less-111827?style=flat-square">
 </p>
 
 > 100X PM is not about writing faster. It is about turning ambiguity into product direction, business logic, channel choices, and executable operating plans.
-
-中文一句话：  
-**100X PM 不是让 AI 更会写，而是让 PM 和 founder 更快把模糊问题收敛成可落地的判断与执行。**
+>
+> 中文一句话：
+> **100X PM 不是让 AI 更会写，而是让 PM 和 founder 更快把模糊问题收敛成可落地的判断与执行。**
 
 ## Start Here
 
@@ -38,9 +49,34 @@ If you only remember one path, remember this:
 2. run [find-winning-direction](commands/find-winning-direction.md) if you already have a URL, a rough idea, or messy strategy context
 3. move into `validate-demand`, `agent-prd`, and `run-roadmap` once the direction is sharp
 
+## Proof Snapshot
+
+| Mode | Quality delta | Time to acceptable draft | Manual edits after first draft |
+| --- | --- | --- | --- |
+| Product audit | `+2.20` | `45.5%` faster | `66.7%` less |
+| New idea | `+2.20` | `42.1%` faster | `60.0%` less |
+| Long-range vision | `+2.00` | `41.7%` faster | `57.1%` less |
+
+> Wave 2 overall: average quality `+2.13`, time to acceptable draft `43.1%` faster, manual edits `61.1%` lower, `overall=pass`.
+>
+> Current pilot limits: single operator, non-blinded scoring, fixed input bundles, and no live scrape or live `OASIS` call inside the benchmark loop yet.
+
+Raw proof:
+
+- [Wave 2 front-door summary](examples/value-tests/runs/2026-03-11-wave-2-front-door-summary.md)
+- [Front-door E2E validation plan](docs/front-door-e2e-validation.md)
+- Recompute the headline metrics:
+  `python scripts/verify-value-test-wave.py "examples/value-tests/runs/2026-03-11-find-winning-direction-*-scorecard.md"`
+
 ## Meet Lighty
 
-**Lighty** is the mascot-guide for 100X PM.
+<p align="center">
+  <img src="assets/lighty-mark.svg" alt="Lighty mascot for 100X PM" width="168">
+</p>
+
+**Lighty** is the visual hammer for 100X PM.
+
+Lighty stands for a calm, signal-first workflow: take messy context, route it into the right mode, pressure-test it with simulation, and turn it into an executable plan.
 
 Lighty routes every session into one of three modes:
 
@@ -48,7 +84,7 @@ Lighty routes every session into one of three modes:
 2. **Shape a new idea**: start from a rough founder or PM concept
 3. **Build long-range vision**: start from messy docs, notes, and fragmented context
 
-Lighty is not just visual branding. Lighty represents the core 100X PM loop:
+Lighty is not just mascot art. Lighty represents the core 100X PM loop:
 
 - gather messy context
 - scrape public signals with `Scrapling`
@@ -200,8 +236,14 @@ We are not publishing invented homepage metrics. We are publishing inspectable a
 | Front-door E2E pilot wave 2 | same-model baseline vs 100X PM across audit, idea, and vision modes | live |
 | Blind-scored benchmark | reviewer-blinded scoring across canonical tasks | planned |
 
-Wave 2 headline:
-across audit, idea, and vision modes, the command-guided workflow improved average quality by `+2.13`, reduced time to acceptable draft by `43.1%`, and reduced manual edits by `61.1%`.
+### Wave 2 front-door pilot
+
+- `product audit`: `+2.20` quality, `45.5%` faster, `66.7%` fewer manual edits
+- `new idea`: `+2.20` quality, `42.1%` faster, `60.0%` fewer manual edits
+- `long-range vision`: `+2.00` quality, `41.7%` faster, `57.1%` fewer manual edits
+- overall: `+2.13` average quality, `43.1%` faster draft time, `61.1%` fewer manual edits, `overall=pass`
+
+Current limits: single operator, non-blinded, fixed input bundles, no live scrape, and no live `OASIS` call inside the benchmark loop.
 
 ### Before / after examples
 

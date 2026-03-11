@@ -1,34 +1,83 @@
-<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1400" height="520" viewBox="0 0 1400 520" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0F172A"/>
-      <stop offset="1" stop-color="#1D4ED8"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1400" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#081024"/>
+      <stop offset="0.56" stop-color="#122559"/>
+      <stop offset="1" stop-color="#0F172A"/>
     </linearGradient>
-    <linearGradient id="card" x1="760" y1="58" x2="1064" y2="282" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#F8FAFC" stop-opacity="0.18"/>
-      <stop offset="1" stop-color="#F8FAFC" stop-opacity="0.05"/>
+    <linearGradient id="lightyOrb" x1="161" y1="166" x2="423" y2="372" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#41F4FF"/>
+      <stop offset="0.48" stop-color="#165EFF"/>
+      <stop offset="1" stop-color="#F4A3FF"/>
+    </linearGradient>
+    <linearGradient id="beanieTop" x1="125" y1="79" x2="355" y2="190" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D58525"/>
+      <stop offset="1" stop-color="#8A4512"/>
+    </linearGradient>
+    <linearGradient id="beanieRib" x1="118" y1="172" x2="362" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#AB6018"/>
+      <stop offset="1" stop-color="#73390F"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="844" y1="60" x2="1324" y2="238" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFC" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#F8FAFC" stop-opacity="0.06"/>
     </linearGradient>
   </defs>
-  <rect width="1200" height="360" rx="28" fill="url(#bg)"/>
-  <circle cx="110" cy="82" r="62" fill="#F59E0B" fill-opacity="0.22"/>
-  <circle cx="1030" cy="310" r="96" fill="#93C5FD" fill-opacity="0.12"/>
-  <rect x="760" y="58" width="304" height="224" rx="24" fill="url(#card)" stroke="#E2E8F0" stroke-opacity="0.18"/>
-  <rect x="80" y="74" width="128" height="34" rx="17" fill="#111827"/>
-  <text x="104" y="96" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">PUBLIC REPO</text>
-  <text x="80" y="158" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="64" font-weight="800">100X PM</text>
-  <text x="80" y="196" fill="#BFDBFE" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="600">AI Product OS for PMs and Founders</text>
-  <text x="80" y="236" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="24">Turn rough ideas into scoped direction, agent-ready specs,</text>
-  <text x="80" y="268" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="24">evals, and delegated execution.</text>
-  <rect x="80" y="300" width="138" height="32" rx="16" fill="#EFF6FF"/>
-  <rect x="228" y="300" width="138" height="32" rx="16" fill="#DBEAFE"/>
-  <rect x="376" y="300" width="138" height="32" rx="16" fill="#BFDBFE"/>
-  <text x="105" y="321" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">shape ideas</text>
-  <text x="253" y="321" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">write PRDs</text>
-  <text x="399" y="321" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">design evals</text>
-  <text x="792" y="108" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">What good output looks like</text>
-  <text x="792" y="146" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="16">1. Clear problem framing</text>
-  <text x="792" y="176" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="16">2. Explicit trade-offs</text>
-  <text x="792" y="206" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="16">3. Agent-readable execution</text>
-  <text x="792" y="236" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="16">4. Metrics and guardrails</text>
-  <text x="792" y="266" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="16">5. Real next action</text>
+
+  <rect width="1400" height="520" rx="32" fill="url(#bg)"/>
+  <circle cx="1242" cy="102" r="128" fill="#1D4ED8" fill-opacity="0.24"/>
+  <circle cx="111" cy="456" r="136" fill="#1E293B" fill-opacity="0.42"/>
+  <circle cx="558" cy="412" r="96" fill="#38BDF8" fill-opacity="0.11"/>
+
+  <rect x="52" y="52" width="474" height="416" rx="34" fill="#0C1537" fill-opacity="0.78" stroke="#E2E8F0" stroke-opacity="0.12"/>
+  <circle cx="244" cy="238" r="132" fill="#1837C3" fill-opacity="0.28"/>
+  <circle cx="244" cy="238" r="118" fill="url(#lightyOrb)"/>
+  <ellipse cx="244" cy="401" rx="70" ry="16" fill="#050914" fill-opacity="0.74"/>
+
+  <path d="M125 176C132 120 173 79 228 79C281 79 323 114 332 165L339 194H118L125 176Z" fill="url(#beanieTop)"/>
+  <rect x="118" y="172" width="244" height="46" rx="23" fill="url(#beanieRib)"/>
+  <path d="M154 187L148 122" stroke="#7A380D" stroke-width="4" stroke-linecap="round"/>
+  <path d="M191 187L186 114" stroke="#7A380D" stroke-width="4" stroke-linecap="round"/>
+  <path d="M228 187V110" stroke="#7A380D" stroke-width="4" stroke-linecap="round"/>
+  <path d="M266 187L270 114" stroke="#7A380D" stroke-width="4" stroke-linecap="round"/>
+  <path d="M303 187L312 126" stroke="#7A380D" stroke-width="4" stroke-linecap="round"/>
+
+  <ellipse cx="196" cy="247" rx="22" ry="34" fill="#15151F"/>
+  <ellipse cx="292" cy="247" rx="22" ry="34" fill="#15151F"/>
+  <path d="M220 311C232 325 253 326 270 309" stroke="#15151F" stroke-width="13" stroke-linecap="round"/>
+
+  <path d="M154 373H334L353 423H135L154 373Z" fill="#EDD7B0"/>
+  <path d="M154 373H244V423H135L154 373Z" fill="#F4E3BF"/>
+  <path d="M244 373H334L353 423H244V373Z" fill="#E5C899"/>
+  <path d="M244 373V423" stroke="#9F7A4B" stroke-width="3"/>
+  <path d="M173 391H226" stroke="#B58D5D" stroke-width="3" stroke-linecap="round"/>
+  <path d="M169 403H222" stroke="#B58D5D" stroke-width="3" stroke-linecap="round"/>
+  <path d="M268 391H320" stroke="#B58D5D" stroke-width="3" stroke-linecap="round"/>
+  <path d="M264 403H316" stroke="#B58D5D" stroke-width="3" stroke-linecap="round"/>
+
+  <rect x="588" y="72" width="240" height="36" rx="18" fill="#0F172A" stroke="#E2E8F0" stroke-opacity="0.18"/>
+  <text x="612" y="95" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">LIGHTY-GUIDED PRODUCT STRATEGY OS</text>
+
+  <text x="588" y="190" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="112" font-weight="800">100X PM</text>
+  <text x="588" y="238" fill="#BFDBFE" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Market-Twin Product Strategy OS for PMs and Founders</text>
+  <text x="588" y="292" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="28">Scrape the market. Simulate the users. Compile the strategy.</text>
+  <text x="588" y="330" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="22">Turn rough ideas, existing products, and messy context into sharper direction,</text>
+  <text x="588" y="360" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="22">better business choices, and agent-ready execution.</text>
+
+  <rect x="588" y="394" width="146" height="40" rx="20" fill="#EFF6FF"/>
+  <rect x="746" y="394" width="128" height="40" rx="20" fill="#DBEAFE"/>
+  <rect x="886" y="394" width="178" height="40" rx="20" fill="#BFDBFE"/>
+  <text x="619" y="420" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">PRODUCT AUDIT</text>
+  <text x="781" y="420" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">NEW IDEA</text>
+  <text x="918" y="420" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">LONG-RANGE VISION</text>
+
+  <rect x="1080" y="394" width="116" height="40" rx="20" fill="#16A34A"/>
+  <text x="1110" y="420" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="800">WAVE 2 PASS</text>
+
+  <rect x="844" y="60" width="500" height="210" rx="28" fill="url(#panel)" stroke="#E2E8F0" stroke-opacity="0.14"/>
+  <text x="876" y="104" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">Proof headline</text>
+  <text x="876" y="146" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="18">Average quality: +2.13</text>
+  <text x="876" y="176" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="18">Time to acceptable draft: -43.1%</text>
+  <text x="876" y="206" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="18">Manual edits after first draft: -61.1%</text>
+  <text x="876" y="238" fill="#93C5FD" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">Signals -&gt; personas -&gt; OASIS -&gt; strategy -&gt; PRD / roadmap</text>
 </svg>
