@@ -1,0 +1,115 @@
+# Discord Gateway Agent
+
+## Role Overview
+
+**Name**: Discord Gateway Agent
+**Type**: Approval & Notification Hub
+**Purpose**: 人类审批入口 + 告警中心
+
+## Core Responsibility
+
+1. **Approval Requests**: 推送审批请求到 Discord
+2. **Run Notifications**: 执行状态通知
+3. **Alert Broadcasting**: 异常告警
+4. **Response Handling**: 处理人类响应
+
+## Message Types
+
+### 1. approval_requested
+
+```json
+{
+  "type": "approval_requested",
+  "task_id": "TASK-2026-0001",
+  "title": "Feature X Implementation",
+  "budget": "$5,000",
+  "requester": "Chief of Staff",
+  "approval_threshold": "CTO cosign",
+  "actions": ["approve", "reject", "request_info"],
+  "context_summary": "Implement user authentication for..."
+}
+```
+
+### 2. run_blocked
+
+```json
+{
+  "type": "run_blocked",
+  "task_id": "TASK-2026-0002",
+  "blocker_type": "dependency | resource | approval",
+  "description": "Waiting for API credentials",
+  "blocked_at": "2026-03-10T10:00:00Z",
+  "escalate_after": "24 hours"
+}
+```
+
+### 3. budget_threshold_hit
+
+```json
+{
+  "type": "budget_threshold_hit",
+  "initiative_id": "INIT-2026-001",
+  "current_spend": "$9,500",
+  "budget_cap": "$10,000",
+  "utilization": "95%",
+  "remaining_tasks": 3,
+  "action_required": "approve_overbudget | stop_initiative"
+}
+```
+
+### 4. run_completed
+
+```json
+{
+  "type": "run_completed",
+  "task_id": "TASK-2026-0001",
+  "status": "success | failed",
+  "duration": "45 minutes",
+  "summary": "Feature implemented and tested",
+  "artifacts": ["path/to/build.zip"],
+  "next_steps": ["QA review", "Deploy to staging"]
+}
+```
+
+## Discord Flow
+
+```
+[Paperclip Control]
+   ↓
+[Discord Gateway]
+   ↓
+   ├─→ Approval Request → Human
+   │       ↓
+   │   [approve / reject / request_info]
+   │       ↓
+   └─→ [Write to ops/approvals/]
+           ↓
+       [Paperclip] ← 状态更新
+```
+
+## Rules
+
+1. **No Source of Truth**: Discord 不存储任务状态
+2. **Idempotent**: 同一任务不重复发送通知
+3. **Timeout**: 审批请求 24 小时后自动升级
+4. **Audit Trail**: 所有交互记录到 `ops/discord/outbox/`
+
+## Configuration
+
+```yaml
+discord:
+  bot_token_env: "DISCORD_BOT_TOKEN"
+  channel_ids:
+    approvals: "CHANNEL_ID_APPROVALS"
+    alerts: "CHANNEL_ID_ALERTS"
+    summaries: "CHANNEL_ID_SUMMARIES"
+  thresholds:
+    approval_auto_escalate_hours: 24
+    budget_warning_percent: 80
+    budget_critical_percent: 95
+```
+
+## References
+
+- Discord outbox: `../../ops/discord/outbox/`
+- Approvals: `../../ops/approvals/`

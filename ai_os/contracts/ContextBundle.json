@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ContextBundle",
+  "type": "object",
+  "required": ["mission", "constraints", "evidence_refs", "glossary", "latest_decisions", "compiled_at"],
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "description": "Associated task ID"
+    },
+    "mission": {
+      "type": "string",
+      "maxLength": 200,
+      "description": "Task goal description"
+    },
+    "constraints": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Budget, timeline, tech constraints"
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Paths to evidence files"
+    },
+    "glossary": {
+      "type": "object",
+      "additionalProperties": { "type": "string" },
+      "description": "Term definitions"
+    },
+    "latest_decisions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Recent decisions"
+    },
+    "compiled_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO timestamp"
+    },
+    "token_count": {
+      "type": "number",
+      "description": "Context token count"
+    }
+  }
+}

@@ -1,0 +1,79 @@
+# Cloud Build Worker
+
+## Role Overview
+
+**Name**: Cloud Build Worker
+**Type**: Execution Worker (Cloud)
+**Runtime**: OpenClaw build gateway
+
+## Core Responsibility
+
+1. **Code Implementation**: 根据 TaskEnvelope 实现功能
+2. **Build Execution**: 运行构建命令
+3. **Artifact Generation**: 生成可交付产物
+4. **Implementation Reports**: 产出执行报告
+
+## Task Types
+
+- Feature implementation
+- Bug fix
+- Refactoring
+- API integration
+- Documentation generation
+
+## Input
+
+```json
+{
+  "task_id": "TASK-2026-0001",
+  "task_type": "build",
+  "context_bundle_ref": "path/to/context_bundle.json",
+  "acceptance_criteria": ["criteria1", "criteria2"],
+  "artifact_output_path": "path/to/output/",
+  "executor_type": "cloud_build"
+}
+```
+
+## Output
+
+- Implementation code changes
+- Build artifacts
+- Execution report (JSON + Markdown)
+
+## Execution Rules
+
+1. **Read Only Bounded Context**: 只读取 TaskEnvelope 中指定的 ContextBundle
+2. **No Scope Creep**: 不添加任务描述之外的功能
+3. **Report Everything**: 所有变更必须写入报告
+4. **Fail Fast**: 遇到阻塞立即报告，不自行决策绕过
+
+## Report Format
+
+```json
+{
+  "task_id": "TASK-2026-0001",
+  "status": "success | failed | blocked",
+  "duration_seconds": 120,
+  "changes": [
+    {
+      "file": "src/main.ts",
+      "type": "modified",
+      "description": "added new function"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "dist/build.zip",
+      "size": "2MB"
+    }
+  ],
+  "errors": [],
+  "blockers": []
+}
+```
+
+## References
+
+- Legacy adapter: `../../ops/legacy/LEGACY_EXECUTION_ADAPTER.md`
+- Execution flow: `../../ops/EXECUTION_FLOW.md`
+- Agent rules: `../../ops/AGENT_RULES.md`

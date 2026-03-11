@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-03-11T05:51:45.431539+00:00",
+  "signals": [
+    {
+      "signal_id": "signal-001",
+      "date": "2026-03-11",
+      "predicted_outcome": "High engagement",
+      "actual_outcome": "High engagement",
+      "accuracy": true,
+      "lessons": "Thread format worked well"
+    }
+  ]
+}

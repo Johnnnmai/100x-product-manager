@@ -1,0 +1,12 @@
+{
+  "monitored_at": "2026-03-11T15:33:28.841239+00:00",
+  "api_base": "http://localhost:3100",
+  "instance": "default",
+  "healthy": true,
+  "health_detail": "healthy",
+  "child_pid": null,
+  "child_alive": false,
+  "last_start_at": null,
+  "restart_count": 0,
+  "log_path": "C:\\Users\\14153\\Documents\\个人品牌书籍制作\\ops\\paperclip\\runtime\\paperclip-runtime.log"
+}

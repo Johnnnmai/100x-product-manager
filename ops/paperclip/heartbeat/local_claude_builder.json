@@ -1,0 +1,15 @@
+{
+  "key": "local_claude_builder",
+  "agent_id": "5e96d28e-2bdc-425d-a7e1-685f82a00e53",
+  "agent_name": "Quill",
+  "status": "running",
+  "summary": "Paperclip reports an active heartbeat run; skipping duplicate invoke.",
+  "run_id": null,
+  "backoff_until": null,
+  "exit_code": null,
+  "last_invoked_at": "2026-03-11T15:21:40.328741+00:00",
+  "last_completed_at": "2026-03-11T15:22:33.620371+00:00",
+  "consecutive_failures": 0,
+  "consecutive_rate_limits": 0,
+  "output_excerpt": null
+}

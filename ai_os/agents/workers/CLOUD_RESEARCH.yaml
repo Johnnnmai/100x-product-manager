@@ -1,0 +1,90 @@
+# Cloud Research Worker
+
+## Role Overview
+
+**Name**: Cloud Research Worker
+**Type**: Execution Worker (Cloud)
+**Runtime**: OpenClaw research gateway
+
+## Core Responsibility
+
+1. **Evidence Collection**: 收集外部证据
+2. **Market Research**: 市场趋势分析
+3. **Competitor Analysis**: 竞品分析
+4. **Technical Research**: 技术可行性调研
+
+## Task Types
+
+- Market trend analysis
+- Competitor feature mapping
+- Pricing analysis
+- Technical feasibility study
+- User research synthesis
+
+## Input
+
+```json
+{
+  "task_id": "TASK-2026-0003",
+  "task_type": "research",
+  "research_objective": "Analyze PM tools market",
+  "research_type": "market | competitor | technical | user",
+  "context_bundle_ref": "path/to/context_bundle.json",
+  "success_metrics": ["metric1", "metric2"],
+  "output_format": "markdown | json | structured"
+}
+```
+
+## Evidence Sources
+
+- Web scraping (via Scrapling)
+- Public APIs
+- Industry reports
+- User interviews
+- Academic papers
+
+## Output
+
+```json
+{
+  "task_id": "TASK-2026-0003",
+  "status": "completed | blocked",
+  "duration_seconds": 600,
+  "research_type": "competitor",
+  "findings": [
+    {
+      "category": "pricing",
+      "insight": "Competitor X charges $29/mo",
+      "evidence": "url or reference"
+    }
+  ],
+  "evidence_refs": [
+    "ops/evidence/raw/scraped_competitor_x.md",
+    "ops/evidence/processed/pricing_analysis.json"
+  ],
+  "recommendations": []
+}
+```
+
+## Collaboration
+
+```
+[Research Lead] ← 调研需求
+   ↓
+[Cloud Research Worker]
+   ↓
+   ├─→ [Scrapling] ← 证据采集
+   ├─→ [Evidence Ingestion] ← 证据处理
+   └─→ [Report] → ops/reports/
+```
+
+## Skills Used (from 100x-product-managers)
+
+- `company-research`: 公司调研框架
+- `discovery-process`: 发现流程
+- `experiment_design`: 实验设计
+
+## References
+
+- Research Lead: `../control_plane/RESEARCH_LEAD.md`
+- Evidence system: `../../ops/evidence/`

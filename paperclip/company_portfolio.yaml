@@ -1,0 +1,115 @@
+company: JM Strategy Lab
+version: 2
+defaults:
+  project_status: active
+  issue_status: todo
+
+projects:
+  - key: internal-ai-os-v1
+    name: Internal AI OS v1
+    description: Local Paperclip control plane with Codex CEO, Claude planning lane, and OpenClaw cloud swarm.
+    status: active
+    color: "#0F766E"
+    lead_role: ceo_codex
+    workspace:
+      name: brand-book
+      cwd: .
+      is_primary: true
+    issue_seeds:
+      - key: internal-ai-os-bootstrap
+        title: Bootstrap Internal AI OS v1
+        description: Stand up the local Paperclip control plane, runtime heartbeat loop, and reusable agent team.
+        assignee_role: ceo_codex
+        priority: critical
+        children:
+          - key: phase0-security
+            title: Phase 0 - Security Baseline
+            description: Audit secrets, document the current execution surface, and harden local config before broader automation.
+            assignee_role: chief_of_staff
+            priority: critical
+          - key: phase1-paperclip-runtime
+            title: Phase 1 - Paperclip Runtime and Heartbeat
+            description: Make Codex the primary CEO lane, restore local wrappers, enable perpetual heartbeat execution, and connect local Paperclip routing.
+            assignee_role: local_codex_builder
+            priority: critical
+          - key: phase2-pm-compiler
+            title: Phase 2 - PM Compiler
+            description: Compile strategy, roadmap, and epic breakdowns into bounded TaskEnvelopes and ContextBundles.
+            assignee_role: chief_of_staff
+            priority: high
+          - key: phase3-discord-hub
+            title: Phase 3 - Discord Approval Hub
+            description: Push approval, blocked, budget, and completion events into Discord with lightweight action handling.
+            assignee_role: local_claude_builder
+            priority: high
+          - key: phase4-context-evidence
+            title: Phase 4 - Context and Evidence Layer
+            description: Bound task context, attach evidence refs, and connect context-hub plus Scrapling into the task lifecycle.
+            assignee_role: cloud_research
+            priority: high
+          - key: phase5-strategy-lab
+            title: Phase 5 - Strategy Lab Interface
+            description: Keep ForecastRequest and ForecastReport interfaces live with mock support until OASIS and MiroFish are connected.
+            assignee_role: local_codex_builder
+            priority: medium
+
+  - key: ai-revenue-flywheel
+    name: AI Revenue Flywheel
+    description: Product, content, distribution, funnel, analytics, and memory system for automated digital product growth.
+    status: active
+    color: "#9333EA"
+    lead_role: growth_lead
+    workspace:
+      name: brand-book
+      cwd: .
+      is_primary: false
+    issue_seeds:
+      - key: revenue-flywheel-operating-model
+        title: Build the AI Revenue Flywheel operating model
+        description: Convert the strategy document into an executable system with fixed lanes, outputs, and metrics for each stage.
+        assignee_role: growth_lead
+        priority: high
+        status: backlog
+        children:
+          - key: signal-layer
+            title: Signal Layer
+            description: Build trend scouting, competitor scans, and signal card generation with evidence-backed inputs.
+            assignee_role: cloud_research
+            priority: high
+            status: backlog
+          - key: offer-layer
+            title: Offer Layer
+            description: Turn signals into Offer Cards with pricing, CTA, deliverables, and channel strategy.
+            assignee_role: chief_of_staff
+            priority: high
+            status: backlog
+          - key: asset-layer
+            title: Asset Layer
+            description: Package ebooks, templates, and bundles into sellable artifacts with bounded delivery requirements.
+            assignee_role: local_codex_builder
+            priority: high
+            status: backlog
+          - key: content-layer
+            title: Content Layer
+            description: Decompose each asset into pain, proof, and how-to content with CTA bindings.
+            assignee_role: local_claude_builder
+            priority: high
+            status: backlog
+          - key: distribution-layer
+            title: Distribution Layer
+            description: Route content into TikTok, XHS, LinkedIn, and other channels with scheduling and experiment hooks.
+            assignee_role: growth_lead
+            priority: high
+            status: backlog
+          - key: funnel-layer
+            title: Funnel Layer
+            description: Build the landing, capture, checkout, and lead magnet path for product conversion.
+            assignee_role: local_codex_builder
+            priority: high
+            status: backlog
+          - key: analytics-layer
+            title: Analytics and Memory Layer
+            description: Track revenue events, experiments, learnings, and memory updates across the flywheel.
+            assignee_role: local_claude_builder
+            priority: high
+            status: backlog

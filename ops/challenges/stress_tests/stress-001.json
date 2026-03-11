@@ -1,0 +1,8 @@
+{
+  "scenario_id": "stress-001",
+  "name": "High Load Test",
+  "description": "Test system under 10x load",
+  "load_factor": 10.0,
+  "failure_injection": "network_failure",
+  "expected_behavior": "Graceful degradation"
+}

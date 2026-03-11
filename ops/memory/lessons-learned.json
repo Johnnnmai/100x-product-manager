@@ -1,0 +1,19 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-03-11T05:51:45.430539+00:00",
+  "lessons": [
+    {
+      "id": "lesson-001",
+      "date": "2026-03-11",
+      "category": "signal",
+      "title": "Test: Twitter trend detection",
+      "what_worked": "Detected trending PM topics early",
+      "what_didnt": "Missed Reddit signals",
+      "action_items": [
+        "Add Reddit monitoring",
+        "Improve keyword matching"
+      ],
+      "confidence": 0.7
+    }
+  ]
+}

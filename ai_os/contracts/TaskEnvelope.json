@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TaskEnvelope",
+  "type": "object",
+  "required": ["goal_id", "initiative_id", "epic_id", "task_id", "executor_type", "budget_cap", "context_bundle_ref", "artifact_output_path", "acceptance_criteria"],
+  "properties": {
+    "goal_id": {
+      "type": "string",
+      "description": "Goal ID from company goals"
+    },
+    "initiative_id": {
+      "type": "string",
+      "description": "Initiative ID this task belongs to"
+    },
+    "epic_id": {
+      "type": "string",
+      "description": "Epic ID this task belongs to"
+    },
+    "task_id": {
+      "type": "string",
+      "pattern": "^TASK-\\d{4}-\\d{4}$",
+      "description": "Unique task identifier"
+    },
+    "executor_type": {
+      "type": "string",
+      "enum": ["cloud_build", "cloud_qa", "cloud_research", "local_fallback"],
+      "description": "Worker type to execute this task"
+    },
+    "budget_cap": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Budget cap in USD"
+    },
+    "approval_required": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether human approval is required"
+    },
+    "context_bundle_ref": {
+      "type": "string",
+      "description": "Path to ContextBundle JSON"
+    },
+    "artifact_output_path": {
+      "type": "string",
+      "description": "Output path for artifacts"
+    },
+    "acceptance_criteria": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" },
+      "description": "List of acceptance criteria"
+    },
+    "latest_decisions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Recent decisions affecting this task"
+    },
+    "dependencies": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Task IDs this task depends on"
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["critical", "high", "medium", "low"],
+      "default": "medium"
+    }
+  }
+}

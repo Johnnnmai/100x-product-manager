@@ -1,0 +1,67 @@
+{
+  "generated_at": "2026-03-11T15:33:18.068417+00:00",
+  "company_id": "823e177b-8e29-4e1d-979e-7fc776302adc",
+  "cycle": 12,
+  "results": [
+    {
+      "key": "ceo",
+      "agent_id": "2dd55f1f-e067-4187-879c-70d5736807fc",
+      "agent_name": "Zoe",
+      "status": "running",
+      "summary": "Paperclip reports an active heartbeat run; skipping duplicate invoke.",
+      "run_id": null,
+      "backoff_until": null,
+      "exit_code": null,
+      "last_invoked_at": "2026-03-11T15:31:26.943288+00:00",
+      "last_completed_at": "2026-03-11T15:32:15.987769+00:00",
+      "consecutive_failures": 2,
+      "consecutive_rate_limits": 0,
+      "output_excerpt": null
+    },
+    {
+      "key": "pm_compiler",
+      "agent_id": "a38362ad-e069-4db7-9883-824ff0e0eee4",
+      "agent_name": "Mira",
+      "status": "running",
+      "summary": "Paperclip reports an active heartbeat run; skipping duplicate invoke.",
+      "run_id": null,
+      "backoff_until": null,
+      "exit_code": null,
+      "last_invoked_at": "2026-03-11T06:56:51.967356+00:00",
+      "last_completed_at": "2026-03-11T06:58:24.992322+00:00",
+      "consecutive_failures": 1,
+      "consecutive_rate_limits": 0,
+      "output_excerpt": null
+    },
+    {
+      "key": "local_builder",
+      "agent_id": "84ba9755-15b1-4be5-9138-c852ea7ef92a",
+      "agent_name": "Forge",
+      "status": "running",
+      "summary": "Paperclip reports an active heartbeat run; skipping duplicate invoke.",
+      "run_id": null,
+      "backoff_until": null,
+      "exit_code": null,
+      "last_invoked_at": "2026-03-11T15:23:35.720172+00:00",
+      "last_completed_at": "2026-03-11T15:24:25.342139+00:00",
+      "consecutive_failures": 0,
+      "consecutive_rate_limits": 0,
+      "output_excerpt": null
+    },
+    {
+      "key": "local_claude_builder",
+      "agent_id": "5e96d28e-2bdc-425d-a7e1-685f82a00e53",
+      "agent_name": "Quill",
+      "status": "running",
+      "summary": "Paperclip reports an active heartbeat run; skipping duplicate invoke.",
+      "run_id": null,
+      "backoff_until": null,
+      "exit_code": null,
+      "last_invoked_at": "2026-03-11T15:21:40.328741+00:00",
+      "last_completed_at": "2026-03-11T15:22:33.620371+00:00",
+      "consecutive_failures": 0,
+      "consecutive_rate_limits": 0,
+      "output_excerpt": null
+    }
+  ]
+}

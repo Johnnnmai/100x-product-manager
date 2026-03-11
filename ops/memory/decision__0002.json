@@ -1,0 +1,15 @@
+{
+  "entry_id": "decision__0002",
+  "category": "decision",
+  "title": "Use Claude Code over Codex",
+  "content": "Claude Code is available and working. Codex is not installed, so using Claude Code as primary.",
+  "tags": [
+    "decision",
+    "rationale"
+  ],
+  "source_task_id": "test-task-001",
+  "source_envelope_id": null,
+  "created_at": "2026-03-11T05:50:36.262740+00:00",
+  "updated_at": "2026-03-11T05:50:36.262740+00:00",
+  "metadata": {}
+}

@@ -1,0 +1,129 @@
+# Strategy Lab Interface
+
+## Role Overview
+
+**Name**: Strategy Lab Interface
+**Type**: Prediction Layer (Reserved)
+**Purpose**: OASIS / MiroFish 接口预留
+
+## Core Responsibility
+
+1. **Forecast Request Formatting**: 格式化预测请求
+2. **Simulation Trigger**: 触发模拟引擎
+3. **Report Processing**: 处理预测报告
+4. **Human Review Loop**: 人工审核流程
+
+## Phase 1 Scope
+
+- **接口定义**: 完成 ForecastRequest / ForecastReport 合同
+- **入口实现**: 支持人工触发
+- **Mock Engine**: 本地 mock 结果可走通
+
+## ForecastRequest Contract
+
+```json
+{
+  "request_id": "FORECAST-2026-0001",
+  "seed_material_refs": [
+    "ops/tasks/compiled/TASK-2026-0001.json",
+    "ops/evidence/processed/market_analysis.md"
+  ],
+  "decision_question": "Should we launch Feature X in Q3 2026?",
+  "time_horizon": "Q3 2026 to Q4 2026",
+  "scenario_prompt": "If we launch Feature X with current pricing...",
+  "constraints": {
+    "max_budget": "$50,000",
+    "max_team_size": 5
+  },
+  "requested_by": "Chief of Staff",
+  "requested_at": "2026-03-10T10:00:00Z"
+}
+```
+
+## ForecastReport Contract
+
+```json
+{
+  "request_id": "FORECAST-2026-0001",
+  "status": "completed",
+  "scenario_summary": "Launching Feature X in Q3 has 70% success probability...",
+  "key_drivers": [
+    "Pricing competitiveness",
+    "Marketing channel effectiveness",
+    "Team capacity"
+  ],
+  "risk_signals": [
+    "Competitor launching similar feature",
+    "Potential supply chain delays"
+  ],
+  "roadmap_implications": [
+    "Consider beta launch in August",
+    "Delay enterprise features to Q4"
+  ],
+  "confidence_level": "medium",
+  "report_path": "ops/strategy_lab/reports/FORECAST-2026-0001.md"
+}
+```
+
+## Flow
+
+```
+[Human / Agent] ← 发起预测请求
+   ↓
+[Strategy Lab Interface]
+   ↓
+   ├─→ Validate Request
+   ├─→ Format ForecastRequest
+   ↓
+[OASIS / MiroFish] (or Mock Engine)
+   ↓
+[ForecastReport]
+   ↓
+[Human Review]
+   ↓
+[Approved → PM Compiler]
+   ↓
+[New TaskEnvelope]
+```
+
+## Phase 2 (Reserved)
+
+- 接入真实 OASIS 仿真引擎
+- 接入 MiroFish 可视化
+- 自动化预测触发
+
+## Configuration
+
+```yaml
+strategy_lab:
+  providers:
+    - name: "oasis"
+      status: "reserved"
+      endpoint_env: "OASIS_ENDPOINT"
+    - name: "mirofish"
+      status: "reserved"
+      endpoint_env: "MIROFISH_ENDPOINT"
+    - name: "mock"
+      status: "active"
+      config: "internal"
+
+  defaults:
+    timeout_seconds: 300
+    max_concurrent: 3
+    auto_review: false  # Always human review in Phase 1
+```
+
+## Request Storage
+
+```
+ops/strategy_lab/
+├── requests/
+│   └── FORECAST-YYYY-NNNN.json
+└── reports/
+    └── FORECAST-YYYY-NNNN.md
+```
+
+## References
+
+- Strategy requests: `../../ops/strategy_lab/requests/`
+- Strategy reports: `../../ops/strategy_lab/reports/`

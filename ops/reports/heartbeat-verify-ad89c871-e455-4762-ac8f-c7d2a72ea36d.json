@@ -1,0 +1,13 @@
+﻿{
+    "runId":  "ad89c871-e455-4762-ac8f-c7d2a72ea36d",
+    "verifiedAt":  "2026-03-11T08:33:36.4618076-07:00",
+    "statuses":  {
+                     "JMS-8":  "in_progress",
+                     "JMS-10":  "blocked",
+                     "JMS-11":  "todo"
+                 },
+    "latestCommentIds":  {
+                             "JMS-8":  "9b1d675e-abf1-4668-afe9-a5628189a90f",
+                             "JMS-11":  "d4e06b46-cc75-4d0c-9d87-c9a586e10fd6"
+                         }
+}

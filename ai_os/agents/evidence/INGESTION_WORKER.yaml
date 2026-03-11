@@ -1,0 +1,102 @@
+# Evidence Ingestion Worker
+
+## Role Overview
+
+**Name**: Evidence Ingestion Worker
+**Type**: Evidence Layer
+**Purpose**: 将 Scrapling 采集结果处理为可引用证据
+
+## Core Responsibility
+
+1. **Raw Evidence Collection**: 接收 Scrapling 原始输出
+2. **Structure Processing**: 结构化处理网页内容
+3. **Evidence Indexing**: 索引和元数据标注
+4. **Quality Validation**: 证据质量检查
+
+## Input (from Scrapling)
+
+```json
+{
+  "scraping_request_id": "SCRAPE-2026-0001",
+  "source_url": "https://competitor.com/pricing",
+  "content_type": "html | screenshot | structured",
+  "raw_output": {
+    "html": "...",
+    "screenshots": ["path/to/screenshot.png"],
+    "data": {"pricing": [...]}
+  }
+}
+```
+
+## Processing Pipeline
+
+1. **Raw Ingest**: 写入 `ops/evidence/raw/`
+2. **Structure Extract**: 提取关键信息
+3. **Format Convert**: 转换为 Markdown/JSON
+4. **Index**: 添加元数据和索引
+5. **Validate**: 验证内容质量
+6. **Write Processed**: 写入 `ops/evidence/processed/`
+
+## Output
+
+```json
+{
+  "evidence_id": "EV-2026-0001",
+  "task_id": "TASK-2026-0003",
+  "source_url": "https://competitor.com/pricing",
+  "processed_path": "ops/evidence/processed/competitor_pricing.md",
+  "raw_path": "ops/evidence/raw/SCRAPE-2026-0001/",
+  "metadata": {
+    "collected_at": "2026-03-10T10:00:00Z",
+    "content_type": "pricing_table",
+    "language": "en",
+    "quality_score": 0.85
+  },
+  "extracted_insights": [
+    "Basic plan: $19/mo",
+    "Pro plan: $49/mo",
+    "Enterprise: Custom pricing"
+  ]
+}
+```
+
+## Evidence Storage
+
+```
+ops/evidence/
+├── raw/
+│   └── SCRAPE-YYYY-NNNN/
+│       ├── index.html
+│       ├── screenshot.png
+│       └── metadata.json
+└── processed/
+    └── evidence_id/
+        ├── content.md
+        └── metadata.json
+```
+
+## Collaboration
+
+```
+[Research Lead] ← 调研需求
+   ↓
+[Scrapling] ← 网页抓取
+   ↓
+[Evidence Ingestion Worker]
+   ↓
+   ├─→ [Context Hub] ← evidence refs
+   └─→ [Task Report] ← evidence_id 引用
+```
+
+## Rules
+
+1. **No Direct Task Generation**: 采集结果只作为 evidence，不直接生成任务
+2. **Quality Threshold**: quality_score < 0.5 需要重新采集
+3. **Retention**: 原始数据保留 90 天
+4. **Access Control**: 只有 Context Hub 可以读取 processed evidence
+
+## References
+
+- Evidence raw: `../../ops/evidence/raw/`
+- Evidence processed: `../../ops/evidence/processed/`
+- Scrapling integration: (external service)

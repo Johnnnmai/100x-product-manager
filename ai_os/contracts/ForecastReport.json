@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ForecastReport",
+  "type": "object",
+  "required": ["request_id", "status", "scenario_summary", "key_drivers", "risk_signals", "roadmap_implications"],
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "pattern": "^FORECAST-\\d{4}-\\d{4}$",
+      "description": "Associated forecast request ID"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["completed", "failed", "timeout"],
+      "description": "Forecast status"
+    },
+    "scenario_summary": {
+      "type": "string",
+      "description": "Summary of forecasted scenario"
+    },
+    "key_drivers": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Key factors affecting the scenario"
+    },
+    "risk_signals": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Identified risk signals"
+    },
+    "roadmap_implications": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Implications for roadmap"
+    },
+    "confidence_level": {
+      "type": "string",
+      "enum": ["high", "medium", "low"],
+      "description": "Confidence in forecast"
+    },
+    "report_path": {
+      "type": "string",
+      "description": "Path to detailed report"
+    }
+  }
+}

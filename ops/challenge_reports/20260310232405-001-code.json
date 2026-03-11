@@ -1,0 +1,24 @@
+{
+  "target": "Code Review",
+  "target_type": "code",
+  "critical_issues": [],
+  "major_issues": [
+    {
+      "description": "Mutable default argument detected",
+      "impact": "Shared state across calls",
+      "recommendation": "Use None and assign inside function"
+    }
+  ],
+  "minor_issues": [],
+  "questions": [
+    "What edge cases are not handled?",
+    "What happens with invalid input?",
+    "Are there race conditions?"
+  ],
+  "recommendations": [
+    "Add comprehensive error handling",
+    "Write unit tests for edge cases",
+    "Review for security vulnerabilities"
+  ],
+  "timestamp": "2026-03-10T23:24:05.904504"
+}

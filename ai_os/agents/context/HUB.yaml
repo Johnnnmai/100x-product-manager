@@ -1,0 +1,104 @@
+# Context Hub Agent
+
+## Role Overview
+
+**Name**: Context Hub Agent
+**Type**: Context Layer
+**Purpose**: 编译 bounded context 给执行 Agent
+
+## Core Responsibility
+
+1. **External API Docs**: 获取外部 API/框架文档
+2. **Bounded Context Compilation**: 编译任务专属上下文
+3. **Context Caching**: 缓存常用上下文
+
+## Input
+
+```json
+{
+  "task_id": "TASK-2026-0001",
+  "context_request": {
+    "internal_sources": ["path/to/docs", "README.md"],
+    "external_sources": ["API docs URL", "Framework docs"],
+    "evidence_refs": ["evidence_id1", "evidence_id2"]
+  },
+  "constraints": {
+    "max_context_tokens": 8000,
+    "prioritize": ["recent_decisions", "acceptance_criteria"]
+  }
+}
+```
+
+## Context Sources
+
+### Internal (Git-based)
+- Project README
+- API specifications
+- Architecture docs
+- Previous task reports
+
+### External (via context-hub)
+- Framework documentation
+- API references
+- SDK guides
+- Best practices
+
+### Evidence (via Scrapling)
+- Scraped web content
+- Structured data
+- Screenshots
+
+## ContextBundle Output
+
+```json
+{
+  "task_id": "TASK-2026-0001",
+  "mission": "Implement user authentication",
+  "constraints": [
+    "budget: $500",
+    "timeline: 2 days",
+    "tech: use existing auth service"
+  ],
+  "evidence_refs": [
+    "ops/evidence/processed/auth_comparison.md"
+  ],
+  "glossary": {
+    "JWT": "JSON Web Token",
+    "OAuth": "Open Authorization"
+  },
+  "latest_decisions": [
+    "Use Auth0 for SSO",
+    "Skip 2FA for MVP"
+  ],
+  "compiled_at": "2026-03-10T10:00:00Z",
+  "token_count": 4500
+}
+```
+
+## Rules
+
+1. **Never Full Repo**: 禁止将整个 repo 上下文给 Agent
+2. **Token Budget**: 遵守 max_context_tokens 限制
+3. **Source Traceability**: 每个上下文元素必须有来源引用
+4. **Cache HIT**: 常用文档优先从缓存获取
+
+## Collaboration
+
+```
+[PM Compiler] ← 需要上下文
+   ↓
+[Context Hub]
+   ↓
+   ├─→ Internal Git Sources
+   ├─→ External (context-hub)
+   ├─→ Evidence (Scrapling)
+   ↓
+[ContextBundle] → ops/context_bundles/
+   ↓
+[Worker Agent] ← 只读自己的 ContextBundle
+```
+
+## References
+
+- Context bundles: `../../ops/context_bundles/`
+- Context cache: `../../ops/context_cache/`

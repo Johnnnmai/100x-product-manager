@@ -1,0 +1,303 @@
+﻿{
+    "JMS-10":  {
+                   "issue":  {
+                                 "id":  "d198ef01-55e6-4f10-9b3a-bdae27ab154d",
+                                 "companyId":  "823e177b-8e29-4e1d-979e-7fc776302adc",
+                                 "projectId":  "adfc69a5-3855-453c-b88f-5bec73e6d532",
+                                 "goalId":  null,
+                                 "parentId":  "45e10ad8-bb82-46c5-870b-3bb1594386c4",
+                                 "title":  "Phase 1 - Paperclip Runtime and Heartbeat",
+                                 "description":  "Make Codex the primary CEO lane, restore local wrappers, enable perpetual heartbeat execution, and connect local Paperclip routing.",
+                                 "status":  "todo",
+                                 "priority":  "critical",
+                                 "assigneeAgentId":  "84ba9755-15b1-4be5-9138-c852ea7ef92a",
+                                 "assigneeUserId":  null,
+                                 "checkoutRunId":  null,
+                                 "executionRunId":  null,
+                                 "executionAgentNameKey":  null,
+                                 "executionLockedAt":  null,
+                                 "createdByAgentId":  null,
+                                 "createdByUserId":  "local-board",
+                                 "issueNumber":  10,
+                                 "identifier":  "JMS-10",
+                                 "requestDepth":  0,
+                                 "billingCode":  null,
+                                 "assigneeAdapterOverrides":  null,
+                                 "startedAt":  null,
+                                 "completedAt":  null,
+                                 "cancelledAt":  null,
+                                 "hiddenAt":  null,
+                                 "createdAt":  "2026-03-11T06:53:58.970Z",
+                                 "updatedAt":  "2026-03-11T07:03:59.608Z",
+                                 "labels":  [
+
+                                            ],
+                                 "labelIds":  [
+
+                                              ],
+                                 "ancestors":  [
+                                                   {
+                                                       "id":  "45e10ad8-bb82-46c5-870b-3bb1594386c4",
+                                                       "identifier":  "JMS-8",
+                                                       "title":  "Bootstrap Internal AI OS v1",
+                                                       "description":  "Stand up the local Paperclip control plane, runtime heartbeat loop, and reusable agent team.",
+                                                       "status":  "in_progress",
+                                                       "priority":  "critical",
+                                                       "assigneeAgentId":  "2dd55f1f-e067-4187-879c-70d5736807fc",
+                                                       "projectId":  "adfc69a5-3855-453c-b88f-5bec73e6d532",
+                                                       "goalId":  null,
+                                                       "project":  {
+                                                                       "id":  "adfc69a5-3855-453c-b88f-5bec73e6d532",
+                                                                       "name":  "Internal AI OS v1",
+                                                                       "description":  "Local Paperclip control plane with Codex CEO, Claude planning lane, and OpenClaw cloud swarm.",
+                                                                       "status":  "in_progress",
+                                                                       "goalId":  null,
+                                                                       "workspaces":  [
+                                                                                          {
+                                                                                              "id":  "6d75764a-00c3-4a02-9f12-4485d3f9dcf5",
+                                                                                              "companyId":  "823e177b-8e29-4e1d-979e-7fc776302adc",
+                                                                                              "projectId":  "adfc69a5-3855-453c-b88f-5bec73e6d532",
+                                                                                              "name":  "brand-book",
+                                                                                              "cwd":  ".",
+                                                                                              "repoUrl":  null,
+                                                                                              "repoRef":  null,
+                                                                                              "metadata":  null,
+                                                                                              "isPrimary":  true,
+                                                                                              "createdAt":  "2026-03-11T06:53:50.233Z",
+                                                                                              "updatedAt":  "2026-03-11T06:53:50.233Z"
+                                                                                          }
+                                                                                      ],
+                                                                       "primaryWorkspace":  {
+                                                                                                "id":  "6d75764a-00c3-4a02-9f12-4485d3f9dcf5",
+                                                                                                "companyId":  "823e177b-8e29-4e1d-979e-7fc776302adc",
+                                                                                                "projectId":  "adfc69a5-3855-453c-b88f-5bec73e6d532",
+                                                                                                "name":  "brand-book",
+                                                                                                "cwd":  ".",
+                                                                                                "repoUrl":  null,
+                                                                                                "repoRef":  null,
+                                                                                                "metadata":  null,
+                                                                                                "isPrimary":  true,
+                                                                                                "createdAt":  "2026-03-11T06:53:50.233Z",
+                                                                                                "updatedAt":  "2026-03-11T06:53:50.233Z"
+                                                                                            }
+                                                                   },
+                                                       "goal":  null
+                                                   }
+                                               ],
+                                 "project":  {
+                                                 "id":  "adfc69a5-3855-453c-b88f-5bec73e6d532",
+                                                 "companyId":  "823e177b-8e29-4e1d-979e-7fc776302adc",
+                                                 "goalId":  null,
+                                                 "name":  "Internal AI OS v1",
+                                                 "description":  "Local Paperclip control plane with Codex CEO, Claude planning lane, and OpenClaw cloud swarm.",
+                                                 "status":  "in_progress",
+                                                 "leadAgentId":  "2dd55f1f-e067-4187-879c-70d5736807fc",
+                                                 "targetDate":  null,
+                                                 "color":  "#0F766E",
+                                                 "archivedAt":  null,
+                                                 "createdAt":  "2026-03-11T06:53:50.181Z",
+                                                 "updatedAt":  "2026-03-11T06:53:50.181Z",
+                                                 "urlKey":  "internal-ai-os-v1",
+                                                 "goalIds":  [
+
+                                                             ],
+                                                 "goals":  [
+
+                                                           ],
+                                                 "workspaces":  [
+                                                                    {
+                                                                        "id":  "6d75764a-00c3-4a02-9f12-4485d3f9dcf5",
+                                                                        "companyId":  "823e177b-8e29-4e1d-979e-7fc776302adc",
+                                                                        "projectId":  "adfc69a5-3855-453c-b88f-5bec73e6d532",
+                                                                        "name":  "brand-book",
+                                                                        "cwd":  ".",
+                                                                        "repoUrl":  null,
+                                                                        "repoRef":  null,
+                                                                        "metadata":  null,
+                                                                        "isPrimary":  true,
+                                                                        "createdAt":  "2026-03-11T06:53:50.233Z",
+                                                                        "updatedAt":  "2026-03-11T06:53:50.233Z"
+                                                                    }
+                                                                ],
+                                                 "primaryWorkspace":  {
+                                                                          "id":  "6d75764a-00c3-4a02-9f12-4485d3f9dcf5",
+                                                                          "companyId":  "823e177b-8e29-4e1d-979e-7fc776302adc",
+                                                                          "projectId":  "adfc69a5-3855-453c-b88f-5bec73e6d532",
+                                                                          "name":  "brand-book",
+                                                                          "cwd":  ".",
+                                                                          "repoUrl":  null,
+                                                                          "repoRef":  null,
+                                                                          "metadata":  null,
+                                                                          "isPrimary":  true,
+                                                                          "createdAt":  "2026-03-11T06:53:50.233Z",
+                                                                          "updatedAt":  "2026-03-11T06:53:50.233Z"
+                                                                      }
+                                             },
+                                 "goal":  null,
+                                 "mentionedProjects":  [
+
+                                                       ]
+                             },
+                   "comments":  {
+                                    "value":  [
+                                                  {
+                                                      "id":  "177ca4f4-e808-4230-99a5-f559ed5cfec9",
+                                                      "companyId":  "823e177b-8e29-4e1d-979e-7fc776302adc",
+                                                      "issueId":  "d198ef01-55e6-4f10-9b3a-bdae27ab154d",
+                                                      "authorAgentId":  "84ba9755-15b1-4be5-9138-c852ea7ef92a",
+                                                      "authorUserId":  null,
+                                                      "body":  "BUILD-01 validation complete. Report: ops/reports/2026-03-11-000314-JMS-10-build-01-initial-validation.md. Verified Codex CEO lane mapping, local wrapper execution, bounded heartbeat behavior, Paperclip outbox routing, and targeted runtime tests (all pass). Blocker: JMS-10 currently lacks task-level ContextBundle/explicit acceptance criteria; please provide PM-compiled TaskEnvelope slices for further implementation without scope expansion.",
+                                                      "createdAt":  "2026-03-11T07:03:59.606Z",
+                                                      "updatedAt":  "2026-03-11T07:03:59.606Z"
+                                                  }
+                                              ],
+                                    "Count":  1
+                                }
+               },
+    "JMS-11":  {
+                   "issue":  {
+                                 "id":  "f1cb6f23-3ae5-449e-ad1c-6f58c13e9b26",
+                                 "companyId":  "823e177b-8e29-4e1d-979e-7fc776302adc",
+                                 "projectId":  "adfc69a5-3855-453c-b88f-5bec73e6d532",
+                                 "goalId":  null,
+                                 "parentId":  "45e10ad8-bb82-46c5-870b-3bb1594386c4",
+                                 "title":  "Phase 2 - PM Compiler",
+                                 "description":  "Compile strategy, roadmap, and epic breakdowns into bounded TaskEnvelopes and ContextBundles.",
+                                 "status":  "todo",
+                                 "priority":  "high",
+                                 "assigneeAgentId":  "a38362ad-e069-4db7-9883-824ff0e0eee4",
+                                 "assigneeUserId":  null,
+                                 "checkoutRunId":  null,
+                                 "executionRunId":  null,
+                                 "executionAgentNameKey":  null,
+                                 "executionLockedAt":  null,
+                                 "createdByAgentId":  null,
+                                 "createdByUserId":  "local-board",
+                                 "issueNumber":  11,
+                                 "identifier":  "JMS-11",
+                                 "requestDepth":  0,
+                                 "billingCode":  null,
+                                 "assigneeAdapterOverrides":  null,
+                                 "startedAt":  null,
+                                 "completedAt":  null,
+                                 "cancelledAt":  null,
+                                 "hiddenAt":  null,
+                                 "createdAt":  "2026-03-11T06:54:02.466Z",
+                                 "updatedAt":  "2026-03-11T06:59:24.248Z",
+                                 "labels":  [
+
+                                            ],
+                                 "labelIds":  [
+
+                                              ],
+                                 "ancestors":  [
+                                                   {
+                                                       "id":  "45e10ad8-bb82-46c5-870b-3bb1594386c4",
+                                                       "identifier":  "JMS-8",
+                                                       "title":  "Bootstrap Internal AI OS v1",
+                                                       "description":  "Stand up the local Paperclip control plane, runtime heartbeat loop, and reusable agent team.",
+                                                       "status":  "in_progress",
+                                                       "priority":  "critical",
+                                                       "assigneeAgentId":  "2dd55f1f-e067-4187-879c-70d5736807fc",
+                                                       "projectId":  "adfc69a5-3855-453c-b88f-5bec73e6d532",
+                                                       "goalId":  null,
+                                                       "project":  {
+                                                                       "id":  "adfc69a5-3855-453c-b88f-5bec73e6d532",
+                                                                       "name":  "Internal AI OS v1",
+                                                                       "description":  "Local Paperclip control plane with Codex CEO, Claude planning lane, and OpenClaw cloud swarm.",
+                                                                       "status":  "in_progress",
+                                                                       "goalId":  null,
+                                                                       "workspaces":  [
+                                                                                          {
+                                                                                              "id":  "6d75764a-00c3-4a02-9f12-4485d3f9dcf5",
+                                                                                              "companyId":  "823e177b-8e29-4e1d-979e-7fc776302adc",
+                                                                                              "projectId":  "adfc69a5-3855-453c-b88f-5bec73e6d532",
+                                                                                              "name":  "brand-book",
+                                                                                              "cwd":  ".",
+                                                                                              "repoUrl":  null,
+                                                                                              "repoRef":  null,
+                                                                                              "metadata":  null,
+                                                                                              "isPrimary":  true,
+                                                                                              "createdAt":  "2026-03-11T06:53:50.233Z",
+                                                                                              "updatedAt":  "2026-03-11T06:53:50.233Z"
+                                                                                          }
+                                                                                      ],
+                                                                       "primaryWorkspace":  {
+                                                                                                "id":  "6d75764a-00c3-4a02-9f12-4485d3f9dcf5",
+                                                                                                "companyId":  "823e177b-8e29-4e1d-979e-7fc776302adc",
+                                                                                                "projectId":  "adfc69a5-3855-453c-b88f-5bec73e6d532",
+                                                                                                "name":  "brand-book",
+                                                                                                "cwd":  ".",
+                                                                                                "repoUrl":  null,
+                                                                                                "repoRef":  null,
+                                                                                                "metadata":  null,
+                                                                                                "isPrimary":  true,
+                                                                                                "createdAt":  "2026-03-11T06:53:50.233Z",
+                                                                                                "updatedAt":  "2026-03-11T06:53:50.233Z"
+                                                                                            }
+                                                                   },
+                                                       "goal":  null
+                                                   }
+                                               ],
+                                 "project":  {
+                                                 "id":  "adfc69a5-3855-453c-b88f-5bec73e6d532",
+                                                 "companyId":  "823e177b-8e29-4e1d-979e-7fc776302adc",
+                                                 "goalId":  null,
+                                                 "name":  "Internal AI OS v1",
+                                                 "description":  "Local Paperclip control plane with Codex CEO, Claude planning lane, and OpenClaw cloud swarm.",
+                                                 "status":  "in_progress",
+                                                 "leadAgentId":  "2dd55f1f-e067-4187-879c-70d5736807fc",
+                                                 "targetDate":  null,
+                                                 "color":  "#0F766E",
+                                                 "archivedAt":  null,
+                                                 "createdAt":  "2026-03-11T06:53:50.181Z",
+                                                 "updatedAt":  "2026-03-11T06:53:50.181Z",
+                                                 "urlKey":  "internal-ai-os-v1",
+                                                 "goalIds":  [
+
+                                                             ],
+                                                 "goals":  [
+
+                                                           ],
+                                                 "workspaces":  [
+                                                                    {
+                                                                        "id":  "6d75764a-00c3-4a02-9f12-4485d3f9dcf5",
+                                                                        "companyId":  "823e177b-8e29-4e1d-979e-7fc776302adc",
+                                                                        "projectId":  "adfc69a5-3855-453c-b88f-5bec73e6d532",
+                                                                        "name":  "brand-book",
+                                                                        "cwd":  ".",
+                                                                        "repoUrl":  null,
+                                                                        "repoRef":  null,
+                                                                        "metadata":  null,
+                                                                        "isPrimary":  true,
+                                                                        "createdAt":  "2026-03-11T06:53:50.233Z",
+                                                                        "updatedAt":  "2026-03-11T06:53:50.233Z"
+                                                                    }
+                                                                ],
+                                                 "primaryWorkspace":  {
+                                                                          "id":  "6d75764a-00c3-4a02-9f12-4485d3f9dcf5",
+                                                                          "companyId":  "823e177b-8e29-4e1d-979e-7fc776302adc",
+                                                                          "projectId":  "adfc69a5-3855-453c-b88f-5bec73e6d532",
+                                                                          "name":  "brand-book",
+                                                                          "cwd":  ".",
+                                                                          "repoUrl":  null,
+                                                                          "repoRef":  null,
+                                                                          "metadata":  null,
+                                                                          "isPrimary":  true,
+                                                                          "createdAt":  "2026-03-11T06:53:50.233Z",
+                                                                          "updatedAt":  "2026-03-11T06:53:50.233Z"
+                                                                      }
+                                             },
+                                 "goal":  null,
+                                 "mentionedProjects":  [
+
+                                                       ]
+                             },
+                   "comments":  {
+                                    "value":  [
+
+                                              ],
+                                    "Count":  0
+                                }
+               }
+}

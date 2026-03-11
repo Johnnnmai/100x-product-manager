@@ -1,0 +1,171 @@
+company: JM Strategy Lab
+version: 2
+defaults:
+  working_directory: "."
+  instructions_file: "AGENTS.md"
+  heartbeat: true
+
+agents:
+  - key: ceo
+    title: CTRL-01 / Codex CEO
+    name: Zoe
+    role: ceo
+    assignment_role: ceo_codex
+    department: control_plane
+    runtime_class: local_control
+    adapter_type: codex_local
+    command: paperclip/bin/zoe-paperclip.cmd
+    model: gpt-5.3-codex
+    max_turns_per_run: 20
+    enable_search: true
+    bypass_sandbox: false
+    bootstrap_prompt_file: paperclip/bootstrap/ceo_codex.md
+    capabilities: "Primary local CEO lane for routing, approvals, delegation, and loop closure."
+
+  - key: pm_compiler
+    title: PLAN-01 / PM Compiler
+    name: Mira
+    role: pm
+    assignment_role: chief_of_staff
+    department: planning
+    runtime_class: local_planning
+    adapter_type: claude_local
+    reports_to: Zoe
+    command: paperclip/bin/mira-paperclip.cmd
+    model: sonnet
+    skip_permissions: true
+    max_turns_per_run: 24
+    bootstrap_prompt_file: paperclip/bootstrap/pm_compiler.md
+    capabilities: "Compiles strategy into bounded TaskEnvelopes, ContextBundles, and acceptance criteria."
+
+  - key: local_builder
+    title: BUILD-01 / Codex Builder
+    name: Forge
+    role: engineer
+    assignment_role: local_codex_builder
+    department: build
+    runtime_class: local_build
+    adapter_type: codex_local
+    reports_to: Zoe
+    command: paperclip/bin/forge-paperclip.cmd
+    model: gpt-5.3-codex
+    max_turns_per_run: 24
+    enable_search: true
+    bypass_sandbox: false
+    bootstrap_prompt_file: paperclip/bootstrap/local_builder.md
+    capabilities: "Fast local implementation, bounded verification, and runtime fixes."
+
+  - key: local_claude_builder
+    title: BUILD-02 / Claude Builder
+    name: Quill
+    role: engineer
+    assignment_role: local_claude_builder
+    department: build
+    runtime_class: local_build
+    adapter_type: claude_local
+    reports_to: Zoe
+    command: paperclip/bin/quill-paperclip.cmd
+    model: sonnet
+    skip_permissions: true
+    max_turns_per_run: 24
+    bootstrap_prompt_file: paperclip/bootstrap/local_claude_builder.md
+    capabilities: "Repo shaping, docs, cleanup, tests, and bounded Claude execution."
+
+  - key: chief_of_staff
+    title: EXEC-02 / Cloud Chief of Staff
+    name: Chief of Staff
+    role: pm
+    assignment_role: chief_of_staff_cloud
+    department: control_plane
+    runtime_class: cloud_control
+    adapter_type: openclaw_gateway
+    reports_to: Zoe
+    gateway_url_env: OPENCLAW_GATEWAY_CONTROL_URL
+    capabilities: "Cloud coordination lane for escalated planning and operator support."
+
+  - key: cto_core
+    title: ENG-01 / CTO Core
+    name: CTO
+    role: engineer
+    assignment_role: cto_core
+    department: engineering
+    runtime_class: cloud_lead
+    adapter_type: openclaw_gateway
+    reports_to: Zoe
+    gateway_url_env: OPENCLAW_GATEWAY_BUILD_URL
+    capabilities: "Technical lead for architecture, build routing, and escalation."
+
+  - key: qa_lead
+    title: QA-01 / Quality Director
+    name: QA Director
+    role: qa
+    assignment_role: qa_director
+    department: verification
+    runtime_class: cloud_lead
+    adapter_type: openclaw_gateway
+    reports_to: CTO
+    gateway_url_env: OPENCLAW_GATEWAY_VERIFY_URL
+    capabilities: "Verification owner for releases, regressions, and quality gates."
+
+  - key: research_lead
+    title: RSR-01 / Research Lead
+    name: Research Lead
+    role: researcher
+    assignment_role: research_lead
+    department: research
+    runtime_class: cloud_lead
+    adapter_type: openclaw_gateway
+    reports_to: Zoe
+    gateway_url_env: OPENCLAW_GATEWAY_RESEARCH_URL
+    capabilities: "Research owner for evidence collection, competitor scans, and signal discovery."
+
+  - key: growth_lead
+    title: GTM-01 / Growth Lead
+    name: Growth Lead
+    role: cmo
+    assignment_role: growth_lead
+    department: growth
+    runtime_class: cloud_lead
+    adapter_type: openclaw_gateway
+    reports_to: Zoe
+    gateway_url_env: OPENCLAW_GATEWAY_CONTROL_URL
+    capabilities: "Growth lead for distribution, funnel, sales, and experiment loops."
+
+  - key: cloud_exec_a
+    title: CLOUD-BUILD-01 / Atlas
+    name: Cloud Build
+    role: engineer
+    assignment_role: cloud_build
+    department: engineering
+    runtime_class: cloud_worker
+    fallback_agent_key: local_builder
+    adapter_type: openclaw_gateway
+    reports_to: CTO
+    gateway_url_env: OPENCLAW_GATEWAY_BUILD_URL
+    capabilities: "Heavy build execution lane for cloud implementation and deployment tasks."
+
+  - key: cloud_verify_b
+    title: CLOUD-VERIFY-01 / Sentinel
+    name: Cloud QA
+    role: qa
+    assignment_role: cloud_qa
+    department: verification
+    runtime_class: cloud_worker
+    fallback_agent_key: local_claude_builder
+    adapter_type: openclaw_gateway
+    reports_to: QA Director
+    gateway_url_env: OPENCLAW_GATEWAY_VERIFY_URL
+    capabilities: "Cloud validation lane for preview checks, smoke tests, and release verification."
+
+  - key: cloud_research_c
+    title: CLOUD-RESEARCH-01 / Scout
+    name: Cloud Research
+    role: researcher
+    assignment_role: cloud_research
+    department: research
+    runtime_class: cloud_worker
+    fallback_agent_key: pm_compiler
+    adapter_type: openclaw_gateway
+    reports_to: Research Lead
+    gateway_url_env: OPENCLAW_GATEWAY_RESEARCH_URL
+    capabilities: "Cloud research lane for evidence gathering, web research, and market scans."

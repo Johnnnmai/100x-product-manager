@@ -1,0 +1,58 @@
+﻿{
+    "JMS-10":  [
+                   null,
+                   null
+               ],
+    "JMS-11":  [
+                   null,
+                   null
+               ],
+    "JMS-8":  [
+                  {
+                      "id":  "45e10ad8-bb82-46c5-870b-3bb1594386c4",
+                      "companyId":  "823e177b-8e29-4e1d-979e-7fc776302adc",
+                      "projectId":  "adfc69a5-3855-453c-b88f-5bec73e6d532",
+                      "goalId":  null,
+                      "parentId":  null,
+                      "title":  "Bootstrap Internal AI OS v1",
+                      "description":  "Stand up the local Paperclip control plane, runtime heartbeat loop, and reusable agent team.",
+                      "status":  "in_progress",
+                      "priority":  "critical",
+                      "assigneeAgentId":  "2dd55f1f-e067-4187-879c-70d5736807fc",
+                      "assigneeUserId":  null,
+                      "checkoutRunId":  "e5e07f55-a2c4-4a17-8b42-781c4bbde6e2",
+                      "executionRunId":  "e5e07f55-a2c4-4a17-8b42-781c4bbde6e2",
+                      "executionAgentNameKey":  null,
+                      "executionLockedAt":  "2026-03-11T15:22:59.524Z",
+                      "createdByAgentId":  null,
+                      "createdByUserId":  "local-board",
+                      "issueNumber":  8,
+                      "identifier":  "JMS-8",
+                      "requestDepth":  0,
+                      "billingCode":  null,
+                      "assigneeAdapterOverrides":  null,
+                      "startedAt":  "2026-03-11T07:03:42.577Z",
+                      "completedAt":  null,
+                      "cancelledAt":  null,
+                      "hiddenAt":  null,
+                      "createdAt":  "2026-03-11T06:53:53.149Z",
+                      "updatedAt":  "2026-03-11T15:22:59.524Z",
+                      "labels":  [
+
+                                 ],
+                      "labelIds":  [
+
+                                   ],
+                      "activeRun":  {
+                                        "id":  "e5e07f55-a2c4-4a17-8b42-781c4bbde6e2",
+                                        "status":  "running",
+                                        "agentId":  "2dd55f1f-e067-4187-879c-70d5736807fc",
+                                        "invocationSource":  "timer",
+                                        "triggerDetail":  "system",
+                                        "startedAt":  "2026-03-11T15:21:04.074Z",
+                                        "finishedAt":  null,
+                                        "createdAt":  "2026-03-11T15:21:04.046Z"
+                                    }
+                  }
+              ]
+}

@@ -1,0 +1,95 @@
+# Cloud QA Worker
+
+## Role Overview
+
+**Name**: Cloud QA Worker
+**Type**: Execution Worker (Cloud)
+**Runtime**: OpenClaw verify gateway
+
+## Core Responsibility
+
+1. **Test Execution**: 运行单元测试、集成测试
+2. **Regression Testing**: 回归测试确保无破坏
+3. **Performance Validation**: 性能基准测试
+4. **Security Scanning**: 安全漏洞扫描
+
+## Task Types
+
+- Unit test execution
+- Integration test
+- End-to-end test
+- Performance benchmark
+- Security audit
+
+## Input
+
+```json
+{
+  "task_id": "TASK-2026-0002",
+  "task_type": "qa",
+  "context_bundle_ref": "path/to/context_bundle.json",
+  "test_scope": "full | regression | specific",
+  "quality_gates": {
+    "coverage_min": 80,
+    "critical_paths": ["path1", "path2"]
+  },
+  "artifact_output_path": "path/to/output/"
+}
+```
+
+## Quality Gates
+
+| Gate | Threshold | Action on Fail |
+|------|-----------|----------------|
+| Unit Coverage | > 80% | Block release |
+| Critical Paths | All pass | Block release |
+| Regression | No failures | Block release |
+| Performance | < P95 | Warn |
+| Security | 0 Critical | Block release |
+
+## Output
+
+```json
+{
+  "task_id": "TASK-2026-0002",
+  "status": "passed | failed | blocked",
+  "duration_seconds": 300,
+  "test_results": {
+    "unit": { "passed": 150, "failed": 2, "coverage": 82 },
+    "integration": { "passed": 45, "failed": 0 },
+    "e2e": { "passed": 20, "failed": 1 }
+  },
+  "performance": {
+    "p50": "120ms",
+    "p95": "450ms",
+    "p99": "800ms"
+  },
+  "security": {
+    "critical": 0,
+    "high": 2,
+    "medium": 5
+  },
+  "gate_results": {
+    "coverage": "pass",
+    "critical_paths": "pass",
+    "regression": "fail",
+    "security": "pass"
+  }
+}
+```
+
+## Collaboration
+
+```
+[CTO] ← 技术实现完成
+   ↓
+[Cloud QA Worker]
+   ↓
+   ├─→ [QA Director] ← 发布门禁决策
+   └─→ [Report] → ops/reports/
+```
+
+## References
+
+- QA Director: `../control_plane/QA_DIRECTOR.md`
+- Evidence storage: `../../ops/evidence/`

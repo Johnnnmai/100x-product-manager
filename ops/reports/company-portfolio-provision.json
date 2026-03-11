@@ -1,0 +1,310 @@
+{
+  "company_id": "823e177b-8e29-4e1d-979e-7fc776302adc",
+  "api_base": "http://127.0.0.1:3100",
+  "portfolio": "paperclip/company_portfolio.yaml",
+  "sync": {
+    "company_id": "823e177b-8e29-4e1d-979e-7fc776302adc",
+    "api_base": "http://127.0.0.1:3100",
+    "patched": [
+      {
+        "key": "ceo",
+        "name": "Zoe",
+        "title": "CTRL-01 / Codex CEO",
+        "status": "patched"
+      },
+      {
+        "key": "chief_of_staff",
+        "name": "Chief of Staff",
+        "title": "EXEC-02 / Cloud Chief of Staff",
+        "status": "patched"
+      },
+      {
+        "key": "cloud_exec_a",
+        "name": "Cloud Build",
+        "title": "CLOUD-BUILD-01 / Atlas",
+        "status": "patched"
+      },
+      {
+        "key": "cloud_research_c",
+        "name": "Cloud Research",
+        "title": "CLOUD-RESEARCH-01 / Scout",
+        "status": "patched"
+      },
+      {
+        "key": "cloud_verify_b",
+        "name": "Cloud QA",
+        "title": "CLOUD-VERIFY-01 / Sentinel",
+        "status": "patched"
+      },
+      {
+        "key": "cto_core",
+        "name": "CTO",
+        "title": "ENG-01 / CTO Core",
+        "status": "patched"
+      },
+      {
+        "key": "growth_lead",
+        "name": "Growth Lead",
+        "title": "GTM-01 / Growth Lead",
+        "status": "patched"
+      },
+      {
+        "key": "local_builder",
+        "name": "Forge",
+        "title": "BUILD-01 / Codex Builder",
+        "status": "patched"
+      },
+      {
+        "key": "local_claude_builder",
+        "name": "Quill",
+        "title": "BUILD-02 / Claude Builder",
+        "status": "patched"
+      },
+      {
+        "key": "pm_compiler",
+        "name": "Mira",
+        "title": "PLAN-01 / PM Compiler",
+        "status": "patched"
+      },
+      {
+        "key": "qa_lead",
+        "name": "QA Director",
+        "title": "QA-01 / Quality Director",
+        "status": "patched"
+      },
+      {
+        "key": "research_lead",
+        "name": "Research Lead",
+        "title": "RSR-01 / Research Lead",
+        "status": "patched"
+      }
+    ],
+    "failed": [],
+    "missing_from_live": [],
+    "orphaned_live": [
+      "openclaw"
+    ],
+    "live_keys": [
+      "ceo",
+      "ceo",
+      "chief_of_staff",
+      "cloud_exec_a",
+      "cloud_research_c",
+      "cloud_verify_b",
+      "cto_core",
+      "growth_lead",
+      "local_builder",
+      "local_claude_builder",
+      "openclaw",
+      "pm_compiler",
+      "qa_lead",
+      "research_lead"
+    ]
+  },
+  "provisioned_agents": [],
+  "roles": {
+    "ceo_codex": "2dd55f1f-e067-4187-879c-70d5736807fc",
+    "chief_of_staff": "a38362ad-e069-4db7-9883-824ff0e0eee4",
+    "local_codex_builder": "84ba9755-15b1-4be5-9138-c852ea7ef92a",
+    "local_claude_builder": "5e96d28e-2bdc-425d-a7e1-685f82a00e53",
+    "chief_of_staff_cloud": "9bf33209-6248-48b8-b160-272e0b5cc686",
+    "cto_core": "9e6b10c4-8923-4ddf-923c-d98407d5a213",
+    "qa_director": "a45d8df2-a2a4-4b0e-9335-7f5146ec1384",
+    "research_lead": "abcbec96-fbde-47aa-9dd6-0758917bc2da",
+    "growth_lead": "b2c13121-3c74-4cac-b748-10c0e1fa24d3",
+    "cloud_build": "52ccbc0d-9bdc-450f-a542-5f3851dc8458",
+    "cloud_qa": "131925c2-d4bc-4de2-afd7-8c73b96f3d03",
+    "cloud_research": "026a63c8-a4dc-4868-9463-efe13d584d9d"
+  },
+  "projects": [
+    {
+      "key": "internal-ai-os-v1",
+      "status": "created",
+      "project": {
+        "id": "adfc69a5-3855-453c-b88f-5bec73e6d532",
+        "companyId": "823e177b-8e29-4e1d-979e-7fc776302adc",
+        "goalId": null,
+        "name": "Internal AI OS v1",
+        "description": "Local Paperclip control plane with Codex CEO, Claude planning lane, and OpenClaw cloud swarm.",
+        "status": "in_progress",
+        "leadAgentId": "2dd55f1f-e067-4187-879c-70d5736807fc",
+        "targetDate": null,
+        "color": "#0F766E",
+        "archivedAt": null,
+        "createdAt": "2026-03-11T06:53:50.181Z",
+        "updatedAt": "2026-03-11T06:53:50.181Z",
+        "urlKey": "internal-ai-os-v1",
+        "goalIds": [],
+        "goals": [],
+        "workspaces": [],
+        "primaryWorkspace": null
+      }
+    },
+    {
+      "key": "internal-ai-os-v1",
+      "workspace": {
+        "id": "6d75764a-00c3-4a02-9f12-4485d3f9dcf5",
+        "companyId": "823e177b-8e29-4e1d-979e-7fc776302adc",
+        "projectId": "adfc69a5-3855-453c-b88f-5bec73e6d532",
+        "name": "brand-book",
+        "cwd": ".",
+        "repoUrl": null,
+        "repoRef": null,
+        "metadata": null,
+        "isPrimary": true,
+        "createdAt": "2026-03-11T06:53:50.233Z",
+        "updatedAt": "2026-03-11T06:53:50.233Z"
+      },
+      "status": "created",
+      "project_key": "internal-ai-os-v1"
+    },
+    {
+      "key": "ai-revenue-flywheel",
+      "status": "created",
+      "project": {
+        "id": "7c1f2de7-4050-42d7-ace9-8a968ee34a70",
+        "companyId": "823e177b-8e29-4e1d-979e-7fc776302adc",
+        "goalId": null,
+        "name": "AI Revenue Flywheel",
+        "description": "Product, content, distribution, funnel, analytics, and memory system for automated digital product growth.",
+        "status": "in_progress",
+        "leadAgentId": "b2c13121-3c74-4cac-b748-10c0e1fa24d3",
+        "targetDate": null,
+        "color": "#9333EA",
+        "archivedAt": null,
+        "createdAt": "2026-03-11T06:54:12.799Z",
+        "updatedAt": "2026-03-11T06:54:12.799Z",
+        "urlKey": "ai-revenue-flywheel",
+        "goalIds": [],
+        "goals": [],
+        "workspaces": [],
+        "primaryWorkspace": null
+      }
+    },
+    {
+      "key": "ai-revenue-flywheel",
+      "workspace": {
+        "id": "29de7e05-0aa4-4d03-b762-ed2c3e731a83",
+        "companyId": "823e177b-8e29-4e1d-979e-7fc776302adc",
+        "projectId": "7c1f2de7-4050-42d7-ace9-8a968ee34a70",
+        "name": "brand-book",
+        "cwd": ".",
+        "repoUrl": null,
+        "repoRef": null,
+        "metadata": null,
+        "isPrimary": true,
+        "createdAt": "2026-03-11T06:54:12.812Z",
+        "updatedAt": "2026-03-11T06:54:12.812Z"
+      },
+      "status": "created",
+      "project_key": "ai-revenue-flywheel"
+    }
+  ],
+  "issues": [
+    {
+      "project": "internal-ai-os-v1",
+      "issue_key": "internal-ai-os-bootstrap",
+      "status": "created",
+      "identifier": "JMS-8",
+      "assignee_role": "ceo_codex"
+    },
+    {
+      "project": "internal-ai-os-v1",
+      "issue_key": "phase0-security",
+      "status": "created",
+      "identifier": "JMS-9",
+      "assignee_role": "chief_of_staff"
+    },
+    {
+      "project": "internal-ai-os-v1",
+      "issue_key": "phase1-paperclip-runtime",
+      "status": "created",
+      "identifier": "JMS-10",
+      "assignee_role": "local_codex_builder"
+    },
+    {
+      "project": "internal-ai-os-v1",
+      "issue_key": "phase2-pm-compiler",
+      "status": "created",
+      "identifier": "JMS-11",
+      "assignee_role": "chief_of_staff"
+    },
+    {
+      "project": "internal-ai-os-v1",
+      "issue_key": "phase3-discord-hub",
+      "status": "created",
+      "identifier": "JMS-12",
+      "assignee_role": "local_claude_builder"
+    },
+    {
+      "project": "internal-ai-os-v1",
+      "issue_key": "phase4-context-evidence",
+      "status": "created",
+      "identifier": "JMS-13",
+      "assignee_role": "cloud_research"
+    },
+    {
+      "project": "internal-ai-os-v1",
+      "issue_key": "phase5-strategy-lab",
+      "status": "created",
+      "identifier": "JMS-14",
+      "assignee_role": "local_codex_builder"
+    },
+    {
+      "project": "ai-revenue-flywheel",
+      "issue_key": "revenue-flywheel-operating-model",
+      "status": "created",
+      "identifier": "JMS-15",
+      "assignee_role": "growth_lead"
+    },
+    {
+      "project": "ai-revenue-flywheel",
+      "issue_key": "signal-layer",
+      "status": "created",
+      "identifier": "JMS-16",
+      "assignee_role": "cloud_research"
+    },
+    {
+      "project": "ai-revenue-flywheel",
+      "issue_key": "offer-layer",
+      "status": "created",
+      "identifier": "JMS-17",
+      "assignee_role": "chief_of_staff"
+    },
+    {
+      "project": "ai-revenue-flywheel",
+      "issue_key": "asset-layer",
+      "status": "created",
+      "identifier": "JMS-18",
+      "assignee_role": "local_codex_builder"
+    },
+    {
+      "project": "ai-revenue-flywheel",
+      "issue_key": "content-layer",
+      "status": "created",
+      "identifier": "JMS-19",
+      "assignee_role": "local_claude_builder"
+    },
+    {
+      "project": "ai-revenue-flywheel",
+      "issue_key": "distribution-layer",
+      "status": "created",
+      "identifier": "JMS-20",
+      "assignee_role": "growth_lead"
+    },
+    {
+      "project": "ai-revenue-flywheel",
+      "issue_key": "funnel-layer",
+      "status": "created",
+      "identifier": "JMS-21",
+      "assignee_role": "local_codex_builder"
+    },
+    {
+      "project": "ai-revenue-flywheel",
+      "issue_key": "analytics-layer",
+      "status": "created",
+      "identifier": "JMS-22",
+      "assignee_role": "local_claude_builder"
+    }
+  ]
+}

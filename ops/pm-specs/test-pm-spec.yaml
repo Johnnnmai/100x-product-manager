@@ -1,0 +1,37 @@
+artifact_root: ops/artifacts
+constraints:
+- Constraint 1
+- Constraint 2
+epics:
+- acceptance_criteria: []
+  approval_required: false
+  budget_cap: 0.0
+  constraints: []
+  epic_id: test-epic-001
+  evidence_refs: []
+  executor_type: openclaw
+  summary: ''
+  tasks:
+  - acceptance_criteria:
+    - Can generate TaskEnvelope
+    approval_required: false
+    artifact_output_path: null
+    budget_cap: 0.0
+    constraints: []
+    evidence_refs: []
+    executor_type: claude_code
+    objective: Test the PM compiler
+    priority: medium
+    steps: []
+    task_id: test-task-001
+    title: Test Task
+  title: Test Epic
+glossary:
+  term1: definition1
+goal_id: test-goal-001
+initiative_id: test-initiative-001
+initiative_title: Test Initiative
+latest_decisions:
+- Decision 1
+mission: Test mission for PM compiler
+summary: Testing the PM compiler

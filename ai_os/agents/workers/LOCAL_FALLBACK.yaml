@@ -1,0 +1,83 @@
+# Local Fallback Workers
+
+## Overview
+
+Local fallback workers are used when:
+- Cloud workers are unavailable
+- Task requires local machine access (e.g., browser automation)
+- Emergency hotfix scenarios
+- Cost optimization for small tasks
+
+## Worker Types
+
+### 1. Local Codex Builder
+
+**Runtime**: Local Codex
+**Use Cases**:
+- Quick code changes
+- Hotfix deployment
+- Local testing
+- Emergency bug fixes
+
+**Trigger Conditions**:
+- Cloud build worker unavailable
+- Task marked as `urgent`
+- Requires local environment access
+
+### 2. Staff Engineer
+
+**Runtime**: Local Claude Code
+**Use Cases**:
+- Technical review
+- Architecture consultation
+- Code review
+- Complex debugging
+
+**Trigger Conditions**:
+- CTO requests technical review
+- Complex architecture decisions
+- Performance debugging
+
+## Execution Model
+
+```
+[Paperclip Control]
+   ↓
+   ├─→ Cloud Worker Available?
+   │       ↓ Yes → Cloud Worker
+   │       ↓ No
+   ↓
+[Local Fallback]
+   ↓
+   ├─→ Codex → Local Codex Builder
+   └─→ Claude → Staff Engineer
+```
+
+## Configuration
+
+```yaml
+fallback_rules:
+  - condition: "cloud_unavailable"
+    max_duration: 3600  # seconds
+    notify: ["chief_of_staff"]
+
+  - condition: "urgent_hotfix"
+    max_duration: 1800
+    notify: ["cto", "chief_of_staff"]
+
+  - condition: "local_only_required"
+    max_duration: 7200
+    notify: ["research_lead"]
+```
+
+## Constraints
+
+1. **Time Limits**: Local tasks must complete within max_duration
+2. **Reporting**: Must report to Paperclip on completion/failure
+3. **Resource Limits**: Only one concurrent local task per machine
+4. **Security**: Local tokens must not be committed to repo
+
+## References
+
+- Legacy adapter: `../../ops/legacy/LEGACY_EXECUTION_ADAPTER.md`
+- Agent rules: `../../ops/AGENT_RULES.md`

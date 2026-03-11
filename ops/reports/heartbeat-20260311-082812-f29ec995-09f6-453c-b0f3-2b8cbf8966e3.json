@@ -1,0 +1,141 @@
+﻿{
+    "runId":  "f29ec995-09f6-453c-b0f3-2b8cbf8966e3",
+    "fetchedAt":  "2026-03-11T08:28:12.1443831-07:00",
+    "me":  {
+               "id":  "2dd55f1f-e067-4187-879c-70d5736807fc",
+               "companyId":  "823e177b-8e29-4e1d-979e-7fc776302adc",
+               "name":  "Zoe",
+               "role":  "ceo",
+               "title":  "CTRL-01 / Codex CEO",
+               "icon":  null,
+               "status":  "running",
+               "reportsTo":  null,
+               "capabilities":  "Primary local CEO lane for routing, approvals, delegation, and loop closure.",
+               "adapterType":  "codex_local",
+               "adapterConfig":  {
+                                     "cwd":  "C:\\paperclip-work\\brand-book",
+                                     "model":  "gpt-5.3-codex",
+                                     "chrome":  false,
+                                     "command":  "C:\\paperclip-work\\brand-book\\paperclip\\bin\\zoe-paperclip.cmd",
+                                     "graceSec":  15,
+                                     "timeoutSec":  0,
+                                     "enableSearch":  true,
+                                     "bypassSandbox":  false,
+                                     "maxTurnsPerRun":  24,
+                                     "promptTemplate":  "You are Zoe, `CTRL-01 / Codex CEO`, the primary control-plane lane for JM Strategy Lab.\n\nMission:\n- keep the internal AI OS moving\n- route work across PM, build, research, QA, and growth lanes\n- maintain momentum on the AI revenue flywheel\n\nOperating loop:\n1. Treat every run as a Paperclip heartbeat, not a general chat session.\n2. Immediately invoke the `paperclip` coordination skill if it is available.\n3. Fetch identity with `GET /api/agents/me`, then fetch assignments with `GET /api/companies/{companyId}/issues?assigneeAgentId={agentId}\u0026status=todo,in_progress,blocked`.\n4. If `PAPERCLIP_TASK_ID` exists, inspect that issue first. Otherwise inspect assigned `in_progress`, then `todo`, then actionable `blocked`.\n5. If no assignment and no wake context exist, exit cleanly before repo exploration. Do not ask the human what to work on.\n6. For an assigned issue, checkout with `POST /api/issues/{issueId}/checkout` and include `X-Paperclip-Run-Id: $PAPERCLIP_RUN_ID`.\n7. Read the issue, parent context, and comments before touching the repo.\n8. Break broad goals into bounded next actions with clear file paths, outputs, and verification.\n9. Delegate planning work to Mira, implementation to Forge or Quill, and heavy cloud work to OpenClaw lanes.\n10. Close the loop only after repo evidence exists and downstream verification is recorded.\n\nRules:\n- start by reading Paperclip state, issue details, and comments before touching repo files\n- prefer one bounded next task over broad project sprawl\n- use Paperclip as the control plane, `ops/` as durable execution state, and Git as the source of truth\n- preserve the existing GitHub to OpenClaw execution path for cloud work\n- do not redesign the architecture during routine task execution\n- do not patch your own identity or secrets\n- do not invent Paperclip endpoints such as `/api/agents/\u003cname\u003e/tasks`, `/api/tasks?agent=...`, or `/api/agents/me/heartbeat/exit`\n- do not use `ops/` queues, repo search, or legacy markdown tasks as the primary assignment source during a heartbeat\n- no assignment means clean exit, not opportunistic repo work",
+                                     "instructionsFilePath":  "C:\\paperclip-work\\brand-book\\AGENTS.md",
+                                     "dangerouslySkipPermissions":  true,
+                                     "dangerouslyBypassApprovalsAndSandbox":  true
+                                 },
+               "runtimeConfig":  {
+                                     "heartbeat":  {
+                                                       "enabled":  true,
+                                                       "cooldownSec":  10,
+                                                       "intervalSec":  180,
+                                                       "wakeOnDemand":  true,
+                                                       "maxConcurrentRuns":  1
+                                                   }
+                                 },
+               "budgetMonthlyCents":  0,
+               "spentMonthlyCents":  0,
+               "permissions":  {
+                                   "canCreateAgents":  true
+                               },
+               "lastHeartbeatAt":  "2026-03-11T15:26:35.795Z",
+               "metadata":  {
+                                "lane":  "CTRL-01",
+                                "source":  "paperclip/agent_fleet.yaml",
+                                "callsign":  "Zoe",
+                                "fleet_key":  "ceo",
+                                "department":  "control_plane",
+                                "runtime_class":  "local_control",
+                                "assignment_role":  "ceo_codex",
+                                "fallback_agent_key":  ""
+                            },
+               "createdAt":  "2026-03-10T16:09:28.948Z",
+               "updatedAt":  "2026-03-11T15:27:35.602Z",
+               "urlKey":  "zoe",
+               "chainOfCommand":  [
+
+                                  ]
+           },
+    "issues":  {
+                   "value":  [
+                                 {
+                                     "id":  "45e10ad8-bb82-46c5-870b-3bb1594386c4",
+                                     "companyId":  "823e177b-8e29-4e1d-979e-7fc776302adc",
+                                     "projectId":  "adfc69a5-3855-453c-b88f-5bec73e6d532",
+                                     "goalId":  null,
+                                     "parentId":  null,
+                                     "title":  "Bootstrap Internal AI OS v1",
+                                     "description":  "Stand up the local Paperclip control plane, runtime heartbeat loop, and reusable agent team.",
+                                     "status":  "in_progress",
+                                     "priority":  "critical",
+                                     "assigneeAgentId":  "2dd55f1f-e067-4187-879c-70d5736807fc",
+                                     "assigneeUserId":  null,
+                                     "checkoutRunId":  "e5e07f55-a2c4-4a17-8b42-781c4bbde6e2",
+                                     "executionRunId":  null,
+                                     "executionAgentNameKey":  null,
+                                     "executionLockedAt":  null,
+                                     "createdByAgentId":  null,
+                                     "createdByUserId":  "local-board",
+                                     "issueNumber":  8,
+                                     "identifier":  "JMS-8",
+                                     "requestDepth":  0,
+                                     "billingCode":  null,
+                                     "assigneeAdapterOverrides":  null,
+                                     "startedAt":  "2026-03-11T07:03:42.577Z",
+                                     "completedAt":  null,
+                                     "cancelledAt":  null,
+                                     "hiddenAt":  null,
+                                     "createdAt":  "2026-03-11T06:53:53.149Z",
+                                     "updatedAt":  "2026-03-11T15:26:35.787Z",
+                                     "labels":  [
+
+                                                ],
+                                     "labelIds":  [
+
+                                                  ],
+                                     "activeRun":  null
+                                 },
+                                 {
+                                     "id":  "b60910cf-4d57-45cf-8e85-c5d0c93a09c5",
+                                     "companyId":  "823e177b-8e29-4e1d-979e-7fc776302adc",
+                                     "projectId":  null,
+                                     "goalId":  null,
+                                     "parentId":  null,
+                                     "title":  "Orchestrate v2 agent rollout and live validation",
+                                     "description":  "Coordinate the v2 agent operating model rollout and confirm the live lanes are working.",
+                                     "status":  "in_progress",
+                                     "priority":  "high",
+                                     "assigneeAgentId":  "2dd55f1f-e067-4187-879c-70d5736807fc",
+                                     "assigneeUserId":  null,
+                                     "checkoutRunId":  null,
+                                     "executionRunId":  null,
+                                     "executionAgentNameKey":  null,
+                                     "executionLockedAt":  null,
+                                     "createdByAgentId":  null,
+                                     "createdByUserId":  "local-board",
+                                     "issueNumber":  1,
+                                     "identifier":  "JMS-1",
+                                     "requestDepth":  0,
+                                     "billingCode":  null,
+                                     "assigneeAdapterOverrides":  null,
+                                     "startedAt":  "2026-03-10T23:00:13.902Z",
+                                     "completedAt":  null,
+                                     "cancelledAt":  null,
+                                     "hiddenAt":  null,
+                                     "createdAt":  "2026-03-10T17:37:00.765Z",
+                                     "updatedAt":  "2026-03-10T23:00:13.902Z",
+                                     "labels":  [
+
+                                                ],
+                                     "labelIds":  [
+
+                                                  ],
+                                     "activeRun":  null
+                                 }
+                             ],
+                   "Count":  2
+               }
+}

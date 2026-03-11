@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ForecastRequest",
+  "type": "object",
+  "required": ["request_id", "seed_material_refs", "decision_question", "time_horizon", "scenario_prompt"],
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "pattern": "^FORECAST-\\d{4}-\\d{4}$",
+      "description": "Unique forecast request ID"
+    },
+    "seed_material_refs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Reference paths to seed materials"
+    },
+    "decision_question": {
+      "type": "string",
+      "description": "Decision to be forecasted"
+    },
+    "time_horizon": {
+      "type": "string",
+      "description": "Time horizon for forecast (e.g., Q3 2026)"
+    },
+    "scenario_prompt": {
+      "type": "string",
+      "description": "Scenario description for simulation"
+    },
+    "constraints": {
+      "type": "object",
+      "properties": {
+        "max_budget": { "type": "string" },
+        "max_team_size": { "type": "number" }
+      }
+    },
+    "requested_by": {
+      "type": "string",
+      "description": "Requester identifier"
+    },
+    "requested_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO timestamp"
+    }
+  }
+}

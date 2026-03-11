@@ -1,0 +1,15 @@
+{
+  "key": "pm_compiler",
+  "agent_id": "a38362ad-e069-4db7-9883-824ff0e0eee4",
+  "agent_name": "Mira",
+  "status": "running",
+  "summary": "Paperclip reports an active heartbeat run; skipping duplicate invoke.",
+  "run_id": null,
+  "backoff_until": null,
+  "exit_code": null,
+  "last_invoked_at": "2026-03-11T06:56:51.967356+00:00",
+  "last_completed_at": "2026-03-11T06:58:24.992322+00:00",
+  "consecutive_failures": 1,
+  "consecutive_rate_limits": 0,
+  "output_excerpt": null
+}

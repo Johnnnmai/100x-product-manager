@@ -1,0 +1,24 @@
+{
+  "target": "Code Review",
+  "target_type": "code",
+  "critical_issues": [
+    {
+      "description": "Bare except clause catches all exceptions",
+      "impact": "Hides bugs, may catch SystemExit",
+      "recommendation": "Use specific exception types"
+    }
+  ],
+  "major_issues": [],
+  "minor_issues": [],
+  "questions": [
+    "What edge cases are not handled?",
+    "What happens with invalid input?",
+    "Are there race conditions?"
+  ],
+  "recommendations": [
+    "Add comprehensive error handling",
+    "Write unit tests for edge cases",
+    "Review for security vulnerabilities"
+  ],
+  "timestamp": "2026-03-10T23:22:40.641534"
+}
