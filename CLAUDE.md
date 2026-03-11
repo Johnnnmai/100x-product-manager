@@ -13,10 +13,10 @@ Use it when the user needs help with:
 
 ## Current Catalog
 
-- 49 skills total
-- 22 component skills
-- 20 interactive skills
-- 7 workflow skills
+- 77 skills total
+- 31 component skills
+- 32 interactive skills
+- 14 workflow skills
 
 ## Recommended Skill Tracks
 
