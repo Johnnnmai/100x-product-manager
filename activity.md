@@ -4,6 +4,100 @@ This file tracks progress across Ralph loop iterations.
 
 ---
 
+## 2026-03-12 - Agent Team Role Definitions
+
+### 完成的工作
+创建了 6 个 Agent Team 角色定义在 `ai_os/agents/team/` 目录:
+
+1. **ARCHITECT.md** - 系统设计与组件架构
+   - 职责: 架构设计、技术领导、集成规划
+   - 输入: CEO, CTO, Implementer Agent
+   - 输出: Implementer Agent, Integrator Agent
+
+2. **IMPLEMENTER.md** - 代码实现与技能创建
+   - 职责: 代码实现、技能创建、文档编写
+   - 输入: Architect Agent, Reviewer Agent
+   - 输出: Reviewer Agent, Tester Agent
+
+3. **REVIEWER.md** - 代码审查与质量检查
+   - 职责: 代码审查、质量保证、反馈循环
+   - 输入: Implementer Agent, Tester Agent
+   - 输出: Implementer Agent, Challenge Agent
+
+4. **TESTER.md** - 单元测试、E2E测试与验证
+   - 职责: 测试开发、测试自动化、验证
+   - 输入: Implementer Agent, Integrator Agent
+   - 输出: Reviewer Agent, Challenge Agent
+
+5. **CHALLENGE.md** - 质疑假设与压力测试
+   - 职责: 对抗性测试、关键分析、质量改进
+   - 输入: 所有 agents
+   - 输出: 所有 agents
+
+6. **INTEGRATOR.md** - 组件集成与系统一致性
+   - 职责: 集成验证、系统一致性、依赖管理
+   - 输入: Architect Agent, 所有实现 agents
+   - 输出: 所有 agents
+
+### 测试结果
+```
+22 passed in 1.91s
+```
+
+### 结果
+- [x] Agent Team 6 角色定义创建 ✅
+- [x] 测试通过 (22 passed) ✅
+
+---
+
+## 2026-03-12 - Test Fix: Local Worker Dry-Run
+
+### 问题
+`test_local_worker_dry_run` 失败:
+- 返回状态 `no_task` 而非预期的 `succeeded/failed/pending`
+- 原因: 测试 fixture 创建的 pending task 文件名与 local_worker 期望的不匹配
+
+### 修复
+更新 `tests/e2e/test_flywheel.py` fixture:
+- 使用正确的 legacy task filename 格式: `{initiative_id}-{epic_id}-{task_id}.md`
+- 更新 compiled_filename 为 `test-initiative-test-epic-001-test-task-001.json`
+- 同步 pending task 文件名
+
+### 测试结果
+```
+22 passed in 3.49s
+```
+
+### 结果
+- [x] test_local_worker_dry_run 通过 ✅
+- [x] 完整测试套件通过 (22 passed) ✅
+
+---
+
+## 2026-03-10 - E2E Test Fixes
+
+### 完成的工作
+修复了 E2E 测试中的两个问题:
+
+1. **TaskEnvelope 字段缺失**
+   - 添加了缺失的必需字段: `acceptance_criteria`, `steps`, `constraints`, `evidence_refs`
+   - 这些字段在 TaskEnvelope contract 中是必需的
+
+2. **任务文件名不匹配**
+   - `envelope_id` 和 legacy_task_filename 不匹配
+   - 修复为使用正确的命名约定: `{initiative_id}-{epic_id}-{task_id}`
+   - 文件名从 `test-initiative-test-epic-001-test-task.md` 改为 `test-initiative-test-epic-001-test-task-001.md`
+
+### 测试结果
+```
+22 passed (之前: 18 passed, 4 errors)
+```
+
+### 更新的文件
+- `tests/e2e/test_flywheel.py` - 修复了 fixture 中的 TaskEnvelope 创建
+
+---
+
 ## 2026-03-11 - Test Fixes & Agent Fleet Enhancement
 
 ### 完成的工作
