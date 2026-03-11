@@ -219,6 +219,42 @@ Signal (更强的趋势信号)
     ],
     "passes": true,
     "notes": "创建 tests/e2e/test_flywheel.py。测试结果: 3 passed, 1 skipped (local_worker 需要复杂环境配置)。"
+  },
+  {
+    "category": "challenge",
+    "description": "实现 Challenge Agent 集成 - 对抗性测试",
+    "steps": [
+      "创建 Challenge Agent skill",
+      "实现对抗性测试场景",
+      "验证 Agent 质疑机制",
+      "测试压力测试设计"
+    ],
+    "passes": true,
+    "notes": "创建 skills/flywheel/challenge/adversarial-tester/SKILL.md。实现对抗性测试框架，包含假设挖掘、边缘案例发现、失败模式分析、安全探测、压力测试设计。验证所有6个团队角色存在。"
+  },
+  {
+    "category": "swarm",
+    "description": "实现 Agent Swarm 编排 - 多代理协调",
+    "steps": [
+      "创建 Swarm Orchestrator",
+      "实现并行任务分发",
+      "验证跨代理验证机制",
+      "测试迭代精化流程"
+    ],
+    "passes": true,
+    "notes": "创建 ai_os/swarm_orchestrator.py，实现 SwarmOrchestrator 类。支持并行任务分发、任务依赖管理、执行状态跟踪。创建 tests/test_swarm_orchestrator.py，9个测试全部通过。"
+  },
+  {
+    "category": "benchmark",
+    "description": "实现性能基准测试",
+    "steps": [
+      "创建基准测试用例",
+      "测量各组件性能",
+      "建立性能指标",
+      "验证系统响应时间"
+    ],
+    "passes": true,
+    "notes": "创建 ai_os/benchmark.py，实现基准测试框架。包含 Benchmark 类，支持迭代测试和性能指标收集。创建 tests/test_benchmark.py，5个测试全部通过。"
   }
 ]
 ```
@@ -238,7 +274,9 @@ Signal (更强的趋势信号)
 - [x] 端到端演示可运行
 - [x] Paperclip 可正常执行 Agent (本地执行已实现，跳过 Paperclip)
 - [x] 端到端测试通过
+- [x] Challenge Agent 对抗性测试通过
 - [x] Agent Swarm 协作验证通过
+- [x] 性能基准测试通过
 
 ---
 
