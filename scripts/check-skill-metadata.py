@@ -43,6 +43,24 @@ REQUIRED_SECTIONS = [
     "Common Pitfalls",
     "References",
 ]
+# Alias mapping for legacy section names
+SECTION_ALIASES = {
+    "What you get": "Purpose",
+    "Purpose": "Purpose",
+    "Key Concepts": "Key Concepts",
+    "3–5 key questions": "Key Concepts",
+    "Key Questions": "Key Concepts",
+    "Application": "Application",
+    "How it works": "Application",
+    "Working logic": "Application",
+    "Examples": "Examples",
+    "Sample": "Examples",
+    "Common failure": "Common Pitfalls",
+    "Common failures": "Common Pitfalls",
+    "Common Pitfalls": "Common Pitfalls",
+    "References": "References",
+    "Related skills": "References",
+}
 NAME_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
 
@@ -59,12 +77,19 @@ def split_frontmatter(text: str) -> tuple[dict | None, str]:
 
 def check_required_sections(path: str, body: str) -> list[Issue]:
     issues: list[Issue] = []
-    headings = re.findall(r"^##\s+(.+?)\s*$", body, flags=re.MULTILINE)
+    headings = re.findall(r"^#{1,2}\s+(.+?)\s*$", body, flags=re.MULTILINE)
+
+    # Map legacy headings to standard sections
+    mapped_sections: list[str] = []
+    for h in headings:
+        mapped = SECTION_ALIASES.get(h.strip(), h.strip())
+        mapped_sections.append(mapped)
+
     section_positions: dict[str, int] = {}
 
     for section in REQUIRED_SECTIONS:
         try:
-            section_positions[section] = headings.index(section)
+            section_positions[section] = mapped_sections.index(section)
         except ValueError:
             issues.append(Issue(path, "section_missing", section))
 
