@@ -83,7 +83,7 @@ Building a CLI tool that helps PMs and founders turn rough ideas into product di
       "Test agent-prd command",
       "Verify pass rate >10%"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "category": "readme",
