@@ -31,7 +31,7 @@ Building a CLI tool that helps PMs and founders turn rough ideas into product di
       "Copy app/main.py from company_asset",
       "Verify imports work"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "category": "integration",

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ pack.project_name }} - Decision Pack</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <h1>{{ pack.project_name }}</h1>
+      <p>{{ pack.executive_summary }}</p>
+      <p><a href="/runs/{{ pack.project_name|lower|replace(' ', '-') }}/{{ pack.run_id }}">Open stored run</a></p>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Problem Map</h2>
+        <ul>{% for item in pack.problem_map %}<li>{{ item }}</li>{% endfor %}</ul>
+      </div>
+      <div class="card">
+        <h2>Validation Stack</h2>
+        <ul>{% for layer in pack.conditional_validation_stack %}<li>L{{ layer.layer }}: {{ layer.claim }}</li>{% endfor %}</ul>
+      </div>
+      <div class="card">
+        <h2>Roadmap</h2>
+        <ul>{% for item in pack.roadmap %}<li>{{ item.window }}: {{ item.goal }}</li>{% endfor %}</ul>
+      </div>
+      <div class="card">
+        <h2>Tasks</h2>
+        <ul>{% for task in pack.tasks %}<li>{{ task.title }} ({{ task.owner }})</li>{% endfor %}</ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Run directory</h2>
+      <code>{{ run_dir }}</code>
+    </section>
+  </main>
+</body>
+</html>

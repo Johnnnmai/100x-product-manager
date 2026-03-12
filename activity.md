@@ -2,6 +2,34 @@
 
 ---
 
+## 2026-03-11 - Task 2: Integrate LightCube v1 Core Code
+
+### Completed Work
+Integrated LightCube v1 core code from company_asset:
+
+1. **Copied core files**:
+   - engine.py - Main engine
+   - integrations.py - Adapters (MiroFish, Oasis, Paperclip, Scrapling)
+   - models.py - Data models
+   - main.py - FastAPI app
+   - utils.py - Utilities
+   - renderers.py - Markdown renderers
+   - static/ - Static files
+   - templates/ - Jinja2 templates
+
+2. **Fixed imports** - Changed absolute imports to relative imports for local package
+
+### Verification
+```bash
+python -c "from app.engine import LightCubeEngine; print('OK')"
+# LightCubeEngine imported OK
+```
+
+### Result
+- [x] Task 2: Integrate LightCube v1 core code ✅
+
+---
+
 ## 2026-03-11 - Task 1: Project Directory Structure Setup
 
 ### Completed Work

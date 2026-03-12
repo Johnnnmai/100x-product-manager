@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LightCube v1</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <h1>LightCube v1</h1>
+      <p>From messy input to agent-ready product direction.</p>
+    </section>
+
+    <section class="card">
+      <form action="/run" method="post">
+        <label>Project name</label>
+        <input type="text" name="project_name" placeholder="LightCube demo" required>
+
+        <label>Mode</label>
+        <select name="mode">
+          <option value="audit">Audit existing product</option>
+          <option value="shape">Shape new idea</option>
+        </select>
+
+        <label>URL</label>
+        <input type="url" name="url" placeholder="https://example.com">
+
+        <label>Idea</label>
+        <textarea name="idea" rows="4" placeholder="Describe the product or idea"></textarea>
+
+        <label>Context</label>
+        <textarea name="context" rows="6" placeholder="Paste notes, constraints, goals, user feedback, or strategy context"></textarea>
+
+        <button type="submit">Generate Decision Pack</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
