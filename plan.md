@@ -52,7 +52,7 @@ Building a CLI tool that helps PMs and founders turn rough ideas into product di
       "Support --text, --url, --path, --json flags",
       "Test CLI works"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "category": "cli",
