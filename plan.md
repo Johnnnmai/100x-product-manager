@@ -73,7 +73,7 @@ Building a CLI tool that helps PMs and founders turn rough ideas into product di
       "Write test prompts for good output",
       "Verify Evals framework works"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "category": "evals",
