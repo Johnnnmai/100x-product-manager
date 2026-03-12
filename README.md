@@ -1,10 +1,19 @@
 # 100x PM - Product Strategy OS
 
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Version](https://img.shields.io/badge/version-0.1.0-orange)](https://pypi.org/project/100xpm/)
+
 Turn rough ideas into product direction, executive-ready PRDs, and roadmaps.
 
-## Overview
+## Is 100x PM Right for You?
 
-100x PM is a CLI tool that helps Product Managers and founders validate ideas, create strategic documents, and generate actionable roadmaps. Powered by LightCube AI engine.
+- **Yes** if you're a founder with a rough idea and need strategic direction
+- **Yes** if you're a PM validating product directions before roadmap planning
+- **Yes** if you need executive-ready PRDs that hold up in meetings
+- **No** if you need full autonomous company orchestration
+- **No** if you need high-fidelity digital twin visualization
+- **No** if you need multi-tenant enterprise controls
 
 ## Features
 
@@ -12,6 +21,32 @@ Turn rough ideas into product direction, executive-ready PRDs, and roadmaps.
 - **PRD Generation** - Create professional Product Requirements Documents
 - **Market Validation** - Analyze signals and validate product directions
 - **Roadmap Planning** - Build actionable implementation roadmaps
+
+## Demo
+
+```bash
+$ 100xpm deploy --text "AI-powered meal planning app for busy professionals"
+
+Running in shape mode...
+Input source: text
+Initializing LightCube engine...
+Success! Output written to:
+  - decision-pack.md
+  - decision-pack.json
+```
+
+### Sample Output
+
+The generated `decision-pack.md` includes:
+
+- **Executive Summary** - One-paragraph strategic recommendation
+- **Signal Brief** - Evidence and market signals analyzed
+- **Problem Map** - Key challenges identified
+- **Conditional Validation Stack** - 5-layer validation framework
+- **Strategy Memo** - Target user, wedge, core flow
+- **PRD** - Build-ready requirements
+- **Roadmap** - 0-30-60-90 day plan
+- **Tasks** - Engineering-ready task list
 
 ## Installation
 
@@ -125,6 +160,10 @@ pytest tests/
 python -m src.cli.main --help
 python -m src.cli.main deploy --text "test"
 ```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
