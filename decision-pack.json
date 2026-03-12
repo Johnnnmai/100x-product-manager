@@ -1,0 +1,202 @@
+{
+  "project_name": "cli-run",
+  "run_id": "20260312-002531-shape",
+  "mode": "shape",
+  "created_at": "2026-03-12T00:25:31.331551+00:00",
+  "executive_summary": "LightCube analyzed idea input in shape mode and recommends focusing on signal-backed idea shaping into a first buildable scope. The strongest near-term move is to tighten the first convincing use case, reduce time-to-value, and validate repeat behavior before broadening scope.",
+  "signal_brief": [
+    {
+      "source": "idea_input",
+      "title": "Founder idea",
+      "summary": "AI-powered meal planning app for busy professionals",
+      "confidence": 0.55
+    }
+  ],
+  "problem_map": [
+    "Core user and wedge may still be blended together.",
+    "The product may solve too many adjacent jobs at once.",
+    "Distribution logic is not yet tightly bound to the product loop.",
+    "Idea evidence anchors: Founder idea"
+  ],
+  "conditional_validation_stack": [
+    {
+      "layer": 1,
+      "claim": "Target user enters the core flow",
+      "risk": "unclear hook",
+      "signal_needed": "landing page click or signup intent"
+    },
+    {
+      "layer": 2,
+      "claim": "User reaches first value within one session",
+      "risk": "time-to-value too slow",
+      "signal_needed": "activation event completion"
+    },
+    {
+      "layer": 3,
+      "claim": "User repeats the core loop",
+      "risk": "value too episodic",
+      "signal_needed": "7-day repeat behavior"
+    },
+    {
+      "layer": 4,
+      "claim": "Users spread or invite naturally",
+      "risk": "weak social or workflow pull",
+      "signal_needed": "share or invite rate"
+    },
+    {
+      "layer": 5,
+      "claim": "Channel scales without breaking economics",
+      "risk": "CAC or effort too high",
+      "signal_needed": "channel conversion and cost"
+    }
+  ],
+  "strategy_memo": {
+    "target_user": "Founder or PM with a rough idea and no sharp wedge yet",
+    "wedge": "signal-backed idea shaping into a first buildable scope",
+    "core_problem": "Core user and wedge may still be blended together.",
+    "core_flow": "Input context → collect signals → pressure-test direction → compile build plan",
+    "distribution_hypothesis": "High-signal audits and decision packs can act as both acquisition and trust-building content.",
+    "business_model": "Subscription with premium strategy runs and optional execution orchestration.",
+    "evidence_used": [
+      {
+        "source": "idea_input",
+        "title": "Founder idea",
+        "summary": "AI-powered meal planning app for busy professionals",
+        "confidence": 0.55
+      }
+    ]
+  },
+  "prd": {
+    "title": "cli-run LightCube v1",
+    "objective": "Turn messy product inputs into decision-ready direction and agent-ready execution.",
+    "primary_user": "Founder or PM with a rough idea and no sharp wedge yet",
+    "must_have_features": [
+      "Input form for URL or idea",
+      "Decision Pack generation",
+      "Project run storage",
+      "Task export for engineering execution"
+    ],
+    "non_goals": [
+      "Full autonomous company orchestration",
+      "High-fidelity digital twin visualization",
+      "Multi-tenant enterprise controls in v1"
+    ],
+    "success_metrics": [
+      "Time to first decision pack",
+      "Manual edits after first pack",
+      "Percent of generated tasks accepted by the team"
+    ]
+  },
+  "roadmap": [
+    {
+      "window": "0-30 days",
+      "goal": "Ship audit and shape workflows",
+      "milestones": [
+        "web form",
+        "pack generation",
+        "local storage"
+      ]
+    },
+    {
+      "window": "31-60 days",
+      "goal": "Close execution loop",
+      "milestones": [
+        "task status tracking",
+        "run comparison",
+        "team feedback capture"
+      ]
+    },
+    {
+      "window": "61-90 days",
+      "goal": "Add advanced simulation",
+      "milestones": [
+        "deeper OASIS scenarios",
+        "optional MiroFish forecasting",
+        "better evidence connectors"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "title": "Implement intake workflow",
+      "owner": "eng",
+      "description": "Build URL and idea submission flow.",
+      "priority": "high",
+      "status": "todo"
+    },
+    {
+      "title": "Generate Decision Pack",
+      "owner": "eng",
+      "description": "Compile markdown and JSON outputs.",
+      "priority": "high",
+      "status": "todo"
+    },
+    {
+      "title": "Review strategy wedge",
+      "owner": "pm",
+      "description": "Confirm target user and core wedge.",
+      "priority": "high",
+      "status": "todo"
+    },
+    {
+      "title": "Design activation metric",
+      "owner": "pm",
+      "description": "Define first-value event and success threshold.",
+      "priority": "medium",
+      "status": "todo"
+    }
+  ],
+  "simulation_summary": {
+    "engine": "local-sim",
+    "audience_reaction": "curious but selective",
+    "spread_potential": "medium",
+    "retention_risk": "high if first value is delayed",
+    "observed_themes": [
+      "Founder idea"
+    ],
+    "forecast": {
+      "engine": "disabled",
+      "note": "Advanced forecasting is optional in v1.",
+      "priority_scenarios": [
+        "narrow wedge converts strongly",
+        "broad positioning confuses users",
+        "distribution fails without a repeatable signal loop"
+      ]
+    }
+  },
+  "metadata": {
+    "paperclip": {
+      "engine": "local-export",
+      "tasks": [
+        {
+          "title": "Implement intake workflow",
+          "owner": "eng",
+          "description": "Build URL and idea submission flow.",
+          "priority": "high",
+          "status": "todo"
+        },
+        {
+          "title": "Generate Decision Pack",
+          "owner": "eng",
+          "description": "Compile markdown and JSON outputs.",
+          "priority": "high",
+          "status": "todo"
+        },
+        {
+          "title": "Review strategy wedge",
+          "owner": "pm",
+          "description": "Confirm target user and core wedge.",
+          "priority": "high",
+          "status": "todo"
+        },
+        {
+          "title": "Design activation metric",
+          "owner": "pm",
+          "description": "Define first-value event and success threshold.",
+          "priority": "medium",
+          "status": "todo"
+        }
+      ]
+    }
+  }
+}

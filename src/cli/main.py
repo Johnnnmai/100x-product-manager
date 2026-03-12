@@ -3,11 +3,20 @@
 """
 from __future__ import annotations
 
+import asyncio
 import json
 import sys
 from pathlib import Path
 
 import click
+
+# Import LightCube engine - will fail gracefully if not available
+try:
+    from app.engine import LightCubeEngine
+    from app.models import RunMode, RunRequest
+    ENGINE_AVAILABLE = True
+except ImportError:
+    ENGINE_AVAILABLE = False
 
 
 @click.group()
@@ -22,7 +31,7 @@ def cli():
 @click.option("--url", "input_url", help="URL to analyze (website/product audit)")
 @click.option("--path", "input_path", type=click.Path(exists=True), help="Path to existing spec/context file")
 @click.option("--json", "input_json", type=click.Path(exists=True), help="JSON file with structured input")
-@click.option("--mode", type=click.Choice(["audit", "idea", "vision"]), default="idea", help="Analysis mode")
+@click.option("--mode", type=click.Choice(["audit", "shape"]), default="shape", help="Analysis mode")
 @click.option("--output", "-o", type=click.Path(), help="Output file path (default: decision-pack.md)")
 def deploy(input_text: str, input_url: str, input_path: str, input_json: str, mode: str, output: str):
     """
@@ -30,7 +39,7 @@ def deploy(input_text: str, input_url: str, input_path: str, input_json: str, mo
 
     Examples:
 
-        # From text idea
+        # From text idea (shape mode)
         100xpm deploy --text "AI-powered meal planning app for busy professionals"
 
         # From website audit
@@ -66,8 +75,59 @@ def deploy(input_text: str, input_url: str, input_path: str, input_json: str, mo
     click.echo(f"Running in {mode} mode...")
     click.echo(f"Input source: {input_source}")
 
-    # TODO: Wire to LightCube engine
-    click.echo("Engine integration pending - CLI structure ready")
+    # Wire to LightCube engine if available
+    if ENGINE_AVAILABLE:
+        click.echo("Initializing LightCube engine...")
+
+        # Map mode to RunMode
+        mode_map = {
+            "audit": RunMode.AUDIT,
+            "shape": RunMode.SHAPE,
+        }
+
+        try:
+            # Create run request
+            req = RunRequest(
+                project_name="cli-run",
+                mode=mode_map[mode],
+                url=input_data.get("url"),
+                idea=input_data.get("content"),
+                context=input_data.get("context"),
+            )
+
+            # Run the engine
+            engine = LightCubeEngine()
+            pack, export = asyncio.run(engine.run(req))
+
+            # Determine output path
+            if output is None:
+                output = "decision-pack.md"
+
+            output_path = Path(output)
+
+            # Write decision pack
+            from app.renderers import decision_pack_markdown
+            output_path.write_text(decision_pack_markdown(pack), encoding="utf-8")
+
+            # Also write JSON
+            json_path = output_path.with_suffix(".json")
+            json_path.write_text(pack.model_dump_json(indent=2), encoding="utf-8")
+
+            click.echo(f"Success! Output written to:")
+            click.echo(f"  - {output_path}")
+            click.echo(f"  - {json_path}")
+
+        except Exception as e:
+            click.echo(f"Error running engine: {e}", err=True)
+            sys.exit(1)
+    else:
+        click.echo("Engine not available - using CLI structure only")
+        # Still create a basic output
+        if output is None:
+            output = "decision-pack.md"
+        output_path = Path(output)
+        output_path.write_text(f"# Product Direction Pack\n\nMode: {mode}\nSource: {input_source}\n", encoding="utf-8")
+        click.echo(f"Basic output written to: {output_path}")
 
 
 @cli.command()

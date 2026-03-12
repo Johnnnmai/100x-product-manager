@@ -62,7 +62,7 @@ Building a CLI tool that helps PMs and founders turn rough ideas into product di
       "Test full workflow: input -> pack -> output",
       "Verify decision-pack.md generation"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "category": "evals",

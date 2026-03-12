@@ -2,6 +2,39 @@
 
 ---
 
+## 2026-03-11 - Task 5: Connect CLI to LightCube Engine
+
+### Completed Work
+Connected CLI to LightCube engine:
+
+1. **Wired deploy command to engine.run()**
+   - Imports LightCubeEngine and RunRequest
+   - Maps CLI modes to RunMode (audit/shape)
+   - Runs engine asynchronously
+
+2. **Tested full workflow**
+   ```bash
+   100xpm deploy --text "AI meal planning app"
+   # Success! Output written to:
+   #   - decision-pack.md
+   #   - decision-pack.json
+   ```
+
+3. **Verified decision-pack.md generation**
+   - Contains Executive Summary
+   - Signal Brief
+   - Problem Map
+   - Conditional Validation Stack
+   - Strategy Memo
+   - PRD
+   - Roadmap
+   - Tasks
+
+### Result
+- [x] Task 5: Connect CLI to LightCube engine ✅
+
+---
+
 ## 2026-03-11 - Task 4: Add CLI Entry Point
 
 ### Completed Work
