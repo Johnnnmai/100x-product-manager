@@ -113,8 +113,8 @@ Building a CLI tool that helps PMs and founders turn rough ideas into product di
 ---
 
 ## Completion Criteria
-- [ ] All tasks have "passes": true
-- [ ] CLI command works: 100xpm deploy --text "..."
-- [ ] Output format correct (decision-pack.md/json)
-- [ ] Evals validate command quality
-- [ ] README complete and professional
+- [x] All tasks have "passes": true
+- [x] CLI command works: 100xpm deploy --text "..."
+- [x] Output format correct (decision-pack.md/json)
+- [x] Evals validate command quality
+- [x] README complete and professional
