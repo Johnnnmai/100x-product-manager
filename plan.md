@@ -94,7 +94,7 @@ Building a CLI tool that helps PMs and founders turn rough ideas into product di
       "Write usage examples",
       "Write output format documentation"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "category": "verification",
