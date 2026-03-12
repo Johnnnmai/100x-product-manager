@@ -105,7 +105,7 @@ Building a CLI tool that helps PMs and founders turn rough ideas into product di
       "Run all Evals",
       "Verify ready for GitHub"
     ],
-    "passes": false
+    "passes": true
   }
 ]
 ```
